@@ -68,10 +68,10 @@ export default function Intro() {
                         I enjoy difficult problems to be <span className='bg-gray-300 rounded-2xl underline'>solved</span> with code.
                     </span>
                 </h3>
-                <div className='flex flex-col sm:flex-row'>
-                    <Link href="#contact" className='bg-gray-950 text-gray-50 px-7 py-3 flex items-center gap-2 rounded-full'>Contact me now.<BsArrowRight />
+                <div className='flex flex-col sm:flex-row pt-8'>
+                    <Link href="#contact" className='bg-gray-950 text-gray-50 text-xl px-7 py-3 flex items-center gap-2 rounded-full'>Contact me<BsArrowRight />
                     </Link>
-                    <a className='bg-gray-50 text-gray-950 px-7 py-3 flex items-center gap-2 rounded-e-full'>Download resume <LuHardDriveDownload /></a>
+                    <a className='bg-gray-50 text-gray-950 px-7 py-3 flex items-center gap-2 rounded-e-full underline hover:cursor-pointer'>Download resume <LuHardDriveDownload /></a>
                 
                 <a className='bg-slate-50 text-gray-800 p-4 flex items-center gap-2 rounded-rull'>
                     <BsLinkedin />
