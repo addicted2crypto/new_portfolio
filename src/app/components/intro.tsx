@@ -68,18 +68,27 @@ export default function Intro() {
                         I enjoy difficult problems to be <span className='bg-gray-300 rounded-2xl underline'>solved</span> with code.
                     </span>
                 </h3>
-                <div className='flex flex-col sm:flex-row pt-8'>
-                    <Link href="#contact" className='bg-gray-950 text-gray-50 text-xl px-7 py-3 flex items-center gap-2 rounded-full'>Contact me<BsArrowRight />
+                <motion.div className='flex flex-col items-center justify-center text-lg hover:cursor-pointer sm:flex-row pt-8 gap-2 px-2 font-medium'
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.169 }}
+                >
+                    <Link href="#contact" className='group bg-gray-950 text-gray-50 text-xl px-7 py-3 flex items-center gap-2 outline-none rounded-full hover:scale-110 hover:bg-blue-950 active:scale-105 transition'>
+                        Contact me
+                        <BsArrowRight className='opacity-69 group-hover:translate-x-1 transition'/>
                     </Link>
-                    <a className='bg-gray-50 text-gray-950 px-7 py-3 flex items-center gap-2 rounded-e-full underline hover:cursor-pointer'>Download resume <LuHardDriveDownload /></a>
-                
-                <a className='bg-slate-50 text-gray-800 p-4 flex items-center gap-2 rounded-rull'>
-                    <BsLinkedin />
-                </a>
-                <a className='bg-slate-50 text-gray-800 p-4 flex items-center gap-2 text-[2.69rem] rounded-rull'>
-                    <FaGithubSquare />
-                </a>
-                </div>
+
+                    <a className='group bg-gray-50 px-7 py-3 flex items-center gap-2 rounded-e-full underline outline-none focus:scale-110 hover:scale-110' href="/resume.pdf" download>
+                        Download resume 
+                        <LuHardDriveDownload className='opacity-69 group-hover:translate-y-1 transition'/></a>
+
+                    <a className='bg-slate-50 text-gray-800 p-4 flex items-center gap-2 rounded-rull'>
+                        <BsLinkedin />
+                    </a>
+                    <a className='bg-slate-50 text-gray-800 p-4 flex items-center gap-2 text-[2.69rem] rounded-rull'>
+                        <FaGithubSquare />
+                    </a>
+                </motion.div>
             </motion.section>
         </section>
     )
