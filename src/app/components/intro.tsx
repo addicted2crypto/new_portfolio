@@ -65,7 +65,7 @@ export default function Intro() {
                 </h2>
                 <h3>
                     <span className='font-semi-bold text-xl'>
-                        I enjoy difficult problems to be <span className='bg-gray-300 rounded-2xl underline'>solved</span> with code.
+                        I enjoy difficult problems to be <span className='bg-[#c9b2e4] rounded-full underline'>solved</span> with code.
                     </span>
                 </h3>
                 <motion.div className='flex flex-col items-center justify-center text-lg hover:cursor-pointer sm:flex-row pt-8 gap-2 px-2 font-medium'
