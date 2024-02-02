@@ -78,15 +78,15 @@ export default function Intro() {
                         <BsArrowRight className='opacity-69 group-hover:translate-x-1 transition'/>
                     </Link>
 
-                    <a className='group bg-gray-50 px-7 py-3 flex items-center gap-2 rounded-e-full underline outline-none focus:scale-110 hover:scale-110' href="/resume.pdf" download>
+                    <a className='group bg-gray-50 px-7 py-3 flex items-center gap-2 rounded-e-full underline outline-none focus:scale-110 hover:scale-110 ' href="/resume.pdf" download>
                         Download resume 
                         <LuHardDriveDownload className='opacity-69 group-hover:translate-y-1 transition'/></a>
 
                     <a className='bg-slate-50 text-gray-800 p-4 flex items-center gap-2 rounded-rull'>
-                        <BsLinkedin />
+                        <BsLinkedin className='opacity-69 group-hover:translate-x-1 transition'/>
                     </a>
                     <a className='bg-slate-50 text-gray-800 p-4 flex items-center gap-2 text-[2.69rem] rounded-rull'>
-                        <FaGithubSquare />
+                        <FaGithubSquare className='opacity-69 group-hover:translate-x-1 transition'/>
                     </a>
                 </motion.div>
             </motion.section>
