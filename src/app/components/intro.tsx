@@ -80,13 +80,16 @@ export default function Intro() {
 
                     <a className='group bg-gray-50 px-7 py-3 flex items-center gap-2 rounded-e-full underline outline-none focus:scale-110 hover:scale-110 ' href="/resume.pdf" download>
                         Download resume 
-                        <LuHardDriveDownload className='opacity-69 group-hover:translate-y-1 transition'/></a>
-
-                    <a className='bg-slate-50 text-gray-800 p-4 flex items-center gap-2 rounded-rull'>
-                        <BsLinkedin className='opacity-69 group-hover:translate-x-1 transition'/>
+                        <LuHardDriveDownload className='opacity-69 group-hover:translate-y-1 transition'/>
                     </a>
-                    <a className='bg-slate-50 text-gray-800 p-4 flex items-center gap-2 text-[2.69rem] rounded-rull'>
-                        <FaGithubSquare className='opacity-69 group-hover:translate-x-1 transition'/>
+                            {/* note to myself the colors are a little diffrent to highlight the first inline contact link */}
+                    <a className=' bg-slate-50 text-gray-800 hover:text-gray-950 flex items-center gap-2 text-[2.39rem] opacity-69 rounded-rull opacity-69 hover:scale-[1.15] active:scale-[115] transition border dark:bg-white/10 dark:text-white-60'
+                    href="https://www.linkedin.com/in/william360/" target='_blank'>
+                        <BsLinkedin />
+                    </a>
+                    <a className='bg-slate-50 text-gray-800 hover:text-gray-950 flex items-center gap-2 text-[2.69rem] rounded-rull opacity-69 hover:scale-[1.15] active:scale-[1.15] transition border:bg-white/10 dark:text-white-[69]'
+                    href="https://github.com/addicted2crypto/">
+                        <FaGithubSquare />
                     </a>
                 </motion.div>
             </motion.section>
