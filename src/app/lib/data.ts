@@ -1,8 +1,11 @@
+
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-
+import eas from './public/eas.png';
+import coincreteImg from '@/public/coincrete.png';
+import cftmarketImg from '@public/cftmarket.png';
 
 export const links = [
   {
@@ -31,14 +34,14 @@ export const links = [
   },
 ] as const;
 
-export const experiencesData = [
+export const experienceData = [
   {
-    title: "Freelance dev",
-    location: "Earth",
+    title: "Full-Stack Lead Developer",
+    location: "Seattle",
     description:
-      "I have obtained quite a few clients all word of mouth over the last few years.",
+      "I am the lead developer for experience as a service.",
     icon: React.createElement(LuGraduationCap),
-    date: "2020",
+    date: "2020 - Present",
   },
   {
     title: "Front-End Developer",
@@ -46,11 +49,11 @@ export const experiencesData = [
     description:
       "I have created a few front end website's and dapp's in the web3 industry",
     icon: React.createElement(CgWorkAlt),
-    date: "2020 - Present",
+    date: "2021 - Present",
   },
   {
     title: "Full-Stack Developer",
-    location: "EARTH",
+    location: "Web3",
     description:
       "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
     icon: React.createElement(FaReact),
@@ -60,25 +63,26 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Local Barbor shop",
+    title: "EAS",
     description:
-      "I worked as a full-stack developer on this local buisness for a few months. The owner has helped me get many clients though word of mouth",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    // imageUrl: corpcommentImg,
+      "I was brought on as the lead dev from word of mouth to experience as a service.",
+    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma","Rust"],
+    // imageUrl: eas,
+    
   },
   {
-    title: "Degen launchpad",
+    title: "CoinCrete",
     description:
-      " I am the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    // imageUrl: "",
+      " I am the front-end developer. It has all the needed features of a web3 dapp with security at the forefront.",
+    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Solidity","JavaScript","CSS","MongoDB"],
+    // imageUrl: coincreteImg,
   },
   {
-    title: "Code4rena",
+    title: "CFT",
     description:
-      "A community bug bounty program where the best in the world compete for bounties from established protocols.",
+      "A new idea for amazing market pools and a interactive place that can be trusted.",
     tags: ["React", "Next.js", "Solidity", "Rust", "Framer","SQL"],
-    // add image for roles
+    // imageUrl: cftmarketImg,
   },
 ] as const;
 
