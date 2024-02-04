@@ -3,9 +3,10 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import easImg from '@/public/eas.png';
+// import { easImg } from "/easImg.png";
 import coincreteImg from '@/public/coincrete.png';
 import cftmarketImg from '@public/cftmarket.png';
+import { easeIn } from 'framer-motion';
 
 export const links = [
   {
@@ -50,6 +51,7 @@ export const experienceData = [
       "I have created a few front end website's and dapp's in the web3 industry",
     icon: React.createElement(CgWorkAlt),
     date: "2021 - Present",
+    
   },
   {
     title: "Full-Stack Developer",
@@ -68,14 +70,16 @@ export const projectsData = [
       "I was brought on as the lead dev from word of mouth to experience as a service.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma","Rust"],
     link: '/easImg',
+    Image: "/eas.png",
     // imageUrl: easImg,
+    
     
   },
   {
     title: "CoinCrete",
     description:
       " I am the front-end developer. It has all the needed features of a web3 dapp with security at the forefront.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Solidity","JavaScript","CSS","MongoDB"],
+    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Solidity","JavaScript","SQL","MongoDB","Postgres"],
     // imageUrl: coincreteImg,
   },
   {
