@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 import { projectsData } from '../lib/data'
 import SectionHeader from './section-header'
@@ -28,7 +29,7 @@ function Project({
   tags,
   imageUrl,
   Link,
-}) {
+}: ProjectProps) {
   return <section>
     <h3>
       {title}
@@ -41,5 +42,6 @@ function Project({
         <li key={index}>{tag}</li>
       })}
     </ul>
+    <Image src='/eas.png' alt="MyProjects" width={33} height={33} quality={86}/>
   </section>
 }

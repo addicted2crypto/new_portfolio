@@ -3,7 +3,7 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import eas from './public/eas.png';
+import easImg from '@/public/eas.png';
 import coincreteImg from '@/public/coincrete.png';
 import cftmarketImg from '@public/cftmarket.png';
 
@@ -67,8 +67,8 @@ export const projectsData = [
     description:
       "I was brought on as the lead dev from word of mouth to experience as a service.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma","Rust"],
-    link: '/eas.png',
-    URL: '/eas',
+    link: '/easImg',
+    // imageUrl: easImg,
     
   },
   {
