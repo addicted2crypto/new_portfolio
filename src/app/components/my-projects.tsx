@@ -20,11 +20,26 @@ export default function MyProjects() {
   );
 }
 
+type ProjectProps = (typeof projectsData)[number];
+
 function Project({
   title,
   description,
   tags,
   imageUrl,
+  Link,
 }) {
-  return <div>{title}</div>
+  return <section>
+    <h3>
+      {title}
+    </h3>
+    <p>
+      {description}
+    </p>
+    <ul>
+      {tags.map((tag, index) => {
+        <li key={index}>{tag}</li>
+      })}
+    </ul>
+  </section>
 }

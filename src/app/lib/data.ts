@@ -67,7 +67,8 @@ export const projectsData = [
     description:
       "I was brought on as the lead dev from word of mouth to experience as a service.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma","Rust"],
-    // imageUrl: eas,
+    link: '/eas.png',
+    URL: '/eas',
     
   },
   {
