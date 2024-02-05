@@ -23,7 +23,7 @@ export default function MyProjects() {
 
 type ProjectProps = (typeof projectsData)[number];
 
-function Project({
+ function Project({
   title,
   description,
   tags,
@@ -45,7 +45,10 @@ function Project({
       ))}
     </ul>
     </div>
-    <Image src={'/eas.png'} alt="MyProjects"  quality={88} height={350} width={350} className='absolute top-8 -right-40 w-[26.69rem] rounded-t-lg shadow-2xl '/>
+    
+      
+    <Image src={imageUrl} alt="MyProjects"  quality={88} height={350} width={350} className='absolute top-8 -right-40 w-[26.69rem] rounded-t-lg shadow-2xl '/>
+    
     {/* <Image src={'/coincrete.png'} alt="MyProjects"  quality={88} height={388} width={388} className='absolute top-8 -right-40'/> */}
   </section>
   );

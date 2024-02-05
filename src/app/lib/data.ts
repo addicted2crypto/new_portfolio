@@ -3,10 +3,11 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-// import { easImg } from "/easImg.png";
-import coincreteImg from '@/public/coincrete.png';
-import cftmarketImg from '@public/cftmarket.png';
-import { easeIn } from 'framer-motion';
+
+import  easImg  from "/public/eas.png";
+import coincreteImg from '/public/coincrete.png';
+import cftmarketImg from '/public/cftmarket.png';
+
 
 export const links = [
   {
@@ -69,9 +70,9 @@ export const projectsData = [
     description:
       "I was brought on as the lead dev from word of mouth to experience as a service.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma","Rust"],
-    link: '/easImg',
-    Image: "/eas.png",
-    // imageUrl: easImg,
+    
+    
+    imageUrl:easImg,
     
     
   },
@@ -80,16 +81,17 @@ export const projectsData = [
     description:
       " I am the front-end developer. It has all the needed features of a web3 dapp with security at the forefront.",
     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Solidity","JavaScript","SQL","MongoDB","Postgres"],
-    // imageUrl: coincreteImg,
+    imageUrl: coincreteImg,
   },
   {
     title: "CFT",
     description:
       "A new idea for amazing market pools and a interactive place that can be trusted.",
     tags: ["React", "Next.js", "Solidity", "Rust", "Framer","SQL"],
-    // imageUrl: cftmarketImg,
+    imageUrl: cftmarketImg,
   },
 ] as const;
+
 
 export const skillsData = [
   "Solidity",
