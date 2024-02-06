@@ -4,6 +4,7 @@ import SectionHeader from './section-header';
 import { motion } from 'framer-motion';
 
 export default function AboutMe() {
+  
   return (
     
     
@@ -13,6 +14,7 @@ export default function AboutMe() {
        animate={{ opacity:1, y: 0}}
        transition={{ delay: 0.175 }}
        id="about"
+       
        >
         <SectionHeader>About me</SectionHeader>
         <p className='mb-8'>
