@@ -1,6 +1,6 @@
 "use client"
 
-import { useScroll } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { projectsData } from '../lib/data';
@@ -14,15 +14,28 @@ type ProjectProps = (typeof projectsData)[number];
   imageUrl,
   // Link,
 }: ProjectProps) {
-  const ref = useRef(null);
-  useScroll({
-    target: '',
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
     // bottom of viewport crosses the bottom of screen
     offset:["0 1", "1.33 1"]
-  })
+  });
+
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.555, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.555, 1]);
 
   return ( 
-    <section className='group bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden sm:pr-8 relative sm:h-[20rem] mb-3 sm:mb-8 last:mb-0 even:pl-2 hover:bg-[#bcbbbb]'>
+    <motion.div ref={ref} 
+    style={{
+        scale:scaleProgress,
+        opacity: opacityProgress,
+        
+    }}
+    className='group mb-3 sm:mb-8 last:mb-0 '
+    >
+    <section 
+        
+        className=' bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] group-even:pl-2 hover:bg-[#bcbbbb]'>
       {/* group-even ml 18rem to push over the code opposite of jpeg on evens need to add group to parent element always */}
       <div className='pt-4 pb-6 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[55%] flex flex-col h-full group-even:ml-[18rem]'>
       <h3 className='text-2xl font-semibold '>
@@ -44,5 +57,6 @@ type ProjectProps = (typeof projectsData)[number];
     
     {/* <Image src={'/coincrete.png'} alt="MyProjects"  quality={88} height={388} width={388} className='absolute top-8 -right-40'/> */}
   </section>
+  </motion.div>
   );
 }
