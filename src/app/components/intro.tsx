@@ -1,17 +1,36 @@
 "use client";
 
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { LuHardDriveDownload } from 'react-icons/lu';
 import { FaGithubSquare } from 'react-icons/fa';
+import { useInView } from 'react-intersection-observer';
+import { useActiveSection } from '../context/active-section';
 
 
 export default function Intro() {
+
+    const {ref, inView} = useInView({
+        threshold: .5,
+      });
+      const { setActiveSection } = useActiveSection()
+    
+      useEffect(() => {
+    
+     
+     if(inView) {
+      setActiveSection("Home");
+     }
+    }, [inView, setActiveSection]);
+
+
     return (
-        <section id="home" className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[69rem]'>
+        <section 
+         ref={ref} 
+          id="home" className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[69rem]'>
             <div className='flex items-center justify-center'>
                 <div className='relative'>
                     <motion.div
