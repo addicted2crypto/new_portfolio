@@ -7,17 +7,17 @@ import { useInView } from 'react-intersection-observer'
 
 export default function AboutMe() {
   const {ref, inView} = useInView({
-    threshold: 0.69,
+    threshold: 0.39,
   });
-  const { setActiveSection } = useActiveSection()
+  const { setActiveSection, timeOfLastClick } = useActiveSection()
 
   useEffect(() => {
 
  
- if(inView) {
+ if(inView && Date.now() - timeOfLastClick > 1000) {
   setActiveSection("About");
  }
-}, [inView, setActiveSection]);
+}, [inView, setActiveSection, timeOfLastClick]);
 
   return (
     <motion.section 
