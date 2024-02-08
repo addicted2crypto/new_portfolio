@@ -1,9 +1,8 @@
 "use client"
 
 import React, { createContext, useContext, useState } from 'react';
-import { links } from '../lib/data';
+import type { SectionName } from '../lib/types';
 
-type SectionName = (typeof links)[number]["name"];
 
 type ActiveSectionProviderProps = {
    children: React.ReactNode 
@@ -24,7 +23,7 @@ export default function ActiveSectionProvider({
 
  
     const [activeSection, setActiveSection] = useState<SectionName>('Home');
-   const [timeOfLastClick, setTimeOfLastClick] = useState(0)
+   const [timeOfLastClick, setTimeOfLastClick] = useState(0);
 
    return  (
    <ActiveSectionContext.Provider value={{
@@ -32,7 +31,7 @@ export default function ActiveSectionProvider({
       setActiveSection,
       timeOfLastClick,
       setTimeOfLastClick,
-   }}
+    }}
    >
       {children}
    </ActiveSectionContext.Provider>

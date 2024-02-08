@@ -14,7 +14,7 @@ export default function AboutMe() {
   useEffect(() => {
 
  
- if(inView && Date.now() - timeOfLastClick > 1000) {
+ if (inView && Date.now() - timeOfLastClick > 1000) {
   setActiveSection("About");
  }
 }, [inView, setActiveSection, timeOfLastClick]);

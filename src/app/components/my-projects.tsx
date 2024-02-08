@@ -12,15 +12,17 @@ export default function MyProjects() {
   const {ref, inView} = useInView({
     threshold: .5,
   });
-  const { setActiveSection } = useActiveSection()
+  // import state tracking here
+  const { setActiveSection, timeOfLastClick } = useActiveSection()
 
   useEffect(() => {
 
  
- if(inView) {
+ if(inView && Date.now() - timeOfLastClick > 1000) {
   setActiveSection("Projects");
  }
-}, [inView, setActiveSection]);
+ //dependency array need all state 
+}, [inView, setActiveSection, setActiveSection]);
   return (
     
     <section ref={ref} id="projects" className='scroll-mt-28'>
