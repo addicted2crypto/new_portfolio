@@ -32,7 +32,7 @@ export default function AboutMe() {
         <SectionHeader>About me</SectionHeader>
         <p className='mb-8'>
         Welcome to my portoflio portal! My journey into the world of code began with a thrilling opportunity to test an app during my early days at my current job. 
-        The experience of providing direct feedback ignited a excitment i call the butterlies, and since then, code has become more than just a hobby. Code is my undeniable passion.
+        The experience of providing direct feedback ignited a excitment i call the butterlies&#39; and since then&#39; code has become more than just a hobby. Code is my undeniable passion.
 
 
 
@@ -41,13 +41,13 @@ export default function AboutMe() {
       
         <p className='mb-8'>
         As a full-stack developer, I thrive on the dynamic nature of software development. Embracing the ever-changing landscape and reveling pushing the limits of problem-solving,
-        I find my stride in the constant evolution of technology. Beyond the lines of code, my family holds the key to my heart, making them my primary source of inspiration and support.
+        I find my stride in the constant evolution of technology. Beyond the lines of code&#39; my family holds the key to my heart&#39; making them my primary source of inspiration and support.
         
 
         </p>
         <p className='mb-8'>
-        My commitment to learning propels me forward, as I enthusiastically explore new technologies and stay abreast of industry trends. Join me on this coding journey, where 
-innovation meets dedication&apos; and let's create something extraordinary together.
+        My commitment to learning propels me forward&rsquo; as I enthusiastically explore new technologies and stay abreast of industry trends. Join me on this coding journey&#39; where 
+        innovation meets dedication&#39; and let&apos;s create something extraordinary together.
 
         </p>
         </motion.section>
