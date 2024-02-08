@@ -9,7 +9,7 @@ export default function AboutMe() {
   const {ref, inView} = useInView({
     threshold: 0.39,
   });
-  const { setActiveSection, timeOfLastClick } = useActiveSection()
+  const { setActiveSection, timeOfLastClick, setTimeOfLastClick } = useActiveSection()
 
   useEffect(() => {
 
