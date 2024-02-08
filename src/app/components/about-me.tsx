@@ -47,7 +47,7 @@ export default function AboutMe() {
         </p>
         <p className='mb-8'>
         My commitment to learning propels me forward, as I enthusiastically explore new technologies and stay abreast of industry trends. Join me on this coding journey, where 
-innovation meets dedication, and let's create something extraordinary together.
+innovation meets dedication&apos; and let's create something extraordinary together.
 
         </p>
         </motion.section>
