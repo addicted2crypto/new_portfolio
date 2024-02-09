@@ -7,12 +7,14 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { LuHardDriveDownload } from 'react-icons/lu';
 import { FaGithubSquare } from 'react-icons/fa';
 import { useSectionTimeOutForClick } from '../lib/hooks';
+import { useActiveSection } from '../context/active-section';
 
 
 export default function Intro() {
 
 
     const { ref } = useSectionTimeOutForClick("Home", 0.6);
+    const { setActiveSection, setTimeOfLastClick } = useActiveSection();
     //*****this is a example to abstract awat into a type hook ******
     // const {ref, inView} = useInView({
     //     threshold: .5,

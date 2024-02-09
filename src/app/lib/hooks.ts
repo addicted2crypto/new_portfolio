@@ -9,7 +9,7 @@ export function useSectionTimeOutForClick( sectionName : SectionName, threshold 
         threshold,
       });
     //   import state here
-      const { setActiveSection, timeOfLastClick } = useActiveSection()
+      const { setActiveSection, timeOfLastClick } = useActiveSection();
     
       useEffect(() => {
     
@@ -23,6 +23,6 @@ export function useSectionTimeOutForClick( sectionName : SectionName, threshold 
     return {
         ref,
 
-    }
+    };
 
 }
