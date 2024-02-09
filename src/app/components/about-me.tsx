@@ -1,24 +1,11 @@
 "use client"
-import React, { useEffect } from 'react';
+import React from 'react';
 import SectionHeader from './section-header';
 import { motion } from 'framer-motion';
-import { useActiveSection } from '../context/active-section';
-import { useInView } from 'react-intersection-observer'
+import { useSectionTimeOutForClick } from '../lib/hooks';
 
 export default function AboutMe() {
-  const {ref, inView} = useInView({
-    threshold: 0.39,
-  });
-  const { setActiveSection, timeOfLastClick, setTimeOfLastClick } = useActiveSection()
-
-  useEffect(() => {
-
- 
- if (inView && Date.now() - timeOfLastClick > 1000) {
-  setActiveSection("About");
- }
-}, [inView, setActiveSection, timeOfLastClick]);
-
+  const { ref } = useSectionTimeOutForClick("About", 0.555);
   return (
     <motion.section 
        ref={ref}
@@ -29,7 +16,7 @@ export default function AboutMe() {
        id="about"
        
        >
-        <SectionHeader>About me</SectionHeader>
+         <SectionHeader>About me</SectionHeader>
         <p className='mb-8'>
         Welcome to my portoflio portal! My journey into the world of code began with a thrilling opportunity to test an app during my early days at my current job. 
         The experience of providing direct feedback ignited a excitment i call the butterlies&#39; and since then&#39; code has become more than just a hobby. Code is my undeniable passion.

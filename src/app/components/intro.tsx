@@ -1,7 +1,8 @@
 "use client";
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
+
+import { motion } from 'framer-motion';
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { LuHardDriveDownload } from 'react-icons/lu';
 import { FaGithubSquare } from 'react-icons/fa';

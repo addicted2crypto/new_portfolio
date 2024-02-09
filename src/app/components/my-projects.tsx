@@ -1,28 +1,15 @@
 "use client";
 
-import React, { useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
-import { useActiveSection } from '../context/active-section';
-import { projectsData } from '../lib/data';
+import React from 'react';
 import SectionHeader from './section-header';
 import Project from './single-project';
 
+import { projectsData } from '../lib/data';
+import { useSectionTimeOutForClick } from '../lib/hooks';
+
 
 export default function MyProjects() {
-  const {ref, inView} = useInView({
-    threshold: .5,
-  });
-  // import state tracking here
-  const { setActiveSection, timeOfLastClick } = useActiveSection()
-
-  useEffect(() => {
-
- 
- if(inView && Date.now() - timeOfLastClick > 1000) {
-  setActiveSection("Projects");
- }
- //dependency array need all state 
-}, [inView, setActiveSection, setActiveSection]);
+  const { ref } = useSectionTimeOutForClick("Projects", 0.555);
   return (
     
     <section ref={ref} id="projects" className='scroll-mt-28'>
