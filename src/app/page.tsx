@@ -3,6 +3,7 @@ import AboutMe from './components/about-me';
 import Intro from './components/intro';
 import MyProjects from './components/my-projects';
 import SectionSeperator from './components/section-seperator';
+import Skills from './context/skills';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <SectionSeperator />
       <AboutMe />
       <MyProjects />
+      <Skills />
     </main>
   );
 }
