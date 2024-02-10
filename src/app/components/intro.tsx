@@ -15,7 +15,7 @@ export default function Intro() {
 
     const { ref } = useSectionTimeOutForClick("Home", 0.6);
     const { setActiveSection, setTimeOfLastClick } = useActiveSection();
-    //*****this is a example to abstract awat into a type hook ******
+    //*****this is a example to abstract await into a type hook ******
     // const {ref, inView} = useInView({
     //     threshold: .5,
     //   });

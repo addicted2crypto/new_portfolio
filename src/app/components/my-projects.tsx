@@ -10,6 +10,7 @@ import { useSectionTimeOutForClick } from '../lib/hooks';
 
 export default function MyProjects() {
   const { ref } = useSectionTimeOutForClick("Projects", 0.555);
+  
   return (
     
     <section ref={ref} id="projects" className='scroll-mt-28'>
