@@ -41,7 +41,7 @@ export const experienceData = [
     title: "Full-Stack Lead Developer",
     location: "Seattle",
     description:
-      "I am the lead developer for experience as a service.",
+      "I am the lead developer for experience as a service. The begining of something huge.",
     icon: React.createElement(LuGraduationCap),
     date: "2020 - Present",
   },
