@@ -1,5 +1,6 @@
 import Image from "next/image";
 import AboutMe from './components/about-me';
+import Experience from './components/experience';
 import Intro from './components/intro';
 import MyProjects from './components/my-projects';
 import SectionSeperator from './components/section-seperator';
@@ -13,6 +14,7 @@ export default function Home() {
       <AboutMe />
       <MyProjects />
       <Skills />
+      <Experience />
     </main>
   );
 }
