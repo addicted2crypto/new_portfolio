@@ -97,7 +97,12 @@ export default function Intro() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.169 }}
                 >
-                    <Link href="#contact" className='group bg-gray-950 text-gray-50 text-xl px-7 py-3 flex items-center gap-2 outline-none rounded-full hover:scale-110 hover:bg-blue-950 active:scale-105 transition'>
+                    <Link href="#contact" className='group bg-gray-950 text-gray-50 text-xl px-7 py-3 flex items-center gap-2 outline-none rounded-full hover:scale-110 hover:bg-blue-950 active:scale-105 transition'
+                    onClick={() => {
+                        setActiveSection('Contact');
+                        setTimeOfLastClick(Date.now());
+                    }}
+                    >
                         Contact me
                         <BsArrowRight className='opacity-69 group-hover:translate-x-1 transition' />
                     </Link>

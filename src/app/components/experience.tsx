@@ -8,12 +8,16 @@ import {
   } from "react-vertical-timeline-component";
   import "react-vertical-timeline-component/style.min.css";
 import { experienceData } from '../lib/data';
-import { isMapIterator } from 'util/types';
-import { IconBase } from 'react-icons';
+import { useSectionTimeOutForClick } from '../lib/hooks';
 
 export default function Experience() {
-  return (
-    <section id='experience' className='scroll-mt-28 mb-28 sm:mb-40'>
+    const { ref } = useSectionTimeOutForClick("Experience")
+  
+    return (
+    <section 
+    ref={ref}
+    id='experience'
+     className='scroll-mt-28 mb-28 sm:mb-40'>
         <SectionHeader>My Experience</SectionHeader>
         
         <VerticalTimeline lineColor=''>
