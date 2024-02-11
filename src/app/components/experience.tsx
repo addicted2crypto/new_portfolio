@@ -11,19 +11,21 @@ import { experienceData } from '../lib/data';
 
 export default function Experience() {
   return (
-    <section id='experience' className='text-bold'>
+    <section id='experience' className='scroll-mt-28 mb-28 sm:mb-40'>
         <SectionHeader>My Experience</SectionHeader>
+        
         <VerticalTimeline>
             {experienceData.map((role, index) => (
                     <React.Fragment key={index}>
-                    <VerticalTimelineElement>
-                        <h3>{role.title}</h3>
+                    <VerticalTimelineElement visible={true}>
+                        <h3 className='font-semibold capitalize'>{role.title}</h3>
                         <p>{role.location}</p>
                         <p>{role.description}</p>
                     </VerticalTimelineElement>
                     </React.Fragment>
                 ))}
         </VerticalTimeline>
+        
     </section>
   );
 }
