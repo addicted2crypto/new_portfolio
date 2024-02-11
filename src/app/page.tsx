@@ -1,5 +1,6 @@
 import Image from "next/image";
 import AboutMe from './components/about-me';
+import Contact from './components/contact';
 import Experience from './components/experience';
 import Intro from './components/intro';
 import MyProjects from './components/my-projects';
@@ -15,6 +16,7 @@ export default function Home() {
       <MyProjects />
       <Skills />
       <Experience />
+      <Contact />
     </main>
   );
 }
