@@ -14,6 +14,6 @@ export const sendEmail = async (formData: FormData) => {
         from: 'onboarding@resend.dev',
         to: 'tundra2727@gmail.com',
         subject: 'Message from contact form',
-        text: 'Thank you for reaching out.',
+        text: 'Thank you for reaching out. Please don"t hesitate to ask any questions.',
     });
 };
