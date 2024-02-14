@@ -2,6 +2,8 @@
 
 import { Resend } from 'resend';
 import { getErrorMessageHelper, validateEmailString } from '../lib/utils';
+import AutoEmailForm from '../../../email-folder/auto-email-form';
+import React from 'react';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -33,8 +35,16 @@ export const sendEmail = async (formData: FormData) => {
         to: 'tundra2727@gmail.com',
         subject: 'Message from contact form',
         reply_to: email as string,
+        react: React.createElement(AutoEmailForm, {
+            message: message as string,
+            senderEmail: email as string,
+
+        })
         // text: message as string,
-        react: {}
+
+        
+        // this is the jsx form changing to use ts
+        // react: <AutoEmailForm message={message} senderEmail={email}/>
     });
     } catch (error: unknown) {
        return {
