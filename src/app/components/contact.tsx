@@ -3,14 +3,14 @@
 import React from 'react'
 import SectionHeader from './section-header'
 import { motion } from "framer-motion";
-import { SiMinutemailer } from "react-icons/si";
 import { useSectionTimeOutForClick } from '../lib/hooks';
 import { sendEmail } from '../actions/sendEmail';
+import ContactButtonSubmit from './contact-button-submit';
 
 export default function Contact() {
     const { ref } = useSectionTimeOutForClick("Contact")
    
-    
+  
 
     return (
         <motion.section
@@ -45,11 +45,11 @@ export default function Contact() {
 
             {/* //     await sendEmail(formData);
             // }}> */}
-                <input type='email' name='senderEmail'required maxLength={100} placeholder='Enter Your Email Here' className='px-6 h-13 rounded-lg border borderBlack' />
-                <textarea placeholder="Your message Here" name='senderMessage'required maxLength={1000} className='h-[13rem] my-3 rounded-lg border borderBlack p-5' />
-                <button type='submit' className='group flex items-center justify-center gap-2 h-[2rem] w-[8rem] bg-[#181818] text-[#fff] rounded-full outline-none transition-all focus:scale-110 hover:scale-110 active:scale-105 hover:bg-[#140000]'>
-                    Contact{" "}
-                    <SiMinutemailer className='text-xs opacity-80 tranistion-all group-hover:translate-x-2 group-hover:-translate-y-1' /></button>
+                <input 
+                    type='email' name='senderEmail'required maxLength={100} placeholder='Enter Your Email Here' className='px-6 h-13 rounded-lg border borderBlack' />
+                <textarea 
+                    placeholder="Your message Here" name='senderMessage'required maxLength={1000} className='h-[13rem] my-3 rounded-lg border borderBlack p-5' />
+                <ContactButtonSubmit />
 
             </form>
 

@@ -23,10 +23,10 @@ export default function AutoEmailForm({ message, senderEmail }: AutoEmailFormPro
         <Head />
         <Preview>Message from William's porfolio site</Preview>
         <Tailwind>
-            <Body>
+            <Body className='bg-[#6f6f6f] text-[#0000007b]'>
                 <Container>
-                    <Section>
-                        <Heading>This message was created from the contact from filled out on Williams Portfolio.</Heading>
+                    <Section className='bg-[#fff] borderBlack my-10 px-10 py-4 rounded-md'>
+                        <Heading className='leading-tight'>This message was created from the contact from filled out on Williams Portfolio.</Heading>
                         <Text>
                             {message}
                         </Text>
