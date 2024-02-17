@@ -49,7 +49,7 @@ export default function Contact() {
                     return;
                 }
                     // error. replaced with toast.success
-                toast.success("Your email was sent successfully. I will respond ASAP")
+                toast.success("Your email was successfully sent. I will respond ASAP")
             }}
             >
 
