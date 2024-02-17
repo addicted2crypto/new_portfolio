@@ -78,18 +78,18 @@ export default function Intro() {
 
                 <h1>
                     <span className='font-semi-bold italic text-center'>
-
-                        I love to code. <span className='text-2xl'>🧑‍💻</span>
+                    
+                    I am a full-stack developer who<span className='font-bold text-5xl m-2'>loves</span> to code. 
                     </span>
                 </h1>
                 <h2>
-                    <span className='font-bold italic '>
-                        I am a full-stack developer, who loves trying new tech stacks.
+                    <span className='font-bold italic'>
+                         Problem-Solving Connoisseur.
                     </span>
                 </h2>
                 <h3>
                     <span className='font-semi-bold text-xl'>
-                        I enjoy difficult problems to be <span className='bg-[#c9b2e4] rounded-full underline'>solved</span> with code.
+                        The ever changing world of software development is my passion. I enjoy problem<span className='bg-[#3a1e59] m-2 rounded-tl rounded-br underline'>solving</span> with code.
                     </span>
                 </h3>
                 <motion.div className='flex flex-col items-center justify-center text-lg hover:cursor-pointer sm:flex-row pt-8 gap-2 px-2 font-medium'
@@ -107,16 +107,16 @@ export default function Intro() {
                         <BsArrowRight className='opacity-69 group-hover:translate-x-1 transition' />
                     </Link>
 
-                    <a className='group bg-gray-50 px-7 py-3 flex items-center gap-2 rounded-e-full underline outline-none focus:scale-110 hover:scale-110 ' href="/resume.pdf" download>
+                    <a className='group bg-gray-50 px-7 py-3 flex items-center gap-2 rounded-e-full underline outline-none focus:scale-110 hover:scale-110 dark:bg-white/10 dark:text-white/80' href="/resume.pdf" download>
                         Download resume
                         <LuHardDriveDownload className='opacity-69 group-hover:translate-y-1 transition' />
                     </a>
                     {/* note to myself the colors are a little diffrent to highlight the first inline contact link */}
-                    <a className=' bg-slate-50 text-gray-800 hover:text-gray-950 flex items-center gap-2 text-[2.39rem] opacity-69 rounded-rull opacity-69 hover:scale-[1.15] active:scale-[115] transition border dark:bg-white/10 dark:text-white-60'
+                    <a className=' bg-slate-50 text-gray-700 hover:text-gray-950 flex items-center gap-2 text-[2.39rem] opacity-69 rounded-rull opacity-69 hover:scale-[1.15] active:scale-[115] transition border dark:bg-white/10 dark:text-white/50'
                         href="https://www.linkedin.com/in/william360/" target='_blank'>
                         <BsLinkedin />
                     </a>
-                    <a className='bg-slate-50 text-gray-800 hover:text-gray-950 flex items-center gap-2 text-[2.69rem] rounded-rull opacity-69 hover:scale-[1.15] active:scale-[1.15] transition border:bg-white/10 dark:text-white-[69]'
+                    <a className='bg-slate-50 text-gray-700 hover:text-gray-950 flex items-center gap-2 text-[2.69rem] rounded-rull opacity-69 hover:scale-[1.15] active:scale-[1.15] transition border:bg-white/10 dark:bg-white/10 dark:text-white/50'
                         href="https://github.com/addicted2crypto/">
                         <FaGithubSquare />
                     </a>
