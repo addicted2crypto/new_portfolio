@@ -6,6 +6,7 @@ import "./globals.css";
 import { Toaster } from 'react-hot-toast';
 import Footer from './components/footer';
 import Toggledarkmode from './components/toggle-darkmode';
+import DarkContextProvider from './context/darkmode-context';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,16 +28,15 @@ export default function RootLayout({
         </div>
         <div className='bg-[#c1d7fe] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75] md:left[-33rem] lg:left[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#5493ff]'>
         </div>
-        {/* <ThemeContextProvider */}
-        <ActiveSectionProvider>
-       <Header />
-        {children}
-        </ActiveSectionProvider>
 
-        <Toaster position='top-center'/>
-        <Footer />
-        <Toggledarkmode />
-        </body>
+        <DarkContextProvider>
+         <ActiveSectionProvider>
+          <Header />
+           {children}
+         </ActiveSectionProvider>
+         <Toggledarkmode />
+        </DarkContextProvider>
+       </body>
     </html>
   );
 }

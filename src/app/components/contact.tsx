@@ -36,13 +36,13 @@ export default function Contact() {
                 Contact Me Now
 
             </SectionHeader>
-            <p className='text-[#383838] -mt-4'>
+            <p className='text-[#383838] -mt-4 dark:text-[#d6d6d6]'>
                 Please contact me directly at
-                <a className='underline text-[#0059fe]' href="mailto:williamsapplianceconsult@gmail.com">
+                <a className='underline text-[#0059fe] dark:text-[#7290fc]' href="mailto:williamsapplianceconsult@gmail.com">
                    {" "}  williamsapplianceconsult@gmail.com
                 </a> or by clicking this form.
             </p>
-            <form className='mt-10 flex flex-col' action={async (formData) => {
+            <form className='mt-10 flex flex-col dark:text-[#080808]' action={async (formData) => {
                 const { emailData, error } = await sendEmail(formData);
                 if (error) {
                     toast.error(error);
@@ -57,13 +57,13 @@ export default function Contact() {
                     type='email' name='senderEmail'
                     required maxLength={100}
                     placeholder='Enter Your Email Here'
-                    className='px-6 h-13 rounded-lg border borderBlack'
+                    className='px-6 h-13 rounded-lg border borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none'
                 />
                 <textarea
                     placeholder="Your message Here"
                     name='senderMessage'
                     required maxLength={1000}
-                    className='h-[13rem] my-3 rounded-lg border borderBlack p-5'
+                    className='h-[13rem] my-3 rounded-lg border borderBlack p-5 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none'
                 />
                 <ContactButtonSubmit />
 

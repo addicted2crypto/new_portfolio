@@ -68,7 +68,7 @@ export const projectsData = [
   {
     title: "EAS",
     description:
-      "I was brought on as the lead dev from word of mouth to experience as a service.",
+      "I was brought on as the lead dev. Word of mouth from previous projects led me to EAS.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma", "Rust"],
 
 

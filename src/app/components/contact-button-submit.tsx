@@ -6,7 +6,7 @@ export default function ContactButtonSubmit() {
     const {pending} = useFormStatus();
 
   return (
-    <button type='submit' className='group flex items-center justify-center gap-2 h-[2rem] w-[8rem] bg-[#181818] text-[#fff] rounded-full outline-none transition-all focus:scale-110 hover:scale-110 active:scale-105 hover:bg-[#140000] disabled: scale-100 disabled:bg-opacity-55'
+    <button type='submit' className='group flex items-center justify-center gap-2 h-[2rem] w-[8rem] bg-[#181818] text-[#fff] rounded-full outline-none transition-all focus:scale-110 hover:scale-110 active:scale-105 hover:bg-[#140000] disabled: scale-100 disabled:bg-opacity-55 dark:bg-white dark:bg-opacity-20'
     disabled={pending}
     >
         {
