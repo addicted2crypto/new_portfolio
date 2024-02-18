@@ -1,4 +1,11 @@
 Create a dynamic porfolio to showcase your skills as a valued dev.
+This is my dynamic portfolio where I showcase my current projects on an interactive website.
+
+
+
+
+
+
 
 ## Getting Started
 
