@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import { Toaster } from 'react-hot-toast';
 import AboutMe from './components/about-me';
 import Contact from './components/contact';

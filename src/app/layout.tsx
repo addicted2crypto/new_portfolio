@@ -3,8 +3,6 @@ import { Inter } from "next/font/google";
 import ActiveSectionProvider from './context/active-section';
 import Header from './components/header';
 import "./globals.css";
-import { Toaster } from 'react-hot-toast';
-import Footer from './components/footer';
 import Toggledarkmode from './components/toggle-darkmode';
 import DarkContextProvider from './context/darkmode-context';
 
