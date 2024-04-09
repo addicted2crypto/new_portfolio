@@ -39,7 +39,7 @@ export default function Contact() {
             <p className='text-[#383838] -mt-4 dark:text-[#d6d6d6]'>
                 Please contact me directly at
                 <a className='underline text-[#0059fe] dark:text-[#7290fc]' href="mailto:williamsapplianceconsult@gmail.com">
-                   {" "}  williamsapplianceconsult@gmail.com
+                   {" "}  williamsapplianceconsult@gmail.com 
                 </a> or by clicking this form.
             </p>
             <form className='mt-10 flex flex-col dark:text-[#080808]' action={async (formData) => {
