@@ -7,6 +7,7 @@ import { GiOpenTreasureChest } from "react-icons/gi";
 import easImg from "/public/eas.png";
 import coincreteImg from '/public/coincrete.png';
 import cftmarketImg from '/public/cftmarket.png';
+import commandImg from '/public/command.png';
 
 
 export const links = [
@@ -75,6 +76,13 @@ export const projectsData = [
     imageUrl: easImg,
 
 
+  },
+  {
+    title: "Command Center",
+    description: 
+      "I was brought on as the lead developer. We are building a full-stack web3 wallet tracker. We will implement real time data that show wallet holdings across chains. Defi options across chains will be implemented.",
+      tags: ["React", "TypeScript", "Next.js", "Tailwind", "Solidity", "Postgres", "AI-LLM"],
+      imageUrl:  commandImg,
   },
   {
     title: "CoinCrete",
