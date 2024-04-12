@@ -14,7 +14,7 @@ export default function MyProjects() {
   return (
     
     <section ref={ref} id="projects" className='scroll-mt-28 mb-28'>
-        <SectionHeader>My Projects</SectionHeader>
+        <SectionHeader>My Developer Roles</SectionHeader>
         <div>
           {
             projectsData.map((project, index ) => (
