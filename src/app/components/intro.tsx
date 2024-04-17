@@ -79,7 +79,7 @@ export default function Intro() {
                 <h1>
                     <span className='font-semi-bold italic text-center'>
                     
-                    I am a full-stack developer who<span className='font-bold text-5xl m-2'>loves</span> to code for fun! 
+                    I am a software engineer who creates full-stack web applications and who<span className='font-bold text-5xl m-2'>loves</span> to code in my freetime as well! 
                     </span>
                 </h1>
                 <h2>

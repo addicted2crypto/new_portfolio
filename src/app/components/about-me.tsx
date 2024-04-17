@@ -27,7 +27,7 @@ export default function AboutMe() {
         </p>
       
         <p className='mb-8'>
-        As a full-stack developer. I thrive on the dynamic nature of software development. Embracing the ever-changing landscape and reveling pushing the limits of problem-solving.
+        As a software engineer. I thrive on the dynamic nature of software development. Embracing the ever-changing landscape and reveling pushing the limits of problem-solving.
         I find my stride in the constant evolution of technology. Beyond the lines of code&#39; my family holds the key to my heart&#39; making them my primary source of inspiration and support.
         
 
