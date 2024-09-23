@@ -79,7 +79,7 @@ export const projectsData = [
     title: 'Appliance Consult',
     description:
       "Full stack app. Secure 100 years of appliance repair advise with a click of a button. Storing all data in a DB to incorperate a AI solution",
-      tags: ["React", "Next.js",  "Tailwind",  "Rust", "MongoDB", "API", "LLM", "AI", "Prisma"],
+      tags: ["React", "Next.js",  "Tailwind",  "Rust", "MongoDB", "API", "LLM", "AI", "Prisma", "Stripe", "ORM", "Nodejs", "Drizzle"],
        imageUrl: applianceImg,
   },
   {
