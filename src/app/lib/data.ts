@@ -71,7 +71,7 @@ export const projectsData = [
     title: 'Appliance Consult',
     description:
       "Full stack app. Secure 100 years of appliance repair advise with a click of a button. Storing all data in a DB to incorperate a AI solution",
-      tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma", "Rust", "MongoDB", "API", "LLM", "AI"],
+      tags: ["React", "Next.js",  "Tailwind",  "Rust", "MongoDB", "API", "LLM", "AI", "Prisma"],
        imageUrl: applianceImg,
   },
   {
@@ -88,7 +88,7 @@ export const projectsData = [
   {
     title: "Command Center",
     description: 
-      "I was brought on as the lead developer. We are building a full-stack web3 wallet tracker. We will implement real time data that show wallet holdings across chains. Defi options across chains will be implemented.",
+      "I was brought on as the lead developer. We are building a full-stack app with a indexed web3 wallet tracker. We will implement real time data that show wallet holdings across chains. Defi options across chains will be implemented.",
       tags: ["React", "TypeScript", "Next.js", "Tailwind", "Solidity", "Postgres", "AI-LLM"],
       imageUrl:  commandImg,
   },
