@@ -40,6 +40,14 @@ export const links = [
 
 export const experienceData = [
   {
+    title: "Boss",
+    location: "WorldWide",
+    description:
+    "I am the talented lead dev. I am the idea maker. I am testing payment paywalls and authorized routes for paid clients. Data collection MATTERS.",
+    icon: React.createElement(FaReact),
+    date: "oct 2022 - Present"
+  },
+  {
     title: "Full-Stack Lead Developer",
     location: "Seattle",
     description:
@@ -51,7 +59,7 @@ export const experienceData = [
     title: "Front-End Developer",
     location: "Web3",
     description:
-      "I have created multipe diffrent front ends and back ends for projects. Working with leading dapp's in the web3 industry",
+      "I have created multipe diffrent front ends and back ends for many projects through word of mouth. Working with leading dapp's in the web3 industry",
     icon: React.createElement(FaReact),
     date: "2021 - Present",
 
