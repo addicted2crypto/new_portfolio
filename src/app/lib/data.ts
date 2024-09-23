@@ -8,6 +8,7 @@ import easImg from "/public/eas.png";
 import coincreteImg from '/public/coincrete.png';
 import cftmarketImg from '/public/cftmarket.png';
 import commandImg from '/public/command.png';
+import applianceImg from '/public/appliance.png';
 
 
 export const links = [
@@ -50,7 +51,7 @@ export const experienceData = [
     title: "Front-End Developer",
     location: "Web3",
     description:
-      "I have created multipe diffrent front ends for a few projects. Working with leading dapp's in the web3 industry",
+      "I have created multipe diffrent front ends and back ends for projects. Working with leading dapp's in the web3 industry",
     icon: React.createElement(FaReact),
     date: "2021 - Present",
 
@@ -59,7 +60,7 @@ export const experienceData = [
     title: "Full-Stack Developer",
     location: "Web3",
     description:
-      "I'm now a full-stack developer working as a freelancer. Security focused!🔐 Refrences needed to work together in web3.",
+      "I'm  a full-stack developer working as a freelancer. Security focused!🔐 Refrences are needed to secure work in web3.",
     icon: React.createElement(GiOpenTreasureChest),
     date: "2020 - present",
   },
@@ -67,9 +68,16 @@ export const experienceData = [
 
 export const projectsData = [
   {
+    title: 'Appliance Consult',
+    description:
+      "Full stack app. Secure 100 years of appliance repair advise with a click of a button. Storing all data in a DB to incorperate a AI solution",
+      tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma", "Rust", "MongoDB", "API", "LLM", "AI"],
+       imageUrl: applianceImg,
+  },
+  {
     title: "EAS",
     description:
-      "I was brought on as the lead dev. Word of mouth from previous projects led me to EAS.",
+      "I was brought on as the lead dev. Word of mouth from previous projects led me to become the lead dev for EAS.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma", "Rust"],
 
 
