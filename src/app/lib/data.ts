@@ -102,8 +102,8 @@ export const projectsData = [
   {
     title: "CFT",
     description:
-      "A new idea for amazing market pools and a interactive place that can be trusted.",
-    tags: ["React", "Next.js", "Solidity", "Rust", "Framer", "SQL"],
+      "A new idea for amazing market pools and a interactive place that can be trusted. Indexing all transactions on a local RPC",
+    tags: ["React", "Next.js", "Solidity", "Rust", "Framer", "SQL", "RPC", "NODE"],
     imageUrl: cftmarketImg,
   },
 ] as const;
