@@ -68,7 +68,7 @@ export const experienceData = [
     title: "Full-Stack Developer",
     location: "Web3",
     description:
-      "I'm  a full-stack developer working as a freelancer. Security focused!🔐 Refrences are needed to secure work in web3.",
+      "I'm  a full-stack developer working as a freelancer. Security focused!🔐 References are needed to secure work in web3. I'm building a lasting name for myself and my company!",
     icon: React.createElement(GiOpenTreasureChest),
     date: "2020 - present",
   },
