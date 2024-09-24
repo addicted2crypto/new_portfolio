@@ -2,6 +2,8 @@
 import React from "react";
 import { FaReact } from "react-icons/fa";
 import { GiComputing } from "react-icons/gi";
+import { BiSolidFridge } from "react-icons/bi";
+
 import { GiOpenTreasureChest } from "react-icons/gi";
 
 import easImg from "/public/eas.png";
@@ -44,7 +46,7 @@ export const experienceData = [
     location: "WorldWide",
     description:
     "I am the talented lead dev. I am the idea maker. I am testing payment paywalls and authorized routes for paid clients. Data collection MATTERS.",
-    icon: React.createElement(FaReact),
+    icon: React.createElement(BiSolidFridge),
     date: "oct 2022 - Present"
   },
   {
