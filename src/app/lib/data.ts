@@ -58,10 +58,10 @@ export const experienceData = [
     date: "2020 - Present",
   },
   {
-    title: "Front-End Developer",
+    title: "Blockchain web3 team lead",
     location: "Web3",
     description:
-      "I have created multipe diffrent front ends and back ends for many projects through word of mouth. Working with leading dapp's in the web3 industry",
+      "I have created multipe diffrent front  and back ends  that communicate with the blockchain for many projects. Working with leading dapp's in the web3 industry",
     icon: React.createElement(FaReact),
     date: "2021 - Present",
 
@@ -88,7 +88,7 @@ export const projectsData = [
     title: "EAS",
     description:
       "I was brought on as the lead dev. Word of mouth from previous projects led me to become the lead dev for EAS.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma", "Rust"],
+    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma", "Rust","Stripe", "Blockchain"],
 
 
     imageUrl: easImg,
