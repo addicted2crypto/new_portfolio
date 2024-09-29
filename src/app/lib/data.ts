@@ -61,7 +61,7 @@ export const experienceData = [
     title: "Blockchain web3 team lead",
     location: "Web3",
     description:
-      "I have created multipe diffrent front  and back ends  that communicate with the blockchain for many projects. Working with leading dapp's in the web3 industry",
+      "I have created multiple different front  and back ends  that communicate with the blockchain for many projects. Working with leading dapp's in the web3 industry",
     icon: React.createElement(FaReact),
     date: "2021 - Present",
 
