@@ -88,7 +88,7 @@ export const projectsData = [
     title: "EAS",
     description:
       "I was brought on as the lead dev. Word of mouth from previous projects led me to become the lead dev for EAS.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma", "Rust","Stripe", "Blockchain"],
+    tags: ["React", "Next.js", "MongoDB", "Tailwind", "NodeJS", "Rust","Stripe", "Blockchain"],
 
 
     imageUrl: easImg,
@@ -99,7 +99,7 @@ export const projectsData = [
     title: "Command Center",
     description: 
       "I was brought on as the lead developer. We are building a full-stack app with a indexed web3 wallet tracker. We will implement real time data that show wallet holdings across chains. Defi options across chains will be implemented.",
-      tags: ["React", "TypeScript", "Next.js", "Tailwind", "Solidity", "Postgres", "AI-LLM"],
+      tags: ["React", "TypeScript", "Next.js", "Tailwind", "Solidity", "Postgres", "AI-LLM", "NodeJS"],
       imageUrl:  commandImg,
   },
   {
