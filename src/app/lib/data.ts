@@ -98,7 +98,7 @@ export const projectsData = [
   {
     title: "Command Center",
     description: 
-      "I was brought on as the lead developer. We are building a full-stack app with a indexed web3 wallet tracker. We will implement real time data that show wallet holdings across chains. Defi options across chains will be implemented.",
+      "I was brought on as the lead developer. We are building a full-stack app with the capability of indexing as a web3 wallet tracker. We will implement real time data that show wallet holdings across chains. Defi options across chains will be implemented.",
       tags: ["React", "TypeScript", "Next.js", "Tailwind", "Solidity", "Postgres", "AI-LLM", "NodeJS"],
       imageUrl:  commandImg,
   },
@@ -113,7 +113,7 @@ export const projectsData = [
     title: "CFT",
     description:
       "A new idea for amazing market pools and a interactive place that can be trusted. Indexing all transactions on a local RPC",
-    tags: ["React", "Next.js", "Solidity", "Rust", "Framer", "SQL", "RPC", "NODE"],
+    tags: ["React", "Next.js", "Solidity", "Rust", "Framer", "SQL", "RPC", "NODE", "SQL"],
     imageUrl: cftmarketImg,
   },
 ] as const;
