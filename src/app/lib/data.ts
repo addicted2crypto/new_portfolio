@@ -11,6 +11,7 @@ import coincreteImg from '/public/coincrete.png';
 import cftmarketImg from '/public/cftmarket.png';
 import commandImg from '/public/command.png';
 import applianceImg from '/public/appliance.png';
+import agentImg from '/public/agent.png';
 
 
 export const links = [
@@ -77,6 +78,13 @@ export const experienceData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: 'AI_Additions',
+    description: 
+    "We are facilitating AI_agents to any website. Any tech stack. Add a AI-Bot anywhere and with any api that fits the clients.",
+    tags: ["C#", ".net", "Python", "AI", "LLM", "RAG", "Opensource", "JAVA", "JS", "CSS", "HTML"],
+    imageUrl: agentImg,
+  },
   {
     title: 'Appliance Consult',
     description:
