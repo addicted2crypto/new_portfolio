@@ -139,6 +139,8 @@ export const skillsData = [
   "Next.js",
   "HTML",
   "CSS",
+  "LLM",
+  "CLI",
   "Rust",
   "Golang",
   "Solidity",
