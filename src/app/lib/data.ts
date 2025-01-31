@@ -82,7 +82,7 @@ export const projectsData = [
     title: 'Anything_AI',
     description: 
     "We are facilitating AI_agents to any website. Any tech stack. Add a AI-Bot anywhere and with any api that fits the clients.",
-    tags: ["C#", ".net", "Python", "AI", "LLM", "RAG", "Opensource", "JAVA", "JS", "CSS", "HTML"],
+    tags: ["C#", ".net", "Python", "JavaScript", "HTML/CSS", "AI", "LLM", "RAG", "Opensource", "JAVA", "JS", "CSS", "HTML", "Fine-Tune"],
     imageUrl: agentImg,
   },
   {
