@@ -79,7 +79,7 @@ export const experienceData = [
 
 export const projectsData = [
   {
-    title: 'AI_Additions',
+    title: 'Anything_AI',
     description: 
     "We are facilitating AI_agents to any website. Any tech stack. Add a AI-Bot anywhere and with any api that fits the clients.",
     tags: ["C#", ".net", "Python", "AI", "LLM", "RAG", "Opensource", "JAVA", "JS", "CSS", "HTML"],
