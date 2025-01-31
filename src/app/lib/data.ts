@@ -113,7 +113,7 @@ export const projectsData = [
   {
     title: "CoinCrete",
     description:
-      " I am the front-end developer. We are creating from scratch all the needed features of a web3 dapp with security at the forefront.",
+      "A full-stack developer who joined a growing team of devs. We are creating from scratch all the needed features of a web3 dapp with security at the forefront.",
     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Solidity", "JavaScript", "SQL", "MongoDB", "Postgres"],
     imageUrl: coincreteImg,
   },
