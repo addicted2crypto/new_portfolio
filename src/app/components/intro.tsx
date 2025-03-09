@@ -65,12 +65,12 @@ export default function Intro() {
                 <h1>
                     <span className='font-semi-bold italic text-center'>
                     
-                    I am a software engineer who creates mobile and web applications. I weirdly <span className='font-bold text-5xl m-2'>love</span> to code in my freetime! 
+                    I am a software engineer. I love creating mobile and web applications. I weirdly <span className='font-bold text-5xl m-2'>love</span> to code in my freetime! 
                     </span>
                 </h1>
                 <h2>
-                    <span className='font-bold italic'>
-                         Problem-Solving Connoisseur.
+                    <span className='font-bold text-3xl'>
+                        A Problem-Solving Connoisseur.
                     </span>
                 </h2>
                 <h3>
