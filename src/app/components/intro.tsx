@@ -15,21 +15,7 @@ export default function Intro() {
 
     const { ref } = useSectionTimeOutForClick("Home", 0.6);
     const { setActiveSection, setTimeOfLastClick } = useActiveSection();
-    //*****this is a example to abstract await into a type hook ******
-    // const {ref, inView} = useInView({
-    //     threshold: .5,
-    //   });
-    // //   import state here
-    //   const { setActiveSection, timeOfLastClick } = useActiveSection()
-
-    //   useEffect(() => {
-
-
-    //  if(inView && Date.now() - timeOfLastClick > 1000) {
-    //   setActiveSection("Home");
-    //  }
-    // //  state array entered here dependency array
-    // }, [inView, setActiveSection, timeOfLastClick]);
+  
 
 
     return (
@@ -79,7 +65,7 @@ export default function Intro() {
                 <h1>
                     <span className='font-semi-bold italic text-center'>
                     
-                    I am a software engineer who creates full-stack web applications and who<span className='font-bold text-5xl m-2'>loves</span> to code in my freetime as well! 
+                    I am a software engineer who creates mobile and web applications. I weirdly <span className='font-bold text-5xl m-2'>love</span> to code in my freetime! 
                     </span>
                 </h1>
                 <h2>
