@@ -100,7 +100,7 @@ export default function Intro() {
                         Download resume
                         <LuHardDriveDownload className='opacity-69 group-hover:translate-y-1 transition' />
                     </a>
-                    {/* note to myself the colors are a little diffrent to highlight the first inline contact link */}
+                    
                     <a className=' bg-slate-50 text-gray-700 hover:text-gray-950 flex items-center gap-2 text-[2.39rem] opacity-69 rounded-rull opacity-69 hover:scale-[1.15] active:scale-[115] transition border dark:bg-white/10 dark:text-white/50'
                         href="https://www.linkedin.com/in/william360/" target='_blank'>
                         <BsLinkedin />
