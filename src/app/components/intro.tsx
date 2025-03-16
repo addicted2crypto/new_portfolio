@@ -96,7 +96,7 @@ export default function Intro() {
                         <BsArrowRight className='opacity-69 group-hover:translate-x-1 transition' />
                     </Link>
 
-                    <a className='group bg-gray-50 px-7 py-3 flex items-center gap-2 rounded-e-full underline outline-none focus:scale-110 hover:scale-110 dark:bg-white/10 dark:text-white/80' href="/MarchRes.pdf" download>
+                    <a className='group bg-gray-50 px-7 py-3 flex items-center gap-2 rounded-e-full underline outline-none focus:scale-110 hover:scale-110 dark:bg-white/10 dark:text-white/80' href="/FixedErrorsResume.pdf" download>
                         Download resume
                         <LuHardDriveDownload className='opacity-69 group-hover:translate-y-1 transition' />
                     </a>
