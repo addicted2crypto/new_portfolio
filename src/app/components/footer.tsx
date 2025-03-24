@@ -7,7 +7,7 @@ export default function Footer() {
         &copy; 2025. All rights reserved. We support all builds as an integral part of the developer team. Security is always our top priority.
         </small>
         <p className='text-xs'>
-            <span className='font-semibold '>About my portfolio website:</span> built with React, Next.js, TypeScript, Tailwind, Framer Motion, React Email with Resend email support, Hosting on Vercel.
+            <span className='font-semibold '>About my portfolio website:</span> built with React, Next.js, TypeScript, Tailwind, Framer Motion, React Email with Resend email support, Hosted on Vercel.
         </p>
      </footer>
   )
