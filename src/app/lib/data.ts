@@ -106,7 +106,7 @@ export const projectsData = [
   {
     title: "Command Center",
     description: 
-      "I was brought on as the lead developer. We are building a full-stack app with the capability of indexing as a web3 wallet tracker. We will implement real time data that show wallet holdings across chains. Defi options across chains will be implemented.",
+      "I was brought in to lead the team as the lead developer. We are building a full-stack app with the capability of indexing as a web3 wallet tracker. We will implement real time data that show wallet holdings across chains. Defi options across chains will be implemented.",
       tags: ["React", "TypeScript", "Next.js", "Tailwind", "Solidity", "Postgres", "AI-LLM", "NodeJS"],
       imageUrl:  commandImg,
   },
