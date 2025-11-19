@@ -18,7 +18,7 @@ export default function AboutMe() {
        >
          <SectionHeader>About me</SectionHeader>
         <p className='mb-8'>
-        Welcome to my portoflio portal! My journey into the world of code began with a thrilling opportunity to test our ai implementation in early 2016 at my current job. 
+        Welcome to my portfolio portal! My journey into the world of code began with a thrilling opportunity to test our ai implementation in early 2016 at my current job. 
         The experience of providing direct feedback ignited a excitment i call the butterflies and since then code has become more than just a hobby. Code is my undeniable passion.
 
 

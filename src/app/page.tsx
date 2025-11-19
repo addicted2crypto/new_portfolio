@@ -8,6 +8,7 @@ import Intro from './components/intro';
 import MyProjects from './components/my-projects';
 import SectionSeperator from './components/section-seperator';
 import Skills from './context/skills';
+import Certifications from './components/certifications';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <MyProjects />
       <Skills />
       <Experience />
+      <Certifications />
       <Contact />
       <Toaster position='top-center'/>
         <Footer />

@@ -12,6 +12,7 @@ import cftmarketImg from '/public/cftmarket.png';
 import commandImg from '/public/command.png';
 import applianceImg from '/public/appliance.png';
 import agentImg from '/public/agent.png';
+import learningtutorImg from '/public/learningtutor.png';
 
 
 export const links = [
@@ -34,6 +35,10 @@ export const links = [
   {
     name: "Experience",
     hash: "#experience",
+  },
+  {
+    name: "Certifications",
+    hash: "#certifications",
   },
   {
     name: "Contact",
@@ -79,8 +84,16 @@ export const experienceData = [
 
 export const projectsData = [
   {
+    title: 'Learning Tutor',
+    description:
+    "An AI-powered personalized learning platform that curates adaptive learning plans for any subject. Built to help me achieve my CompTIA Security+ certification, this full-stack application leverages LLM technology to create customized educational pathways and intelligent tutoring capabilities.",
+    tags: ["React", "Next.js", "Tailwind", "AI", "LLM", "TypeScript", "Node.js", "API", "Full-Stack"],
+    imageUrl: learningtutorImg,
+    demoUrl: "https://thelearningtutorapp.vercel.app",
+  },
+  {
     title: 'Anything_AI',
-    description: 
+    description:
     "We are facilitating AI_agents to any website. Any tech stack. Add a AI-Bot anywhere and with any api that fits the clients.",
     tags: ["C#", ".net", "Python", "JavaScript", "HTML/CSS", "AI", "LLM", "RAG", "Opensource", "JAVA", "JS", "CSS", "HTML", "Fine-Tune"],
     imageUrl: agentImg,
@@ -145,8 +158,6 @@ export const skillsData = [
   "Golang",
   "Solidity",
   "Node.js",
-  "Python",
-  "Git",
   "Tailwind",
   "Prisma",
   "MongoDB",
@@ -157,4 +168,15 @@ export const skillsData = [
   "PostgreSQL",
   "Django",
   "Framer Motion",
+] as const;
+
+export const certificationsData = [
+  {
+    name: "CompTIA Security+ Certified",
+    issuer: "CompTIA",
+    date: "October 28, 2025",
+    credentialId: "COMP001022876354",
+    expirationDate: "October 24, 2028",
+    credentialUrl: "http://verify.CompTIA.org",
+  },
 ] as const;

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import ActiveSectionProvider from './context/active-section';
 import Header from './components/header';
-import "./globals.css";
+import './globals.css';
 import Toggledarkmode from './components/toggle-darkmode';
 import DarkContextProvider from './context/darkmode-context';
 

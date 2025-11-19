@@ -12,7 +12,7 @@ type ProjectProps = (typeof projectsData)[number];
   description,
   tags,
   imageUrl,
-  // Link,
+  demoUrl,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -46,6 +46,16 @@ type ProjectProps = (typeof projectsData)[number];
       <p className='mt-2 leading-relaxed text-gray-700 dark:text-white/70'>
        {description}
       </p>
+      {demoUrl && (
+        <a
+          href={demoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className='mt-3 inline-block w-fit px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-700 hover:scale-105 transition dark:bg-white/10 dark:hover:bg-white/20'
+        >
+          View Live Demo →
+        </a>
+      )}
     <ul className='flex flex-wrap mt-4 gap-2 sm:mt-auto'>
       {tags.map((tag, index) => (
         <li className='bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full
