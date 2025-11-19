@@ -98,7 +98,7 @@ export const projectsData = [
     "An AI-powered personalized learning platform that curates adaptive learning plans for any subject. Built to help me achieve my CompTIA Security+ certification, this full-stack application leverages LLM technology to create customized educational pathways and intelligent tutoring capabilities.",
     tags: ["React", "Next.js", "Tailwind", "AI", "LLM", "TypeScript", "Node.js", "API", "Full-Stack"],
     imageUrl: learningtutorImg,
-    demoUrl: "https://thelearningtutorapp.vercel.app",
+    demoUrl: "https://tutorlearningapp.vercel.app/",
   },
   {
     title: 'Anything_AI',
