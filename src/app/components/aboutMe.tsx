@@ -18,7 +18,7 @@ export default function AboutMe() {
        >
          <SectionHeader>About me</SectionHeader>
         <p className='mb-8'>
-        Welcome to my portfolio! My journey into the world of code began with an exciting opportunity to test AI implementation in early 2016. The experience of providing direct feedback ignited an excitement that hasn't faded since. Code has become more than just a hobby—it's my undeniable passion.
+        Welcome to my portfolio! My journey into the world of code began with an exciting opportunity to test AI implementation in early 2016. The experience of providing direct feedback ignited an excitement that hasn&apos;t faded since. Code has become more than just a hobby—it&apos;s my undeniable passion.
         </p>
 
         <p className='mb-8'>
@@ -26,7 +26,7 @@ export default function AboutMe() {
         </p>
 
         <p className='mb-8'>
-        My commitment to learning propels me forward as I enthusiastically explore new technologies and keep up with industry trends. Join me on this coding journey where innovation meets dedication, and let's create something extraordinary together.
+        My commitment to learning propels me forward as I enthusiastically explore new technologies and keep up with industry trends. Join me on this coding journey where innovation meets dedication, and let&apos;s create something extraordinary together.
         </p>
         </motion.section>
         
