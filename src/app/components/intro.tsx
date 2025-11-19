@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { LuHardDriveDownload } from 'react-icons/lu';
 import { FaGithubSquare } from 'react-icons/fa';
+import { HiDocumentText } from 'react-icons/hi';
 import { useSectionTimeOutForClick } from '../lib/hooks';
 import { useActiveSection } from '../context/active-section';
 
@@ -60,25 +61,25 @@ export default function Intro() {
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
             >
-                <span className='font-bold text-3xl'>Hello, my name is William</span>
+                <span className='font-bold text-3xl'>Hello, I'm William</span>
 
                 <h1>
                     <span className='font-semi-bold italic text-center'>
-                    
-                    I am a software engineer.
+
+                    I am a full-stack software engineer.
                     <h3>
-                    I love creating mobile and web applications. I weirdly <span className='font-bold text-5xl m-2'>love</span> to code in my freetime!
-                        </h3> 
+                    I build scalable web applications with <span className='font-bold text-5xl m-2'>passion</span> and precision.
+                        </h3>
                     </span>
                 </h1>
                 <h2>
                     <span className='font-bold text-3xl'>
-                        A Problem-Solving Connoisseur.
+                        Specializing in AI & Web3 Solutions
                     </span>
                 </h2>
                 <h3>
                     <span className='font-semi-bold text-xl'>
-                        The ever changing world of software development, along with problem <span className='bg-[#3a1e59] m-2 rounded-tl rounded-br underline'>solving</span> is my passion. 
+                        Passionate about solving complex problems through elegant code and innovative technology.
                     </span>
                 </h3>
                 <motion.div className='flex flex-col items-center justify-center text-lg hover:cursor-pointer sm:flex-row pt-8 gap-2 px-2 font-medium'
@@ -96,11 +97,16 @@ export default function Intro() {
                         <BsArrowRight className='opacity-69 group-hover:translate-x-1 transition' />
                     </Link>
 
-                    <a className='group bg-gray-50 px-7 py-3 flex items-center gap-2 rounded-e-full underline outline-none focus:scale-110 hover:scale-110 dark:bg-white/10 dark:text-white/70' href="/C:\Users\William\OneDrive\Desktop\new_portfolio\public\semperIncludedRes.pdf" download>
-                        Download resume
+                    <a className='group bg-gray-50 px-7 py-3 flex items-center gap-2 rounded-e-full underline outline-none focus:scale-110 hover:scale-110 dark:bg-white/10 dark:text-white/70' href="/semperIncludedRes.pdf" download>
+                        Download PDF
                         <LuHardDriveDownload className='opacity-69 group-hover:translate-y-1 transition' />
                     </a>
-                    
+
+                    <Link href="/resume" className='group bg-gray-50 px-7 py-3 flex items-center gap-2 rounded-e-full underline outline-none focus:scale-110 hover:scale-110 dark:bg-white/10 dark:text-white/70' target='_blank'>
+                        View Resume
+                        <HiDocumentText className='opacity-69 group-hover:scale-110 transition' />
+                    </Link>
+
                     <a className=' bg-slate-50 text-gray-700 hover:text-gray-950 flex items-center gap-2 text-[2.39rem] opacity-69 rounded-rull opacity-69 hover:scale-[1.15] active:scale-[115] transition border dark:bg-white/10 dark:text-white/50'
                         href="https://www.linkedin.com/in/william360/" target='_blank'>
                         <BsLinkedin />

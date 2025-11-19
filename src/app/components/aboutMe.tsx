@@ -18,24 +18,15 @@ export default function AboutMe() {
        >
          <SectionHeader>About me</SectionHeader>
         <p className='mb-8'>
-        Welcome to my portfolio portal! My journey into the world of code began with a thrilling opportunity to test our ai implementation in early 2016 at my current job. 
-        The experience of providing direct feedback ignited a excitment i call the butterflies and since then code has become more than just a hobby. Code is my undeniable passion.
-
-
-
-
+        Welcome to my portfolio! My journey into the world of code began with an exciting opportunity to test AI implementation in early 2016. The experience of providing direct feedback ignited an excitement that hasn't faded since. Code has become more than just a hobby—it's my undeniable passion.
         </p>
-      
-        <p className='mb-8'>
-        As a software engineer. I thrive on the dynamic nature of software development. Embracing the ever-changing landscape and reveling pushing the limits of problem-solving.
-        I find my stride in the constant evolution of technology. Beyond the passion for code and tech, my family holds the key to my heart. Making them my primary source of inspiration and support.
-        
 
+        <p className='mb-8'>
+        As a software engineer, I thrive on the dynamic nature of software development, embracing the ever-changing landscape and reveling in pushing the limits of problem-solving. I find my stride in the constant evolution of technology. Beyond my passion for code and tech, my family holds the key to my heart, making them my primary source of inspiration and support.
         </p>
-        <p className='mb-8'>
-        My commitment to learning propels me forward as I enthusiastically explore new technologies and stay abreast of industry trends. Join me on this coding journey where 
-        innovation meets dedication and let`s create something extraordinary together.
 
+        <p className='mb-8'>
+        My commitment to learning propels me forward as I enthusiastically explore new technologies and keep up with industry trends. Join me on this coding journey where innovation meets dedication, and let's create something extraordinary together.
         </p>
         </motion.section>
         

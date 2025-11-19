@@ -13,6 +13,7 @@ export interface ProjectData {
   tags: readonly string[];
   imageUrl: StaticImageData;
   demoUrl?: string;
+  githubUrl?: string;
 }
 
 import easImg from "/public/eas.png";
@@ -57,37 +58,37 @@ export const links = [
 
 export const experienceData = [
   {
-    title: "Boss",
-    location: "WorldWide",
+    title: "Lead Full-Stack Developer",
+    location: "Remote",
     description:
-    "I am the talented lead dev. I am the idea maker. I am testing payment paywalls and authorized routes for paid clients. Data collection MATTERS.",
-    icon: React.createElement(BiSolidFridge),
-    date: "oct 2022 - Present"
+      "Leading development of enterprise SaaS platforms with focus on payment processing, authentication systems, and data analytics. Architecting secure APIs and implementing industry-standard security practices for client applications. Managing full development lifecycle from requirements to deployment.",
+    icon: React.createElement(GiComputing),
+    date: "Oct 2022 - Present"
   },
   {
     title: "Full-Stack Lead Developer",
-    location: "Seattle",
+    location: "Seattle, WA",
     description:
-      "I am the lead developer for experience as a service. The begining of something huge.",
+      "Lead developer for Experience as a Service (EAS) platform. Architected scalable full-stack solutions serving B2B clients. Built core features including user authentication, payment integration, and real-time data processing using modern web technologies.",
     icon: React.createElement(GiComputing),
-    date: "2020 - Present",
+    date: "2020 - 2022",
   },
   {
-    title: "Blockchain web3 team lead",
-    location: "Web3",
+    title: "Blockchain Developer & Team Lead",
+    location: "Remote",
     description:
-      "I have created multiple different front  and back ends  that communicate with the blockchain for many projects. Working with leading dapp's in the web3 industry",
+      "Led blockchain development team building decentralized applications (dApps) for Web3 projects. Designed and implemented smart contracts and frontend interfaces that interact with multiple blockchain networks. Collaborated with leading Web3 companies on production deployments.",
     icon: React.createElement(FaReact),
-    date: "2021 - Present",
+    date: "2021 - 2022",
 
   },
   {
-    title: "Full-Stack Developer",
-    location: "Web3",
+    title: "Freelance Full-Stack Developer",
+    location: "Remote",
     description:
-      "I'm  a full-stack developer working as a freelancer. Security focused!🔐 References are needed to secure work in web3. I'm building a lasting name for myself and my company!",
+      "Provided full-stack development services with emphasis on security and scalable architecture. Built custom web applications for clients in various industries. Specialized in React, Node.js, and blockchain integrations while maintaining strong focus on code quality and security best practices.",
     icon: React.createElement(GiOpenTreasureChest),
-    date: "2020 - present",
+    date: "2020 - 2021",
   },
 ] as const;
 
@@ -103,80 +104,83 @@ export const projectsData = [
   {
     title: 'Anything_AI',
     description:
-    "We are facilitating AI_agents to any website. Any tech stack. Add a AI-Bot anywhere and with any api that fits the clients.",
-    tags: ["C#", ".net", "Python", "JavaScript", "HTML/CSS", "AI", "LLM", "RAG", "Opensource", "JAVA", "JS", "CSS", "HTML", "Fine-Tune"],
+    "Facilitating MCP tools with agentic AI integration for any website and tech stack. Enables seamless AI-Bot communication and web scraping capabilities that adapt to client-specific APIs and requirements. Flexible architecture supports multiple programming languages and frameworks.",
+    tags: ["C#", ".net", "Python", "JavaScript", "AI", "LLM", "RAG", "Opensource", "JAVA", "API", "Fine-Tune"],
     imageUrl: agentImg,
   },
   {
     title: 'Appliance Consult',
     description:
-      "Full stack app. Secured 100 years of appliance repair experience to facilitate advice with a 1 click of a button. Storing all data in a DB to incorperate a AI solution",
-      tags: ["React", "Next.js",  "Tailwind",  "Rust", "MongoDB", "API", "LLM", "AI", "Prisma", "Stripe", "ORM", "Nodejs", "Drizzle"],
+      "Full-stack application digitizing a century of appliance repair expertise into an AI-powered advisory platform. Users receive instant expert repair guidance with one click. Built with modern tech stack integrating payment processing and comprehensive database architecture to deliver intelligent repair recommendations.",
+      tags: ["React", "Next.js",  "Tailwind",  "Rust", "MongoDB", "API", "LLM", "AI", "Prisma", "Stripe", "ORM", "Node.js", "Drizzle"],
        imageUrl: applianceImg,
   },
   {
     title: "EAS",
     description:
-      "I was brought on as the lead dev. Word of mouth from previous projects led me to become the lead dev for EAS.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "NodeJS", "Rust","Stripe", "Blockchain"],
-
-
+      "Brought on as lead developer for Experience as a Service platform through referrals from previous successful projects. Architected scalable full-stack solution with payment integration, authentication systems, and blockchain capabilities to serve B2B clients.",
+    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Node.js", "Rust","Stripe", "Blockchain"],
     imageUrl: easImg,
-
-
   },
   {
     title: "Command Center",
-    description: 
-      "I was brought in to lead the team as the lead developer. We are building a full-stack app with the capability of indexing as a web3 wallet tracker. We will implement real time data that show wallet holdings across chains. Defi options across chains will be implemented.",
-      tags: ["React", "TypeScript", "Next.js", "Tailwind", "Solidity", "Postgres", "AI-LLM", "NodeJS"],
+    description:
+      "Led development team building a comprehensive Web3 wallet tracker with multi-chain indexing capabilities. Real-time data dashboard displays wallet holdings across multiple blockchain networks with integrated DeFi options for cross-chain operations.",
+      tags: ["React", "TypeScript", "Next.js", "Tailwind", "Solidity", "Postgres", "AI-LLM", "Node.js"],
       imageUrl:  commandImg,
   },
   {
     title: "CoinCrete",
     description:
-      "A full-stack developer who joined a growing team of devs. We are creating from scratch all the needed features of a web3 dapp with security at the forefront.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Solidity", "JavaScript", "SQL", "MongoDB", "Postgres"],
+      "Joined a growing development team building a Web3 dApp from the ground up with security as the primary focus. Implemented core features including smart contract integration, user authentication, and multi-chain wallet connectivity using modern full-stack technologies.",
+    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Solidity", "JavaScript", "MongoDB", "Postgres"],
     imageUrl: coincreteImg,
   },
   {
     title: "CFT",
     description:
-      "A new idea for amazing market pools and a interactive place that can be trusted. Indexing all transactions on a local RPC",
-    tags: ["React", "Next.js", "Solidity", "Rust", "Framer", "SQL", "RPC", "NODE", "SQL"],
+      "Innovative decentralized market pools platform built with trust and transparency at its core. Features comprehensive transaction indexing on local RPC nodes, enabling users to track and verify all market activities in real-time.",
+    tags: ["React", "Next.js", "Solidity", "Rust", "Framer", "SQL", "RPC", "Node.js"],
     imageUrl: cftmarketImg,
   },
 ] as const;
 
 
 export const skillsData = [
+  // Languages
   "JavaScript",
-  "C#",
-  "React",
-  "Typescript",
+  "TypeScript",
   "Python",
-  "RAG",
-  "Git",
-  ".net",
-  "Next.js",
-  "HTML",
-  "CSS",
-  "LLM",
-  "CLI",
+  "C#",
   "Rust",
   "Golang",
   "Solidity",
-  "Node.js",
+  // Frontend
+  "React",
+  "Next.js",
+  "HTML",
+  "CSS",
   "Tailwind",
-  "Prisma",
+  "Framer Motion",
+  // Backend
+  "Node.js",
+  "Express",
+  ".NET",
+  "Django",
+  // Databases & ORMs
   "MongoDB",
+  "PostgreSQL",
+  "Prisma",
+  // State & APIs
   "Redux",
   "GraphQL",
   "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Django",
-  "Framer Motion",
+  // AI/ML
+  "LLM",
+  "RAG",
+  // Tools
+  "Git",
+  "CLI",
 ] as const;
 
 export const certificationsData = [

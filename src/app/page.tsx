@@ -6,7 +6,7 @@ import Experience from './components/experience';
 import Footer from './components/footer';
 import Intro from './components/intro';
 import MyProjects from './components/myProjects';
-import SectionSeperator from './components/section-seperator';
+import SectionSeperator from './components/sectionSeperator';
 import Skills from './context/skills';
 import Certifications from './components/certifications';
 

@@ -9,8 +9,24 @@ import DarkContextProvider from './context/darkmode-context';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "William | My Portfolio!",
-  description: "William is the dev that you want at your company.",
+  title: "William Heeb | Full-Stack Developer | React, TypeScript, AI & Web3",
+  description: "Full-stack software engineer with 5+ years building production-ready web applications. Specialized in React, Next.js, TypeScript, AI integration, and Web3 development. CompTIA Security+ certified. Open to new opportunities.",
+  keywords: ["Full-Stack Developer", "React Developer", "TypeScript", "Next.js", "AI Developer", "Web3 Developer", "Software Engineer", "Blockchain Developer", "JavaScript"],
+  authors: [{ name: "William Heeb" }],
+  creator: "William Heeb",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://williamsforeverportfolio.vercel.app/",
+    title: "William Heeb - Full-Stack Developer Portfolio",
+    description: "Full-stack developer specializing in React, TypeScript, AI, and Web3 technologies. 5+ years of experience building scalable applications.",
+    siteName: "William Heeb Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "William Heeb - Full-Stack Developer",
+    description: "Full-stack developer specializing in React, TypeScript, AI, and Web3",
+  },
 };
 
 export default function RootLayout({
