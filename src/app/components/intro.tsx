@@ -99,144 +99,96 @@ export default function Intro() {
                     </span>
                 </h3>
                 <motion.div
-                    className='flex flex-col items-center gap-6 pt-8 w-full max-w-md px-4'
-                    initial="hidden"
-                    animate="visible"
-                    variants={{
-                        hidden: { opacity: 0, y: 50 },
-                        visible: {
-                            opacity: 1,
-                            y: 0,
-                            transition: {
-                                duration: 0.6,
-                                staggerChildren: 0.15,
-                                delayChildren: 0.2
-                            }
-                        }
-                    }}
+                    className='flex items-center justify-center gap-4 pt-8 px-4 flex-wrap'
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 }}
                 >
-                    {/* Primary CTA - Full Width with Magnetic Effect */}
+                    {/* Contact Button with Magnetic Effect */}
                     <motion.div
-                        className='w-full'
-                        variants={{
-                            hidden: { opacity: 0, y: 20 },
-                            visible: {
-                                opacity: 1,
-                                y: 0,
-                                transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }
-                            }
+                        ref={buttonRef}
+                        onMouseMove={handleMouseMove}
+                        onMouseLeave={handleMouseLeave}
+                        animate={{
+                            x: mousePosition.x,
+                            y: mousePosition.y
+                        }}
+                        transition={{
+                            type: 'spring',
+                            stiffness: 300,
+                            damping: 20
                         }}
                     >
-                        <motion.div
-                            ref={buttonRef}
-                            onMouseMove={handleMouseMove}
-                            onMouseLeave={handleMouseLeave}
-                            animate={{
-                                x: mousePosition.x,
-                                y: mousePosition.y
-                            }}
-                            transition={{
-                                type: 'spring',
-                                stiffness: 300,
-                                damping: 20
-                            }}
-                        >
-                            <Link
-                                href="#contact"
-                                onClick={() => {
-                                    setActiveSection('Contact');
-                                    setTimeOfLastClick(Date.now());
-                                }}
-                                className='group relative w-full flex items-center justify-center gap-3
-                                         bg-gray-950 text-white px-8 py-4 rounded-full text-lg font-medium
-                                         overflow-hidden transition-all duration-300
-                                         hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20
-                                         dark:bg-gray-900 dark:hover:shadow-blue-400/30'
-                            >
-                                <span className='absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600
-                                               opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
-                                <span className='relative z-10'>Contact me</span>
-                                <BsArrowRight className='relative z-10 group-hover:translate-x-2 transition-transform duration-300' />
-                            </Link>
-                        </motion.div>
-                    </motion.div>
-
-                    {/* Secondary Actions - Grouped */}
-                    <motion.div
-                        className='flex flex-wrap gap-3 justify-center w-full'
-                        variants={{
-                            hidden: { opacity: 0, y: 20 },
-                            visible: {
-                                opacity: 1,
-                                y: 0,
-                                transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }
-                            }
-                        }}
-                    >
-                        <a
-                            href="/semperIncludedRes.pdf"
-                            download
-                            className='group flex items-center gap-2 px-6 py-3 rounded-full
-                                     bg-white/80 backdrop-blur-sm border border-black/10
-                                     hover:bg-white hover:scale-105 hover:shadow-lg
-                                     transition-all duration-300
-                                     dark:bg-white/10 dark:border-white/20 dark:hover:bg-white/20'
-                        >
-                            <LuHardDriveDownload className='group-hover:translate-y-1 transition-transform duration-300' />
-                            <span>Download PDF</span>
-                        </a>
-
                         <Link
-                            href="/resume"
-                            target='_blank'
-                            className='group flex items-center gap-2 px-6 py-3 rounded-full
-                                     bg-white/80 backdrop-blur-sm border border-black/10
-                                     hover:bg-white hover:scale-105 hover:shadow-lg
-                                     transition-all duration-300
-                                     dark:bg-white/10 dark:border-white/20 dark:hover:bg-white/20'
+                            href="#contact"
+                            onClick={() => {
+                                setActiveSection('Contact');
+                                setTimeOfLastClick(Date.now());
+                            }}
+                            className='group relative flex items-center gap-2
+                                     bg-gray-900 text-white px-7 py-3 rounded-full
+                                     overflow-hidden transition-all duration-300
+                                     hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20
+                                     dark:bg-white/10'
                         >
-                            <HiDocumentText className='group-hover:scale-110 transition-transform duration-300' />
-                            <span>View Resume</span>
+                            <span className='absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600
+                                           opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
+                            <span className='relative z-10'>Contact me here</span>
+                            <BsArrowRight className='relative z-10 group-hover:translate-x-2 transition-transform duration-300' />
                         </Link>
                     </motion.div>
 
-                    {/* Social Icons - Separate Group */}
-                    <motion.div
-                        className='flex gap-4 pt-2'
-                        variants={{
-                            hidden: { opacity: 0, y: 20 },
-                            visible: {
-                                opacity: 1,
-                                y: 0,
-                                transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }
-                            }
-                        }}
+                    {/* Download PDF */}
+                    <a
+                        href="/semperIncludedRes.pdf"
+                        download
+                        className='group flex items-center gap-2 bg-white px-7 py-3 rounded-full
+                                 border border-black/10 hover:scale-105 hover:shadow-lg
+                                 transition-all duration-300
+                                 dark:bg-gray-950 dark:text-white/80'
                     >
-                        <a
-                            href="https://www.linkedin.com/in/william360/"
-                            target='_blank'
-                            className='group relative p-4 rounded-full bg-white/80 backdrop-blur-sm
-                                     border border-black/10 hover:scale-110 hover:shadow-lg
-                                     transition-all duration-300
-                                     dark:bg-white/10 dark:border-white/20'
-                        >
-                            <BsLinkedin className='text-2xl text-gray-700 dark:text-white/70
-                                                  group-hover:text-blue-600 dark:group-hover:text-blue-400
-                                                  transition-colors duration-300' />
-                        </a>
-                        <a
-                            href="https://github.com/addicted2crypto/"
-                            target='_blank'
-                            className='group relative p-4 rounded-full bg-white/80 backdrop-blur-sm
-                                     border border-black/10 hover:scale-110 hover:shadow-lg
-                                     transition-all duration-300
-                                     dark:bg-white/10 dark:border-white/20'
-                        >
-                            <FaGithubSquare className='text-2xl text-gray-700 dark:text-white/70
-                                                      group-hover:text-gray-950 dark:group-hover:text-white
-                                                      transition-colors duration-300' />
-                        </a>
-                    </motion.div>
+                        <LuHardDriveDownload className='group-hover:translate-y-1 transition-transform duration-300' />
+                        <span>Download CV</span>
+                    </a>
+
+                    {/* View Resume */}
+                    <Link
+                        href="/resume"
+                        target='_blank'
+                        className='group flex items-center gap-2 bg-white px-7 py-3 rounded-full
+                                 border border-black/10 hover:scale-105 hover:shadow-lg
+                                 transition-all duration-300
+                                 dark:bg-gray-950 dark:text-white/80'
+                    >
+                        <HiDocumentText className='group-hover:scale-110 transition-transform duration-300' />
+                        <span>View Resume</span>
+                    </Link>
+
+                    {/* LinkedIn */}
+                    <a
+                        href="https://www.linkedin.com/in/william360/"
+                        target='_blank'
+                        className='bg-white p-4 text-gray-700 rounded-full
+                                 border border-black/10 hover:scale-110 hover:shadow-lg
+                                 hover:text-blue-600
+                                 transition-all duration-300
+                                 dark:bg-gray-950 dark:text-white/70'
+                    >
+                        <BsLinkedin />
+                    </a>
+
+                    {/* GitHub */}
+                    <a
+                        href="https://github.com/addicted2crypto/"
+                        target='_blank'
+                        className='bg-white p-4 text-gray-700 rounded-full
+                                 border border-black/10 hover:scale-110 hover:shadow-lg
+                                 hover:text-gray-950
+                                 transition-all duration-300
+                                 dark:bg-gray-950 dark:text-white/70'
+                    >
+                        <FaGithubSquare />
+                    </a>
                 </motion.div>
             </motion.section>
         </section>

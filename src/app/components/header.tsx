@@ -15,11 +15,15 @@ export default function Header() {
  const { scrollY } = useScroll();
  const headerOpacity = useTransform(scrollY, [0, 100], [0.8, 0.95]);
  const headerScale = useTransform(scrollY, [0, 100], [1, 0.98]);
- const headerBlur = useTransform(scrollY, [0, 100], [0.5, 1]);
  const headerShadow = useTransform(
    scrollY,
    [0, 100],
    ['0 0 0 rgba(0,0,0,0)', '0 10px 30px rgba(0,0,0,0.15)']
+ );
+ const backdropBlur = useTransform(
+   scrollY,
+   [0, 100],
+   ['blur(0.5rem)', 'blur(1rem)']
  );
 
   return <header className='z-[999] relative'>
@@ -31,12 +35,11 @@ export default function Header() {
     initial={{ y: -100, x: "-50%", opacity: 0}}
     animate={{ y: 0, x: "-50%", opacity: 1}}
     style={{
-      backgroundColor: 'rgba(219, 234, 254, var(--tw-bg-opacity))',
       opacity: headerOpacity,
       scale: headerScale,
       boxShadow: headerShadow,
-      backdropFilter: `blur(${headerBlur}rem)`,
-      WebkitBackdropFilter: `blur(${headerBlur}rem)`,
+      backdropFilter: backdropBlur,
+      WebkitBackdropFilter: backdropBlur,
     }}
     >
 
