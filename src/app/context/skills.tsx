@@ -32,7 +32,10 @@ export default function Skills() {
       <ul className='flex flex-wrap justify-center gap-2 text-lg text-[#404040]'>
        {
         skillsData.map((skill, index) => (
-          <motion.li className='bg-[#f6f6f6] border border-[#000]/[.169] rounded-lg px-5 py-3 dark:bg-white/20 dark:text-white/80 ' 
+          <motion.li
+          className='bg-[#f6f6f6] border border-[#000]/[.169] rounded-lg px-5 py-3
+                     cursor-default transition-colors duration-300
+                     dark:bg-white/20 dark:text-white/80'
           key={index}
           variants={inViewAnimation}
           initial="initial"
@@ -41,6 +44,18 @@ export default function Skills() {
             once: true,
           }}
           custom={index}
+          whileHover={{
+            scale: 1.1,
+            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+            boxShadow: '0 0 20px rgba(59, 130, 246, 0.3)',
+            borderColor: 'rgba(59, 130, 246, 0.5)',
+            y: -5,
+          }}
+          transition={{
+            type: 'spring',
+            stiffness: 400,
+            damping: 17
+          }}
           >
             {skill}
           </motion.li>

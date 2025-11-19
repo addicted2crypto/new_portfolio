@@ -3,19 +3,41 @@ import React from 'react';
 import Link from 'next/link';
 import clsx from 'clsx';
 
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { links } from '../lib/data';
 import { useActiveSection } from '../context/active-section';
 
-  
+
 export default function Header() {
 
  const {activeSection, setActiveSection, setTimeOfLastClick} = useActiveSection();
 
+ const { scrollY } = useScroll();
+ const headerOpacity = useTransform(scrollY, [0, 100], [0.8, 0.95]);
+ const headerScale = useTransform(scrollY, [0, 100], [1, 0.98]);
+ const headerBlur = useTransform(scrollY, [0, 100], [0.5, 1]);
+ const headerShadow = useTransform(
+   scrollY,
+   [0, 100],
+   ['0 0 0 rgba(0,0,0,0)', '0 10px 30px rgba(0,0,0,0.15)']
+ );
+
   return <header className='z-[999] relative'>
-    <motion.div className='fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-black border-opacity-90 bg-blue-100 bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full dark:bg-[#060606] dark:border-black/40 dark:bg-opacity-80'
+    <motion.div
+    className='fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-black border-opacity-90
+               bg-blue-100 shadow-lg shadow-black/[0.03]
+               sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full
+               dark:bg-[#060606] dark:border-black/40 transition-all duration-300'
     initial={{ y: -100, x: "-50%", opacity: 0}}
     animate={{ y: 0, x: "-50%", opacity: 1}}
+    style={{
+      backgroundColor: 'rgba(219, 234, 254, var(--tw-bg-opacity))',
+      opacity: headerOpacity,
+      scale: headerScale,
+      boxShadow: headerShadow,
+      backdropFilter: `blur(${headerBlur}rem)`,
+      WebkitBackdropFilter: `blur(${headerBlur}rem)`,
+    }}
     >
 
     </motion.div>

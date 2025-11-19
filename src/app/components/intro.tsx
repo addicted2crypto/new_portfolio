@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState, useRef } from 'react';
 
 import { motion } from 'framer-motion';
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
@@ -13,9 +14,24 @@ import { useActiveSection } from '../context/active-section';
 
 export default function Intro() {
 
-
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const buttonRef = useRef<HTMLDivElement>(null);
     const { ref } = useSectionTimeOutForClick("Home", 0.6);
     const { setActiveSection, setTimeOfLastClick } = useActiveSection();
+
+    const handleMouseMove = (e: React.MouseEvent) => {
+        if (!buttonRef.current) return;
+        const rect = buttonRef.current.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const deltaX = (e.clientX - centerX) * 0.2;
+        const deltaY = (e.clientY - centerY) * 0.2;
+        setMousePosition({ x: deltaX, y: deltaY });
+    };
+
+    const handleMouseLeave = () => {
+        setMousePosition({ x: 0, y: 0 });
+    };
   
 
 
@@ -82,39 +98,145 @@ export default function Intro() {
                         Passionate about solving complex problems through elegant code and innovative technology.
                     </span>
                 </h3>
-                <motion.div className='flex flex-col items-center justify-center text-lg hover:cursor-pointer sm:flex-row pt-8 gap-2 px-2 font-medium'
-                    initial={{ opacity: 0, y: 100 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.169 }}
-                >
-                    <Link href="#contact" className='group bg-gray-950 text-gray-50 text-xl px-7 py-3 flex items-center gap-2 outline-none rounded-full hover:scale-110 hover:bg-blue-950 active:scale-105 transition'
-                    onClick={() => {
-                        setActiveSection('Contact');
-                        setTimeOfLastClick(Date.now());
+                <motion.div
+                    className='flex flex-col items-center gap-6 pt-8 w-full max-w-md px-4'
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                        hidden: { opacity: 0, y: 50 },
+                        visible: {
+                            opacity: 1,
+                            y: 0,
+                            transition: {
+                                duration: 0.6,
+                                staggerChildren: 0.15,
+                                delayChildren: 0.2
+                            }
+                        }
                     }}
+                >
+                    {/* Primary CTA - Full Width with Magnetic Effect */}
+                    <motion.div
+                        className='w-full'
+                        variants={{
+                            hidden: { opacity: 0, y: 20 },
+                            visible: {
+                                opacity: 1,
+                                y: 0,
+                                transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }
+                            }
+                        }}
                     >
-                        Contact me
-                        <BsArrowRight className='opacity-69 group-hover:translate-x-1 transition' />
-                    </Link>
+                        <motion.div
+                            ref={buttonRef}
+                            onMouseMove={handleMouseMove}
+                            onMouseLeave={handleMouseLeave}
+                            animate={{
+                                x: mousePosition.x,
+                                y: mousePosition.y
+                            }}
+                            transition={{
+                                type: 'spring',
+                                stiffness: 300,
+                                damping: 20
+                            }}
+                        >
+                            <Link
+                                href="#contact"
+                                onClick={() => {
+                                    setActiveSection('Contact');
+                                    setTimeOfLastClick(Date.now());
+                                }}
+                                className='group relative w-full flex items-center justify-center gap-3
+                                         bg-gray-950 text-white px-8 py-4 rounded-full text-lg font-medium
+                                         overflow-hidden transition-all duration-300
+                                         hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20
+                                         dark:bg-gray-900 dark:hover:shadow-blue-400/30'
+                            >
+                                <span className='absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600
+                                               opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
+                                <span className='relative z-10'>Contact me</span>
+                                <BsArrowRight className='relative z-10 group-hover:translate-x-2 transition-transform duration-300' />
+                            </Link>
+                        </motion.div>
+                    </motion.div>
 
-                    <a className='group bg-gray-50 px-7 py-3 flex items-center gap-2 rounded-e-full underline outline-none focus:scale-110 hover:scale-110 dark:bg-white/10 dark:text-white/70' href="/semperIncludedRes.pdf" download>
-                        Download PDF
-                        <LuHardDriveDownload className='opacity-69 group-hover:translate-y-1 transition' />
-                    </a>
+                    {/* Secondary Actions - Grouped */}
+                    <motion.div
+                        className='flex flex-wrap gap-3 justify-center w-full'
+                        variants={{
+                            hidden: { opacity: 0, y: 20 },
+                            visible: {
+                                opacity: 1,
+                                y: 0,
+                                transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }
+                            }
+                        }}
+                    >
+                        <a
+                            href="/semperIncludedRes.pdf"
+                            download
+                            className='group flex items-center gap-2 px-6 py-3 rounded-full
+                                     bg-white/80 backdrop-blur-sm border border-black/10
+                                     hover:bg-white hover:scale-105 hover:shadow-lg
+                                     transition-all duration-300
+                                     dark:bg-white/10 dark:border-white/20 dark:hover:bg-white/20'
+                        >
+                            <LuHardDriveDownload className='group-hover:translate-y-1 transition-transform duration-300' />
+                            <span>Download PDF</span>
+                        </a>
 
-                    <Link href="/resume" className='group bg-gray-50 px-7 py-3 flex items-center gap-2 rounded-e-full underline outline-none focus:scale-110 hover:scale-110 dark:bg-white/10 dark:text-white/70' target='_blank'>
-                        View Resume
-                        <HiDocumentText className='opacity-69 group-hover:scale-110 transition' />
-                    </Link>
+                        <Link
+                            href="/resume"
+                            target='_blank'
+                            className='group flex items-center gap-2 px-6 py-3 rounded-full
+                                     bg-white/80 backdrop-blur-sm border border-black/10
+                                     hover:bg-white hover:scale-105 hover:shadow-lg
+                                     transition-all duration-300
+                                     dark:bg-white/10 dark:border-white/20 dark:hover:bg-white/20'
+                        >
+                            <HiDocumentText className='group-hover:scale-110 transition-transform duration-300' />
+                            <span>View Resume</span>
+                        </Link>
+                    </motion.div>
 
-                    <a className=' bg-slate-50 text-gray-700 hover:text-gray-950 flex items-center gap-2 text-[2.39rem] opacity-69 rounded-rull opacity-69 hover:scale-[1.15] active:scale-[115] transition border dark:bg-white/10 dark:text-white/50'
-                        href="https://www.linkedin.com/in/william360/" target='_blank'>
-                        <BsLinkedin />
-                    </a>
-                    <a className='bg-slate-50 text-gray-700 hover:text-gray-950 flex items-center gap-2 text-[2.69rem] rounded-rull opacity-69 hover:scale-[1.15] active:scale-[1.15] transition border:bg-white/10 dark:bg-white/10 dark:text-white/50'
-                        href="https://github.com/addicted2crypto/">
-                        <FaGithubSquare />
-                    </a>
+                    {/* Social Icons - Separate Group */}
+                    <motion.div
+                        className='flex gap-4 pt-2'
+                        variants={{
+                            hidden: { opacity: 0, y: 20 },
+                            visible: {
+                                opacity: 1,
+                                y: 0,
+                                transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }
+                            }
+                        }}
+                    >
+                        <a
+                            href="https://www.linkedin.com/in/william360/"
+                            target='_blank'
+                            className='group relative p-4 rounded-full bg-white/80 backdrop-blur-sm
+                                     border border-black/10 hover:scale-110 hover:shadow-lg
+                                     transition-all duration-300
+                                     dark:bg-white/10 dark:border-white/20'
+                        >
+                            <BsLinkedin className='text-2xl text-gray-700 dark:text-white/70
+                                                  group-hover:text-blue-600 dark:group-hover:text-blue-400
+                                                  transition-colors duration-300' />
+                        </a>
+                        <a
+                            href="https://github.com/addicted2crypto/"
+                            target='_blank'
+                            className='group relative p-4 rounded-full bg-white/80 backdrop-blur-sm
+                                     border border-black/10 hover:scale-110 hover:shadow-lg
+                                     transition-all duration-300
+                                     dark:bg-white/10 dark:border-white/20'
+                        >
+                            <FaGithubSquare className='text-2xl text-gray-700 dark:text-white/70
+                                                      group-hover:text-gray-950 dark:group-hover:text-white
+                                                      transition-colors duration-300' />
+                        </a>
+                    </motion.div>
                 </motion.div>
             </motion.section>
         </section>
