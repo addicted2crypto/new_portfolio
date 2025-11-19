@@ -1,8 +1,8 @@
 "use client";
 
 import React from 'react'
-import SectionHeader from './section-header'
-import ContactButtonSubmit from './contact-button-submit';
+import SectionHeader from './sectionHeader'
+import ContactButtonSubmit from './contactButtonSubmit';
 import toast from 'react-hot-toast';
 import { motion } from "framer-motion";
 import { useSectionTimeOutForClick } from '../lib/hooks';

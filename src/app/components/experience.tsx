@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useContext } from 'react'
-import SectionHeader from './section-header'
+import SectionHeader from './sectionHeader'
 import {
     VerticalTimeline,
     VerticalTimelineElement,

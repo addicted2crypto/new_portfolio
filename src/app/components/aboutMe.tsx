@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import SectionHeader from './section-header';
+import SectionHeader from './sectionHeader';
 import { motion } from 'framer-motion';
 import { useSectionTimeOutForClick } from '../lib/hooks';
 

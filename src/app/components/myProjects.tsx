@@ -1,8 +1,8 @@
 "use client";
 
 import React from 'react';
-import SectionHeader from './section-header';
-import Project from './single-project';
+import SectionHeader from './sectionHeader';
+import Project from './singleProject';
 
 import { projectsData } from '../lib/data';
 import { useSectionTimeOutForClick } from '../lib/hooks';

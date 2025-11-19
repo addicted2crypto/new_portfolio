@@ -1,11 +1,11 @@
 
 import { Toaster } from 'react-hot-toast';
-import AboutMe from './components/about-me';
+import AboutMe from './components/aboutMe';
 import Contact from './components/contact';
 import Experience from './components/experience';
 import Footer from './components/footer';
 import Intro from './components/intro';
-import MyProjects from './components/my-projects';
+import MyProjects from './components/myProjects';
 import SectionSeperator from './components/section-seperator';
 import Skills from './context/skills';
 import Certifications from './components/certifications';

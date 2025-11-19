@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react';
-import SectionHeader from './section-header';
+import SectionHeader from './sectionHeader';
 import { certificationsData } from '../lib/data';
 import { useSectionTimeOutForClick } from '../lib/hooks';
 import { motion } from 'framer-motion';

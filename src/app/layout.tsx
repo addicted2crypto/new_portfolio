@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import ActiveSectionProvider from './context/active-section';
 import Header from './components/header';
 import './globals.css';
-import Toggledarkmode from './components/toggle-darkmode';
+import Toggledarkmode from './components/toggleDark';
 import DarkContextProvider from './context/darkmode-context';
 
 const inter = Inter({ subsets: ["latin"] });
