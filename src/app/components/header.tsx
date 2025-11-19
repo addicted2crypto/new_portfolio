@@ -25,7 +25,7 @@ export default function Header() {
     </motion.div>
 
     <nav className='flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0'>
-      <ul className='flex w-[22rem] flex-wrap items-center justify-between gap-y-1 text-[.969rem] font-medium text-gray-600 sm:w-[36rem] sm:flex-nowrap sm:gap-3 sm:px-3'>
+      <ul className='flex w-[22rem] flex-wrap items-center justify-between gap-y-1 text-[0.8rem] font-medium text-gray-600 sm:w-[34rem] sm:flex-nowrap sm:gap-1 sm:px-2'>
         {links.map(link => {
           // Special styling for Home and Contact
           const isHome = link.name === 'Home';
@@ -34,7 +34,7 @@ export default function Header() {
 
           return (
             <motion.li
-              className={clsx('h-3/4 flex items-center justify-center relative', {
+              className={clsx('flex items-center justify-center relative', {
                 'order-first': isHome,
                 'order-last': isContact,
               })}
@@ -47,8 +47,8 @@ export default function Header() {
                   'flex items-center justify-center transition',
                   {
                     // Special styling for Home and Contact
-                    'px-5 py-2 rounded-full bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700': isSpecial,
-                    'px-3 py-3 hover:text-gray-950 dark:hover:text-[#e8e6e6]': !isSpecial,
+                    'px-4 py-1.5 rounded-full bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-sm': isSpecial,
+                    'px-2 py-2 hover:text-gray-950 dark:hover:text-[#e8e6e8]': !isSpecial,
                     'text-[#050202] dark:text-white': activeSection === link.name,
                     'dark:text-[#c1c1c1]': activeSection !== link.name && !isSpecial,
                     'text-gray-700 dark:text-gray-300': isSpecial && activeSection !== link.name,
