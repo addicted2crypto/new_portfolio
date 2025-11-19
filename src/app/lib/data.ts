@@ -3,8 +3,17 @@ import React from "react";
 import { FaReact } from "react-icons/fa";
 import { GiComputing } from "react-icons/gi";
 import { BiSolidFridge } from "react-icons/bi";
+import { StaticImageData } from "next/image";
 
 import { GiOpenTreasureChest } from "react-icons/gi";
+
+export interface ProjectData {
+  title: string;
+  description: string;
+  tags: readonly string[];
+  imageUrl: StaticImageData;
+  demoUrl?: string;
+}
 
 import easImg from "/public/eas.png";
 import coincreteImg from '/public/coincrete.png';
