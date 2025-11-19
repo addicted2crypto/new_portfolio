@@ -142,26 +142,24 @@ export default function Intro() {
                     <a
                         href="/semperIncludedRes.pdf"
                         download
-                        className='group flex items-center gap-2 bg-white px-7 py-3 rounded-full
-                                 border border-black/10 hover:scale-105 hover:shadow-lg
-                                 transition-all duration-300
-                                 dark:bg-gray-950 dark:text-white/80'
+                        className='group flex items-center gap-2 bg-white px-7 py-3 rounded-full outline-none
+                                 focus:scale-110 hover:scale-110 active:scale-105 transition
+                                 borderBlack dark:bg-white/10'
                     >
-                        <LuHardDriveDownload className='group-hover:translate-y-1 transition-transform duration-300' />
-                        <span>Download CV</span>
+                        <LuHardDriveDownload className='opacity-60 group-hover:translate-y-1 transition' />
+                        Download CV
                     </a>
 
                     {/* View Resume */}
                     <Link
                         href="/resume"
                         target='_blank'
-                        className='group flex items-center gap-2 bg-white px-7 py-3 rounded-full
-                                 border border-black/10 hover:scale-105 hover:shadow-lg
-                                 transition-all duration-300
-                                 dark:bg-gray-950 dark:text-white/80'
+                        className='group flex items-center gap-2 bg-white px-7 py-3 rounded-full outline-none
+                                 focus:scale-110 hover:scale-110 active:scale-105 transition
+                                 borderBlack dark:bg-white/10'
                     >
-                        <HiDocumentText className='group-hover:scale-110 transition-transform duration-300' />
-                        <span>View Resume</span>
+                        <HiDocumentText className='opacity-60 group-hover:scale-110 transition' />
+                        View Resume
                     </Link>
 
                     {/* LinkedIn */}
