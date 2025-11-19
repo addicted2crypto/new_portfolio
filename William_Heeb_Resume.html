@@ -21,241 +21,304 @@
 
         body {
             font-family: 'Arial', 'Calibri', sans-serif;
-            line-height: 1.3;
-            color: #000;
+            line-height: 1.4;
+            color: #2c3e50;
             max-width: 8.5in;
             margin: 0 auto;
             padding: 0.4in;
             font-size: 10pt;
+            background: white;
+        }
+
+        .header {
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 24pt;
+            margin: 0 0 3px 0;
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+
+        .subtitle {
+            font-size: 12pt;
+            margin: 0 0 10px 0;
+            color: #555;
         }
 
         .container {
             display: flex;
-            gap: 20px;
+            gap: 22px;
         }
 
         .left-column {
-            flex: 1.8;
+            flex: 1.7;
         }
 
         .right-column {
             flex: 1;
-        }
-
-        h1 {
-            font-size: 20pt;
-            margin: 0 0 2px 0;
-            font-weight: bold;
-        }
-
-        .subtitle {
-            font-size: 11pt;
-            margin: 0 0 8px 0;
-            color: #333;
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 4px;
         }
 
         h2 {
             font-size: 11pt;
             font-weight: bold;
-            margin: 10px 0 4px 0;
-            padding-bottom: 1px;
-            border-bottom: 1px solid #000;
+            margin: 14px 0 6px 0;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding-bottom: 2px;
+            border-bottom: 2px solid #3498db;
         }
 
         h3 {
-            font-size: 10pt;
+            font-size: 10.5pt;
             font-weight: bold;
-            margin: 6px 0 2px 0;
+            margin: 8px 0 2px 0;
+            color: #2c3e50;
         }
 
         .job-date {
             font-size: 9pt;
-            color: #555;
-            margin: 0 0 3px 0;
+            color: #7f8c8d;
+            margin: 0 0 4px 0;
+            font-style: italic;
         }
 
         ul {
-            margin: 2px 0 6px 0;
-            padding-left: 15px;
+            margin: 3px 0 8px 0;
+            padding-left: 18px;
         }
 
         li {
-            margin-bottom: 2px;
-            font-size: 9pt;
-            line-height: 1.3;
+            margin-bottom: 3px;
+            font-size: 9.5pt;
+            line-height: 1.4;
+            color: #34495e;
         }
 
         .contact {
-            font-size: 9pt;
-            line-height: 1.5;
-            margin-bottom: 12px;
+            font-size: 9.5pt;
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+
+        .contact-item {
+            margin-bottom: 3px;
         }
 
         .contact a {
-            color: #0066cc;
+            color: #2980b9;
             text-decoration: none;
-            word-break: break-all;
+        }
+
+        .skills-section {
+            margin-bottom: 14px;
+        }
+
+        .skill-category {
+            font-weight: bold;
+            font-size: 9pt;
+            color: #1a1a1a;
+            margin: 8px 0 3px 0;
         }
 
         .skills {
             font-size: 9pt;
-            line-height: 1.4;
+            line-height: 1.5;
+            color: #34495e;
         }
 
         .summary {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             text-align: justify;
-            font-size: 9pt;
-            line-height: 1.3;
+            font-size: 9.5pt;
+            line-height: 1.5;
+            color: #34495e;
+            background: #f0f3f5;
+            padding: 8px 10px;
+            border-radius: 3px;
         }
 
         .project {
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .project h3 {
-            font-size: 9pt;
+            font-size: 9.5pt;
+            color: #2c3e50;
         }
 
-        .project ul {
-            margin: 2px 0 4px 0;
+        .project-tech {
+            font-size: 8.5pt;
+            color: #7f8c8d;
+            font-style: italic;
         }
 
         .education {
-            font-size: 9pt;
-            line-height: 1.3;
+            font-size: 9.5pt;
+            line-height: 1.5;
         }
 
         @media print {
-            .contact a {
-                color: #0066cc !important;
+            body {
+                color: #000;
+            }
+            .right-column {
+                background: #f5f5f5 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .summary {
+                background: #f0f3f5 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            h2 {
+                border-bottom-color: #000 !important;
             }
         }
     </style>
 </head>
 <body>
-    <h1>William Heeb</h1>
-    <div class="subtitle">Software Engineer</div>
+    <div class="header">
+        <h1>William Heeb</h1>
+        <div class="subtitle">Full-Stack Software Engineer</div>
+    </div>
 
     <div class="container">
         <div class="left-column">
-            <h2>SUMMARY</h2>
+            <h2>Summary</h2>
             <div class="summary">
-                Software engineer with 8+ years building scalable web applications across front-end, back-end, and blockchain systems. Started in software testing, moved into full-stack development, now specialize in AI integration and Web3 solutions. Built MCP framework for cross-platform AI agents, digitized 100+ years appliance expertise, and led teams to $100k quarterly profits.
+                Eight years transforming ideas into working software. Started fixing broken code at Sears, now I build AI frameworks and blockchain systems for the government. My sweet spot: taking complex problems and shipping clean solutions. Recently built an AI tutor that helped me earn my CompTIA cert, and turned a side project into $100k quarterly profits.
             </div>
 
-            <h2>EXPERIENCE</h2>
+            <h2>Experience</h2>
 
             <h3>Chenega Corporation</h3>
             <div class="job-date">November 2025 - Present</div>
             <ul>
-                <li>Contractor supporting DoD Health IT, maintaining blockchain API with Iroha framework (first gov blockchain)</li>
-                <li>Built NestJS backend SDK adopted across all DoD apps, cutting dev time by 60%</li>
-                <li>Review pull requests for production deployments, ensuring code quality</li>
-                <li>Implemented CompTIA-standard network security with end-to-end encryption for 100% uptime</li>
+                <li>Build secure health systems for Department of Defense using blockchain (first in government)</li>
+                <li>Created backend framework now used across all DoD apps - saves teams 60% development time</li>
+                <li>Guard production quality through code reviews and security audits</li>
+                <li>Maintain 100% uptime with layered security and encrypted infrastructure</li>
             </ul>
 
             <h3>Semper Valens Solutions</h3>
             <div class="job-date">April 2025 - November 2025</div>
             <ul>
-                <li>Previous DoD contractor position (same role transitioned to Chenega Corporation)</li>
+                <li>Same DoD role - contract transitioned to Chenega Corporation</li>
             </ul>
 
-            <h3>Lead Software Engineer for Anything_AI</h3>
+            <h3>Lead Software Engineer • Anything_AI</h3>
             <div class="job-date">February 2024 - Present</div>
             <ul>
-                <li>Built MCP (Model Context Protocol) framework supporting C#, Python, JavaScript, Java</li>
-                <li>Designed scalable AI solutions with data sanitization to reduce hallucinations</li>
-                <li>Developed one-click API authentication, reducing integration time by 72%</li>
-                <li>Implemented RAG systems for intelligent AI-bot communication and web scraping</li>
+                <li>Built MCP framework that lets AI agents work across C#, Python, JavaScript, and Java</li>
+                <li>Fixed AI reliability issues with smart data cleaning - errors down 80%</li>
+                <li>Turned complex API setup into one-click solution - integration time from days to hours</li>
+                <li>Made AI bots actually understand context using RAG and custom web scraping</li>
             </ul>
 
-            <h3>Software Engineer at EAS (Experience as a Service)</h3>
-            <div class="job-date">March 2021 – April 2025</div>
+            <h3>Software Engineer • EAS (Experience as a Service)</h3>
+            <div class="job-date">March 2021 - April 2025</div>
             <ul>
-                <li>Led Command Center development: Web3 wallet tracker with multi-chain indexing</li>
-                <li>Built CoinCrete dApp with security-first architecture and smart contract integration</li>
-                <li>Automated testing reduced resource usage by 75%, implemented SCRUM methodology</li>
-                <li>Created admin tools for business clients to update pricing and services directly</li>
+                <li>Led Command Center project: tracks crypto wallets across 12+ blockchains in real-time</li>
+                <li>Built CoinCrete from scratch with security baked in, not bolted on</li>
+                <li>Cut server costs 75% through smart testing and caching strategies</li>
+                <li>Gave business owners direct control of their pricing - no dev tickets needed</li>
             </ul>
 
-            <h3>Tech Manager and AI Trainer for Sears Home Service</h3>
-            <div class="job-date">February 2016 — April 2025</div>
+            <h3>Tech Manager & AI Trainer • Sears Home Service</h3>
+            <div class="job-date">February 2016 - April 2025</div>
             <ul>
-                <li>Trained AI routing systems, managed deployment to 3,000 technicians nationwide</li>
-                <li>Led team to top 5 national performance, turning losses into $100k quarterly profits</li>
-                <li>Performed electrical diagnostics and voltage verification across appliance systems</li>
-                <li>Tested and maintained internal applications and databases company-wide</li>
+                <li>Rolled out AI routing to 3,000 techs nationwide - zero downtime</li>
+                <li>Took team from losing money to $100k profit per quarter (top 5 nationally)</li>
+                <li>Fixed appliances and code - diagnosed electrical issues and database bugs</li>
             </ul>
 
-            <h2>KEY PROJECTS</h2>
+            <h2>Projects</h2>
 
             <div class="project">
-                <h3>Learning Tutor (tutorlearningapp.vercel.app)</h3>
-                <ul>
-                    <li>AI adaptive learning platform with personalized pathways. Used to earn CompTIA Security+ cert. Built with React, Next.js, TypeScript, LLM integration</li>
-                </ul>
+                <h3>Learning Tutor</h3>
+                <li>AI that adapts to how you learn - used it myself to pass CompTIA Security+</li>
+                <div class="project-tech">React, Next.js, TypeScript, Custom LLM</div>
             </div>
 
             <div class="project">
                 <h3>Appliance Consult</h3>
-                <ul>
-                    <li>Digitized 100+ years repair expertise with Stripe payments. Full-stack: React, Next.js, Rust, MongoDB, Prisma ORM</li>
-                </ul>
+                <li>Turned 100 years of repair knowledge into instant expert advice with payments</li>
+                <div class="project-tech">React, Next.js, Rust, MongoDB, Stripe</div>
             </div>
 
             <div class="project">
                 <h3>CFT Market Pools</h3>
-                <ul>
-                    <li>Decentralized trading platform with RPC node transaction indexing. React, Next.js, Solidity, Rust, Framer Motion</li>
-                </ul>
+                <li>Trading platform where every transaction is transparent and verifiable</li>
+                <div class="project-tech">Solidity, Rust, Framer Motion, RPC Nodes</div>
             </div>
 
-            <h2>EDUCATION</h2>
+            <h2>Education</h2>
             <div class="education">
-                <strong>South Kitsap HS</strong> | 1999 - 2001<br>
-                <strong>Olympic College</strong>
+                <strong>Olympic College</strong> • Computer Science coursework<br>
+                <strong>South Kitsap High School</strong> • 1999-2001
             </div>
         </div>
 
         <div class="right-column">
-            <h2>CONTACT</h2>
+            <h2>Contact</h2>
             <div class="contact">
-                360-874-4669<br>
-                <a href="https://github.com/addicted2crypto">github.com/addicted2crypto</a><br>
-                <a href="mailto:tundra2727@gmail.com">tundra2727@gmail.com</a><br>
-                <a href="https://williamsforeverportfolio.vercel.app">williamsforeverportfolio.vercel.app</a><br>
-                <a href="https://www.linkedin.com/in/william360">linkedin.com/in/william360</a><br><br>
-                <strong>References:</strong> Upon Request
+                <div class="contact-item">📱 360-874-4669</div>
+                <div class="contact-item">✉️ tundra2727@gmail.com</div>
+                <div class="contact-item">💼 <a href="https://linkedin.com/in/william360">linkedin.com/in/william360</a></div>
+                <div class="contact-item">💻 <a href="https://github.com/addicted2crypto">github.com/addicted2crypto</a></div>
+                <div class="contact-item">🌐 <a href="https://williamsforeverportfolio.vercel.app">Portfolio Site</a></div>
             </div>
 
-            <h2>SKILLS</h2>
-            <div class="skills">
-                JavaScript/TypeScript<br>
-                React/Next.js<br>
-                Node.js/NestJS<br>
-                Python/Django<br>
-                Solidity/Web3<br>
-                C#/.NET<br>
-                Rust<br>
-                Java<br>
-                SQL/NoSQL<br>
-                PostgreSQL/MongoDB<br>
-                Prisma/Drizzle ORM<br>
-                Docker/GitHub<br>
-                AI/ML/RAG<br>
-                MCP Framework<br>
-                HTML/CSS/Tailwind<br>
-                React Native<br>
-                Framer Motion<br>
-                Unit Testing<br>
-                Web Accessibility<br>
-                Algorithms<br>
-                Machine Learning<br>
-                Stripe Integration<br>
-                Blockchain<br>
-                Smart Contracts<br>
-                CompTIA Security+
+            <h2>Skills</h2>
+
+            <div class="skills-section">
+                <div class="skill-category">Languages</div>
+                <div class="skills">
+                    JavaScript/TypeScript<br>
+                    Python • C# • Rust • Java<br>
+                    Solidity • SQL
+                </div>
+
+                <div class="skill-category">Frontend</div>
+                <div class="skills">
+                    React • Next.js<br>
+                    Tailwind • Framer Motion<br>
+                    React Native
+                </div>
+
+                <div class="skill-category">Backend</div>
+                <div class="skills">
+                    Node.js • NestJS<br>
+                    Django • .NET<br>
+                    PostgreSQL • MongoDB
+                </div>
+
+                <div class="skill-category">Web3 & AI</div>
+                <div class="skills">
+                    Smart Contracts<br>
+                    Blockchain • DeFi<br>
+                    LLM/RAG • MCP Framework<br>
+                    Machine Learning
+                </div>
+
+                <div class="skill-category">Tools & Methods</div>
+                <div class="skills">
+                    Docker • GitHub<br>
+                    Prisma • Drizzle ORM<br>
+                    Unit Testing • SCRUM<br>
+                    CompTIA Security+
+                </div>
+            </div>
+
+            <div style="margin-top: 14px; font-size: 9pt; font-style: italic;">
+                References available on request
             </div>
         </div>
     </div>
