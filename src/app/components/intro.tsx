@@ -140,7 +140,7 @@ export default function Intro() {
 
                     {/* Download PDF */}
                     <a
-                        href="/2page_11_30_2025-res.pdf"
+                        href="/newres.pdf"
                         download
                         className='group flex items-center gap-2 bg-white px-7 py-3 rounded-full outline-none
                                  focus:scale-110 hover:scale-110 active:scale-105 transition
