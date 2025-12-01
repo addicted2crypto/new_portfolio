@@ -8,20 +8,13 @@
         @media print {
             body { margin: 0; }
             @page {
-                margin: 0.4in;
+                margin: 0.35in;
                 size: letter;
             }
-            /* Hide browser-generated headers/footers (URL, date, page numbers) */
-            @page {
-                margin-top: 0.4in;
-                margin-bottom: 0.4in;
-            }
         }
-
-        /* Additional print reset to prevent URL/path display */
-        @page :first { margin-top: 0.4in; }
-        @page :left { margin-left: 0.4in; }
-        @page :right { margin-right: 0.4in; }
+        @page :first { margin-top: 0.35in; }
+        @page :left { margin-left: 0.35in; }
+        @page :right { margin-right: 0.35in; }
 
         * {
             margin: 0;
@@ -31,52 +24,52 @@
 
         body {
             font-family: 'Arial', 'Calibri', sans-serif;
-            line-height: 1.4;
+            line-height: 1.35;
             color: #2c3e50;
             max-width: 8.5in;
             margin: 0 auto;
-            padding: 0.4in;
-            font-size: 10pt;
+            padding: 0.35in;
+            font-size: 9.5pt;
             background: white;
         }
 
         .header {
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
         h1 {
-            font-size: 24pt;
-            margin: 0 0 3px 0;
+            font-size: 22pt;
+            margin: 0 0 2px 0;
             font-weight: bold;
             color: #1a1a1a;
         }
 
         .subtitle {
-            font-size: 12pt;
-            margin: 0 0 10px 0;
+            font-size: 11pt;
+            margin: 0 0 6px 0;
             color: #555;
         }
 
         .container {
             display: flex;
-            gap: 22px;
+            gap: 18px;
         }
 
         .left-column {
-            flex: 1.7;
+            flex: 1.8;
         }
 
         .right-column {
             flex: 1;
             background: #f8f9fa;
-            padding: 12px;
+            padding: 10px;
             border-radius: 4px;
         }
 
         h2 {
-            font-size: 11pt;
+            font-size: 10pt;
             font-weight: bold;
-            margin: 14px 0 6px 0;
+            margin: 10px 0 4px 0;
             color: #1a1a1a;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -85,39 +78,39 @@
         }
 
         h3 {
-            font-size: 10.5pt;
+            font-size: 9.5pt;
             font-weight: bold;
-            margin: 8px 0 2px 0;
+            margin: 6px 0 1px 0;
             color: #2c3e50;
         }
 
         .job-date {
-            font-size: 9pt;
+            font-size: 8.5pt;
             color: #7f8c8d;
-            margin: 0 0 4px 0;
+            margin: 0 0 2px 0;
             font-style: italic;
         }
 
         ul {
-            margin: 3px 0 8px 0;
-            padding-left: 18px;
+            margin: 2px 0 5px 0;
+            padding-left: 16px;
         }
 
         li {
-            margin-bottom: 3px;
-            font-size: 9.5pt;
-            line-height: 1.4;
+            margin-bottom: 2px;
+            font-size: 9pt;
+            line-height: 1.35;
             color: #34495e;
         }
 
         .contact {
-            font-size: 9.5pt;
-            line-height: 1.6;
-            margin-bottom: 14px;
+            font-size: 9pt;
+            line-height: 1.5;
+            margin-bottom: 10px;
         }
 
         .contact-item {
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         .contact a {
@@ -126,57 +119,56 @@
         }
 
         .skills-section {
-            margin-bottom: 14px;
+            margin-bottom: 10px;
         }
 
         .skill-category {
             font-weight: bold;
-            font-size: 9pt;
+            font-size: 8.5pt;
             color: #1a1a1a;
-            margin: 8px 0 3px 0;
+            margin: 6px 0 2px 0;
         }
 
         .skills {
-            font-size: 9pt;
-            line-height: 1.5;
+            font-size: 8.5pt;
+            line-height: 1.4;
             color: #34495e;
         }
 
         .summary {
-            margin-bottom: 10px;
+            margin-bottom: 6px;
             text-align: justify;
-            font-size: 9.5pt;
-            line-height: 1.5;
+            font-size: 9pt;
+            line-height: 1.4;
             color: #34495e;
             background: #f0f3f5;
-            padding: 8px 10px;
+            padding: 6px 8px;
             border-radius: 3px;
         }
 
         .project {
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         .project h3 {
-            font-size: 9.5pt;
+            font-size: 9pt;
             color: #2c3e50;
+            margin: 4px 0 1px 0;
         }
 
         .project-tech {
-            font-size: 8.5pt;
+            font-size: 8pt;
             color: #7f8c8d;
             font-style: italic;
         }
 
         .education {
-            font-size: 9.5pt;
-            line-height: 1.5;
+            font-size: 9pt;
+            line-height: 1.4;
         }
 
         @media print {
-            body {
-                color: #000;
-            }
+            body { color: #000; }
             .right-column {
                 background: #f5f5f5 !important;
                 -webkit-print-color-adjust: exact;
@@ -187,9 +179,7 @@
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
-            h2 {
-                border-bottom-color: #000 !important;
-            }
+            h2 { border-bottom-color: #000 !important; }
         }
     </style>
 </head>
@@ -203,30 +193,35 @@
         <div class="left-column">
             <h2>Summary</h2>
             <div class="summary">
-                Eight years shipping production software—from debugging Sears' internal apps to building the first blockchain
-                 system for DoD healthcare. I built an AI tutor to help myself pass Security+, then open-sourced it.
-                 I love learning new frameworks. I like hard problems: multi-chain wallet indexing, RAG pipelines, smart contracts that don't blow up.
+                Eight years shipping production software. Built the first blockchain system for DoD healthcare, wrote an MCP framework in four languages, and turned a repair team's $20k loss into $100k quarterly profit. Security+ certified.
             </div>
 
             <h2>Experience</h2>
 
             <h3>Chenega Corporation — Software Engineer</h3>
-            <div class="job-date">Seattle, WA (Hybrid) • November 2025 - Present</div>
+            <div class="job-date">Seattle, WA (Hybrid) • Apr 2025 - Present (via Semper Valens Apr-Nov)</div>
             <ul>
-                <li>Ship DoD Health IT features on Hyperledger Iroha—first government blockchain deployment in production</li>
-                <li>Built NestJS SDK adopted by 4 DoD teams; reduced boilerplate setup from 2 days to 3 hours</li>
-                <li>Review ~15 PRs/week; caught 3 critical auth bugs before production in first month</li>
-                <li>Configured end-to-end TLS, VPN tunnels, and WAF rules per CompTIA Security+ standards</li>
+                <li>Ship DoD Health IT features on Hyperledger Iroha—first government blockchain in production</li>
+                <li>Built NestJS SDK adopted by 4 DoD teams; reduced setup from 2 days to 3 hours</li>
+                <li>Review ~15 PRs/week; configured TLS, VPN tunnels, and WAF rules per Security+ standards</li>
             </ul>
 
-            <h3>Semper Valens Solutions — Software Engineer</h3>
-            <div class="job-date">Seattle, WA (Hybrid) • April 2025 - July 2025</div>
+            <h3>Sears Home Service — Tech Manager & AI Trainer</h3>
+            <div class="job-date">Silverdale, WA • Feb 2016 - Apr 2025</div>
             <ul>
-                <li>Similar DoD role—contract vehicle changed to Chenega Corporation</li>
+                <li>Managed AI routing deployment to 3,000 techs; tested updates, filed 40+ bugs, wrote SQL fixes</li>
+                <li>Led team from $20k quarterly loss to $100k profit; ranked top 5 of 200+ nationwide</li>
+            </ul>
+
+            <h3>EAS (Experience as a Service) — Software Engineer</h3>
+            <div class="job-date">Seattle, WA • Mar 2021 - Apr 2025</div>
+            <ul>
+                <li>Led Command Center: real-time wallet indexer across 12 chains (Ethereum, Polygon, Arbitrum)</li>
+                <li>Added Redis caching; cut AWS bill 75% ($3,200/mo to $800/mo)</li>
             </ul>
 
             <h3>Anything_AI — Lead Software Engineer</h3>
-            <div class="job-date">Remote • February 2024 - July 2025</div>
+            <div class="job-date">Remote • Feb 2024 - Jul 2025</div>
             <ul>
                 <li>Wrote MCP framework from scratch: 4 language SDKs (C#, Python, JS, Java), 12 tool integrations</li>
                 <li>Built input sanitization layer that dropped hallucination rate from 23% to 4% in production</li>
@@ -234,47 +229,23 @@
                 <li>Implemented RAG pipeline with Pinecone + custom chunking; retrieval latency under 200ms</li>
             </ul>
 
-            <h3>EAS (Experience as a Service) — Software Engineer</h3>
-            <div class="job-date">Seattle, WA • March 2021 - April 2025</div>
-            <ul>
-                <li>Led Command Center: real-time wallet indexer across 12 chains (Ethereum, Polygon, Arbitrum, etc.)</li>
-                <li>Architected CoinCrete dApp; wrote Solidity contracts, integrated MetaMask + WalletConnect</li>
-                <li>Added Redis caching + lazy loading; cut AWS bill 75% ($3,200/mo to $800/mo)</li>
-                <li>Built admin dashboard with Stripe integration; clients update pricing without dev tickets</li>
-            </ul>
-
-            <h3>Sears Home Service — Tech Manager & AI Trainer</h3>
-            <div class="job-date">Silverdale, WA • February 2016 - April 2025</div>
-            <ul>
-                <li>Deployed AI routing system to 3,000 field techs; tested weekly updates, filed 40+ bug reports</li>
-                <li>Turned $20k quarterly loss into $100k profit; ranked top 5 of 200+ teams nationwide</li>
-                <li>Debugged internal ticketing apps and wrote SQL queries to fix data sync issues</li>
-            </ul>
-
             <h2>Projects</h2>
 
             <div class="project">
-                <h3>Learning Tutor — <a href="https://tutorlearningapp.vercel.app" style="color:#2980b9;font-weight:normal;font-size:9pt;">live demo</a></h3>
-                <li>Adaptive learning app I built to pass Security+; generates study plans from GPT-4 API</li>
-                <div class="project-tech">React, Next.js, TypeScript, OpenAI API, Vercel</div>
+                <h3>Learning Tutor — <a href="https://tutorlearningapp.vercel.app" style="color:#2980b9;font-weight:normal;font-size:8pt;">live</a></h3>
+                <li>AI study planner I built to pass Security+; GPT-4 generates adaptive learning paths</li>
+                <div class="project-tech">React, Next.js, TypeScript, OpenAI API</div>
             </div>
 
             <div class="project">
                 <h3>Appliance Consult</h3>
-                <li>Digitized 9 years of repair diagnostics into searchable knowledge base with Stripe checkout</li>
-                <div class="project-tech">Next.js, Rust backend, MongoDB, Prisma, Stripe</div>
-            </div>
-
-            <div class="project">
-                <h3>CFT Market Pools</h3>
-                <li>DeFi pool tracker with local RPC indexing; all tx verifiable on-chain</li>
-                <div class="project-tech">Solidity, Rust, React, Framer Motion, Alchemy RPC</div>
+                <li>9 years of repair diagnostics as searchable knowledge base with Stripe payments</li>
+                <div class="project-tech">Next.js, Rust, MongoDB, Prisma</div>
             </div>
 
             <h2>Education</h2>
             <div class="education">
-                <strong>Olympic College</strong> • Computer Science coursework<br>
-                <strong>South Kitsap High School</strong> • 1999-2001
+                <strong>Olympic College</strong> — Computer Science coursework
             </div>
         </div>
 
@@ -301,8 +272,7 @@
                 <div class="skill-category">Frontend</div>
                 <div class="skills">
                     React • Next.js • Redux<br>
-                    Tailwind • Framer Motion<br>
-                    GraphQL • Apollo
+                    Tailwind • GraphQL/Apollo
                 </div>
 
                 <div class="skill-category">Backend</div>
@@ -329,10 +299,6 @@
                     Docker • GitHub Actions<br>
                     Prisma • Drizzle ORM
                 </div>
-            </div>
-
-            <div style="margin-top: 14px; font-size: 9pt; font-style: italic;">
-                References available on request
             </div>
         </div>
     </div>
