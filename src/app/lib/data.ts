@@ -209,7 +209,8 @@ export const certificationsData = [
     issuer: "CompTIA",
     date: "October 28, 2025",
     credentialId: "COMP001022876354",
-    expirationDate: "October 24, 2028",
-    credentialUrl: "http://verify.CompTIA.org",
+    verificationCode: "QF4L4H4TYNRQ2WH2",
+    expirationDate: "October 28, 2028",
+    credentialUrl: "https://www.certmetrics.com/comptia/public/verification.aspx?code=QF4L4H4TYNRQ2WH2",
   },
 ] as const;
