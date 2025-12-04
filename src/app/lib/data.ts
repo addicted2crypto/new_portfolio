@@ -23,6 +23,7 @@ import commandImg from '/public/command.png';
 import applianceImg from '/public/appliance.png';
 import agentImg from '/public/agent.png';
 import learningtutorImg from '/public/learningtutor.png';
+import dhaImg from '/public/dha.png';
 
 
 export const links = [
@@ -93,6 +94,13 @@ export const experienceData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: 'Defense Health Agency — DoD Contractor',
+    description:
+    "Software Engineer supporting health.mil and TRICARE platforms through government contracts (Semper Valens Solutions → Chenega Corporation). Shipping DoD Health IT features on Hyperledger Iroha—the first government blockchain deployment in production. Built a NestJS SDK adopted by 4 DoD teams, reducing boilerplate setup from 2 days to 3 hours. Maintaining enterprise CMS sites with JavaScript, C#, and Sitecore while implementing security protocols including end-to-end TLS, VPN tunnels, and WAF configurations.",
+    tags: ["NestJS", "Hyperledger Iroha", "C#", "JavaScript", "Sitecore CMS", "TypeScript", "Security+", ".NET", "Node.js", "DoD"],
+    imageUrl: dhaImg,
+  },
   {
     title: 'Learning Tutor',
     description:
