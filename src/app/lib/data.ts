@@ -163,6 +163,7 @@ export const skillsData = [
   "Rust",
   "Golang",
   "Solidity",
+  "SQL",
   // Frontend
   "React",
   "Next.js",
@@ -173,12 +174,14 @@ export const skillsData = [
   // Backend
   "Node.js",
   "Express",
+  "NestJS",
   ".NET",
   "Django",
   // Databases & ORMs
   "MongoDB",
   "PostgreSQL",
   "Prisma",
+  "Drizzle",
   // State & APIs
   "Redux",
   "GraphQL",
@@ -188,6 +191,7 @@ export const skillsData = [
   "RAG",
   // Tools
   "Git",
+  "Docker",
   "CLI",
 ] as const;
 
