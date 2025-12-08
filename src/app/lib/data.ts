@@ -201,6 +201,9 @@ export const skillsData = [
   "Git",
   "Docker",
   "CLI",
+  "Bash",
+  "AWS",
+  "Azure",
 ] as const;
 
 export const certificationsData = [
