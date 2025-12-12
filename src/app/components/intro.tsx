@@ -15,6 +15,7 @@ import { useActiveSection } from '../context/active-section';
 export default function Intro() {
 
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const [imageTilt, setImageTilt] = useState({ rotateX: 0, rotateY: 0 });
     const buttonRef = useRef<HTMLDivElement>(null);
     const { ref } = useSectionTimeOutForClick("Home", 0.6);
     const { setActiveSection, setTimeOfLastClick } = useActiveSection();
@@ -32,15 +33,42 @@ export default function Intro() {
     const handleMouseLeave = () => {
         setMousePosition({ x: 0, y: 0 });
     };
-  
 
+    const handleImageMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const mouseX = e.clientX - centerX;
+        const mouseY = e.clientY - centerY;
+
+        const maxTilt = 25;
+        const rotateY = (mouseX / (rect.width / 2)) * maxTilt;
+        const rotateX = -(mouseY / (rect.height / 2)) * maxTilt;
+
+        setImageTilt({ rotateX, rotateY });
+    };
+
+    const handleImageMouseLeave = () => {
+        setImageTilt({ rotateX: 0, rotateY: 0 });
+    };
 
     return (
         <section
             ref={ref}
             id="home" className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[69rem]'>
             <div className='flex items-center justify-center'>
-                <div className='relative'>
+                <motion.div
+                    className='relative cursor-pointer'
+                    onMouseMove={handleImageMouseMove}
+                    onMouseLeave={handleImageMouseLeave}
+                    animate={{
+                        rotateX: imageTilt.rotateX,
+                        rotateY: imageTilt.rotateY,
+                        scale: imageTilt.rotateX !== 0 || imageTilt.rotateY !== 0 ? 1.1 : 1,
+                    }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                    style={{ perspective: 1000, transformStyle: 'preserve-3d' }}
+                >
                     <motion.div
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -52,7 +80,10 @@ export default function Intro() {
                             height={90}
                             quality={90}
                             priority={true}
-                            className='h-30 w-30 rounded-full object-cover border-[.369rem] border-slate-50 shadow-xl' />
+                            className='h-30 w-30 rounded-full object-cover border-[.369rem] border-slate-50 shadow-xl'
+                            style={{
+                                boxShadow: `${-imageTilt.rotateY * 0.5}px ${imageTilt.rotateX * 0.5}px 20px rgba(0,0,0,0.3)`
+                            }} />
 
                     </motion.div>
                     <motion.span className='absolute text-4xl top-0 left-0'
@@ -62,16 +93,11 @@ export default function Intro() {
                             type: 'keyframes',
                             stiffness: 125,
                             delay: 0.69,
-
                         }}
-
                     >
-
                         🫡
-
                     </motion.span>
-                </div>
-
+                </motion.div>
             </div>
             <motion.section className='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl'
                 initial={{ opacity: 0, y: 100 }}
