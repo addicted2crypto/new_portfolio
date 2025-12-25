@@ -62,7 +62,7 @@ export const experienceData = [
     title: "Software Engineer — DoD Contractor",
     location: "Seattle, WA (Hybrid)",
     description:
-      "Supporting Defense Health Agency platforms (health.mil, TRICARE) through government contracts with Semper Valens Solutions and Chenega Corporation. Shipping DoD Health IT features on Hyperledger Iroha—the first government blockchain in production. Built NestJS SDK adopted by 4 DoD teams. Maintaining enterprise CMS with JavaScript, C#, and Sitecore while implementing end-to-end TLS, VPN tunnels, and WAF configurations.",
+      "Supporting Defense Health Agency platforms (health.mil, TRICARE) through government contracts with Semper Valens Solutions and Chenega Corporation. Shipping DoD Health IT features on Hyperledger Iroha—pushing for the first government project supported on blockchain in production. Built NestJS SDK adopted by 4 DoD teams. Maintaining enterprise CMS with JavaScript, C#, and Sitecore while implementing end-to-end TLS, VPN tunnels, and WAF configurations.",
     icon: React.createElement(GiComputing),
     date: "April 2025 - Present"
   },
