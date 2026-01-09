@@ -24,6 +24,7 @@ import applianceImg from '/public/appliance.png';
 import agentImg from '/public/agent.png';
 import learningtutorImg from '/public/learningtutor.png';
 import dhaImg from '/public/dha.png';
+import gymtechImg from '/public/gymtech.png';
 
 
 export const links = [
@@ -58,6 +59,14 @@ export const links = [
 ] as const;
 
 export const experienceData = [
+  {
+    title: "Founder & Lead Developer — GymTech",
+    location: "Remote",
+    description:
+      "Building a full-stack SaaS platform for martial arts and fitness gyms. Architected multi-tenant system with role-based access control, tier-based subscriptions ($79-$299/mo), and Stripe Connect payment processing. Implementing class scheduling, member management, QR check-ins, landing page builder, and real-time analytics with PostgreSQL and Supabase.",
+    icon: React.createElement(GiComputing),
+    date: "Dec 2025 - Present"
+  },
   {
     title: "Software Engineer — DoD Contractor",
     location: "Seattle, WA (Hybrid)",
@@ -108,6 +117,13 @@ export const projectsData = [
     "Software Engineer supporting health.mil and TRICARE platforms through government contracts (Semper Valens Solutions → Chenega Corporation). Shipping DoD Health IT features on Hyperledger Iroha—the first government blockchain deployment in production. Built a NestJS SDK adopted by 4 DoD teams, reducing boilerplate setup from 2 days to 3 hours. Maintaining enterprise CMS sites with JavaScript, C#, and Sitecore while implementing security protocols including end-to-end TLS, VPN tunnels, and WAF configurations.",
     tags: ["NestJS", "Hyperledger Iroha", "C#", "JavaScript", "Sitecore CMS", "TypeScript", "Security+", ".NET", "Node.js", "DoD"],
     imageUrl: dhaImg,
+  },
+  {
+    title: 'GymTech — Gym Management SaaS',
+    description:
+      "Full-stack SaaS platform for martial arts and fitness gyms competing with SparkMembership. Built multi-tenant architecture with role-based access control (super_admin, gym_owner, staff, member) and tier-based subscriptions ($79-$299/mo). Integrated Stripe for platform billing and Stripe Connect for gym payment processing. Core features include class scheduling, member database, QR check-in system, landing page builder, and real-time analytics dashboards. PostgreSQL triggers enforce tier limits on members, staff, and messaging quotas. Designed complete subscription lifecycle with 14-day trials and automated data policies.",
+    tags: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "Stripe", "Tailwind CSS", "Zustand", "RLS", "Multi-tenant", "SaaS"],
+    imageUrl: gymtechImg,
   },
   {
     title: 'Learning Tutor',
@@ -171,6 +187,7 @@ export const skillsData = [
   "Rust",
   "Golang",
   "Solidity",
+  "Java",
   "SQL",
   // Frontend
   "React",
@@ -188,12 +205,15 @@ export const skillsData = [
   // Databases & ORMs
   "MongoDB",
   "PostgreSQL",
+  "Supabase",
   "Prisma",
   "Drizzle",
   // State & APIs
   "Redux",
+  "Zustand",
   "GraphQL",
   "Apollo",
+  "Stripe",
   // AI/ML
   "LLM",
   "RAG",
