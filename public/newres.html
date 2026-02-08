@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>William Heeb Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+    :root {
+      --bg: #0b0b0e;
+      --surface: #131316;
+      --surface-hover: #1a1a1f;
+      --sidebar-bg: #0f0f13;
+      --border: #222228;
+      --border-subtle: #1a1a1f;
+      --text: #e4e4e7;
+      --text-muted: #a1a1aa;
+      --text-dim: #6b6b76;
+      --accent: #3b82f6;
+      --accent-glow: rgba(59, 130, 246, 0.10);
+      --accent-glow-strong: rgba(59, 130, 246, 0.25);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'IBM Plex Sans', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: #60a5fa; text-decoration: underline; }
+
+    /* ═══ PAGE ═══ */
+    .page {
+      width: 8.5in;
+      min-height: 11in;
+      margin: 0.4in auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 225px;
+      grid-template-rows: auto 1fr auto;
+      page-break-after: always;
+      position: relative;
+    }
+    .page:last-child { page-break-after: auto; }
+
+    /* ═══ HEADER ═══ */
+    .header-band {
+      grid-column: 1 / -1;
+      padding: 1.35rem 1.7rem 1.1rem;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(135deg, var(--surface) 0%, #12121a 100%);
+      position: relative; z-index: 2;
+    }
+    .header-band h1 { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.03em; }
+    .header-band .tagline {
+      font-family: 'IBM Plex Mono', monospace;
+      color: var(--accent); font-size: 0.82rem; font-weight: 500; margin-top: 0.1rem;
+    }
+
+    /* ═══ MAIN ═══ */
+    .main { padding: 1.4rem 1.7rem; position: relative; z-index: 2; }
+
+    .summary {
+      color: var(--text-muted); font-size: 0.82rem; line-height: 1.65;
+      margin-bottom: 1.2rem; padding-bottom: 0.9rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .sec-title {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.65rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.12em; color: var(--accent); margin-bottom: 0.8rem;
+    }
+
+    /* ═══ ENTRIES ═══ */
+    .entry {
+      margin-bottom: 1.05rem; padding: 0.55rem 0.65rem; border-radius: 6px;
+      border: 1px solid transparent;
+      transition: background 0.25s, border-color 0.25s, box-shadow 0.25s;
+      cursor: default;
+    }
+    .entry:last-child { margin-bottom: 0; }
+    .entry:hover {
+      background: var(--surface-hover); border-color: var(--border);
+      box-shadow: 0 0 20px var(--accent-glow);
+    }
+
+    .entry-role { font-size: 0.88rem; font-weight: 600; line-height: 1.3; }
+    .entry-role .co { color: var(--text-muted); font-weight: 400; }
+    .entry-meta {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem; color: var(--text-dim); margin: 0.15rem 0 0.35rem;
+    }
+
+    .entry ul { list-style: none; }
+    .entry li {
+      position: relative; padding-left: 1rem;
+      font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;
+      margin-bottom: 0.15rem; transition: color 0.2s;
+    }
+    .entry li::before {
+      content: '▸'; position: absolute; left: 0;
+      color: var(--accent); font-size: 0.7rem; top: 1px; transition: transform 0.2s;
+    }
+    .entry:hover li { color: var(--text); }
+    .entry:hover li::before { transform: translateX(2px); }
+
+    /* ═══ PROJECTS ═══ */
+    .project {
+      margin-bottom: 0.85rem; padding: 0.5rem 0.65rem; border-radius: 6px;
+      border: 1px solid transparent;
+      transition: background 0.25s, border-color 0.25s, box-shadow 0.25s;
+      cursor: default;
+    }
+    .project:last-child { margin-bottom: 0; }
+    .project:hover {
+      background: var(--surface-hover); border-color: var(--border);
+      box-shadow: 0 0 16px var(--accent-glow);
+    }
+
+    .project-name { font-weight: 600; font-size: 0.84rem; }
+    .project-desc {
+      font-size: 0.78rem; color: var(--text-muted);
+      margin: 0.1rem 0 0.15rem; line-height: 1.45; transition: color 0.2s;
+    }
+    .project:hover .project-desc { color: var(--text); }
+    .project-tech {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.66rem; color: var(--text-dim);
+    }
+
+    /* ═══ SIDEBAR ═══ */
+    .sidebar {
+      background: var(--sidebar-bg); border-left: 1px solid var(--border);
+      padding: 1.4rem 1.15rem; position: relative; z-index: 2;
+    }
+
+    .sb-section { margin-bottom: 1.2rem; }
+    .sb-section:last-child { margin-bottom: 0; }
+
+    .sb-title {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.6rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.12em; color: var(--accent);
+      margin-bottom: 0.5rem; padding-bottom: 0.3rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sb-item { font-size: 0.75rem; color: var(--text-muted); line-height: 1.45; margin-bottom: 0.06rem; }
+    .sb-item.contact-item { margin-bottom: 0.25rem; }
+
+    .sb-group { margin-bottom: 0.7rem; }
+    .sb-group:last-child { margin-bottom: 0; }
+    .sb-group-label { font-size: 0.68rem; font-weight: 600; color: var(--text); margin-bottom: 0.1rem; }
+    .sb-group p { font-size: 0.72rem; color: var(--text-muted); line-height: 1.4; }
+
+    .skill-tag {
+      display: inline; transition: color 0.2s, text-shadow 0.3s; cursor: default;
+    }
+    .skill-tag:hover { color: var(--accent); text-shadow: 0 0 8px rgba(59,130,246,0.5); }
+
+    .edu-line { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.1rem; }
+    .edu-line strong { color: var(--text); font-weight: 600; }
+
+    .refs {
+      grid-column: 1 / -1; text-align: center; font-size: 0.68rem;
+      color: var(--text-dim); padding: 0.55rem;
+      border-top: 1px solid var(--border-subtle); position: relative; z-index: 2;
+    }
+
+    .highlight-item {
+      font-size: 0.73rem; color: var(--text-muted); margin-bottom: 0.45rem;
+      padding: 0.35rem 0.5rem; border-radius: 5px;
+      border: 1px solid var(--border-subtle);
+      transition: border-color 0.25s, background 0.25s; cursor: default;
+    }
+    .highlight-item:hover { border-color: var(--border); background: var(--surface-hover); }
+    .highlight-item:last-child { margin-bottom: 0; }
+    .hl-icon { margin-right: 0.3rem; }
+
+    /* ═══ PRINT ═══ */
+    @media print {
+      body { background: #fff; }
+      .page { margin: 0; border: none; border-radius: 0; width: 100%; min-height: 100vh; }
+      .page, .main, .header-band { background: #fff; color: #111; }
+      .sidebar { background: #f7f7f9; border-left-color: #ddd; }
+      .header-band { background: #fff; border-bottom-color: #ddd; }
+      .sec-title, .sb-title, .header-band .tagline { color: #2563eb; }
+      .entry li::before { color: #2563eb; }
+      .entry-role, .sb-group-label, .edu-line strong, .project-name { color: #111; }
+      .entry li, .entry-meta, .sb-item, .sb-group p, .summary,
+      .project-desc, .edu-line, .entry-role .co { color: #444; }
+      .project-tech, .refs, .highlight-item { color: #777; }
+      a { color: #2563eb; }
+      .entry, .project, .highlight-item { border-color: transparent!important; background: transparent!important; box-shadow: none!important; }
+      .glow-orb { display: none!important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════ PAGE 1 ══════════ -->
+<div class="page" id="page1">
+  <div class="header-band">
+    <h1 id="typed-name"></h1>
+    <div class="tagline" id="typed-tagline" style="opacity: 0;"></div>
+  </div>
+
+  <div class="main">
+    <div class="summary">
+      Eight years shipping production software, from debugging Sears' internal apps to deploying
+      the first blockchain system for DoD healthcare. I built an AI tutor to help myself pass
+      Security+, then open-sourced it. I like hard problems: RAG pipelines, multi-tenant SaaS
+      architecture, smart contracts that don't blow up, and government systems that actually work.
+    </div>
+
+    <div class="sec-title">Experience</div>
+
+    <div class="entry">
+      <div class="entry-role">Software Engineer <span class="co">| Chenega Corporation</span></div>
+      <div class="entry-meta">Seattle, WA (Hybrid) · Nov 2025 – Present</div>
+      <ul>
+        <li>Ship DoD Health IT features on Hyperledger Iroha, first government blockchain deployment in production</li>
+        <li>Built NestJS SDK adopted by 4 DoD teams; reduced boilerplate setup from 2 days to 3 hours</li>
+        <li>Maintain health.mil and Tricare sites: bug fixes and feature updates in JavaScript, C#, Sitecore CMS</li>
+        <li>Configured end-to-end TLS, VPN tunnels, and WAF rules per CompTIA Security+ standards</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-role">Software Engineer <span class="co">| Semper Valens Solutions</span></div>
+      <div class="entry-meta">Seattle, WA (Hybrid) · Apr 2025 – Jul 2025</div>
+      <ul>
+        <li>Same DoD Health IT role; contract vehicle changed to Chenega Corporation</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-role">Lead Software Engineer <span class="co">| Anything_AI</span></div>
+      <div class="entry-meta">Remote · Feb 2024 – Jul 2025</div>
+      <ul>
+        <li>Wrote MCP framework from scratch: 4 language SDKs (C#, Python, JS, Java), 12 tool integrations</li>
+        <li>Built input sanitization layer that dropped hallucination rate from 23% to 4% in production</li>
+        <li>Shipped OAuth2 wrapper cutting third-party API integration from 2 days to 45 minutes</li>
+        <li>Implemented RAG pipeline with Pinecone + custom chunking; retrieval latency under 200 ms</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-role">Software Engineer <span class="co">| EAS (Experience as a Service)</span></div>
+      <div class="entry-meta">Seattle, WA · Mar 2021 – Apr 2025</div>
+      <ul>
+        <li>Architected full-stack B2B platform with authentication, Stripe payment integration, and real-time data processing</li>
+        <li>Built modern, responsive web applications with semantic HTML/CSS/JS; ensured accessibility and cross-browser support</li>
+        <li>Automated rendering tests and optimized page assets; reduced footprint 75% while running agile SCRUM sprints</li>
+        <li>Developed self-service admin dashboard so clients update pricing and services without developer tickets</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-role">Tech Manager &amp; AI Trainer <span class="co">| Sears Home Service</span></div>
+      <div class="entry-meta">Silverdale, WA · Feb 2016 – Apr 2025</div>
+      <ul>
+        <li>Deployed AI routing system to 3,000 field techs; tested weekly updates, filed 40+ bug reports</li>
+        <li>Turned $20k quarterly loss into $100k profit; ranked top 5 of 200+ teams nationwide</li>
+        <li>Debugged internal ticketing apps and wrote SQL queries to fix data-sync issues</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="sb-section">
+      <div class="sb-title">Contact</div>
+      <div class="sb-item contact-item">360-874-4669</div>
+      <div class="sb-item contact-item">tundra2727@gmail.com</div>
+      <div class="sb-item contact-item"><a href="https://linkedin.com/in/william360">linkedin.com/in/william360</a></div>
+      <div class="sb-item contact-item"><a href="https://github.com/addicted2crypto">github.com/addicted2crypto</a></div>
+      <div class="sb-item contact-item"><a href="https://williamsforeverportfolio.vercel.app">Portfolio</a></div>
+    </div>
+
+    <div class="sb-section">
+      <div class="sb-title">Skills</div>
+
+      <div class="sb-group">
+        <div class="sb-group-label">Languages</div>
+        <p><span class="skill-tag">JavaScript</span> / <span class="skill-tag">TypeScript</span><br><span class="skill-tag">Python</span> · <span class="skill-tag">C#</span> · <span class="skill-tag">Rust</span> · <span class="skill-tag">Go</span><br><span class="skill-tag">Solidity</span> · <span class="skill-tag">Java</span> · <span class="skill-tag">SQL</span></p>
+      </div>
+
+      <div class="sb-group">
+        <div class="sb-group-label">Frontend</div>
+        <p><span class="skill-tag">React</span> · <span class="skill-tag">Next.js</span> · <span class="skill-tag">Tailwind</span><br><span class="skill-tag">Framer Motion</span> · <span class="skill-tag">HTML</span> · <span class="skill-tag">CSS</span><br><span class="skill-tag">GraphQL</span> · <span class="skill-tag">Apollo</span></p>
+      </div>
+
+      <div class="sb-group">
+        <div class="sb-group-label">Backend</div>
+        <p><span class="skill-tag">Node.js</span> · <span class="skill-tag">Express</span> · <span class="skill-tag">NestJS</span><br><span class="skill-tag">Django</span> · <span class="skill-tag">.NET</span><br><span class="skill-tag">PostgreSQL</span> · <span class="skill-tag">MongoDB</span> · <span class="skill-tag">Supabase</span></p>
+      </div>
+
+      <div class="sb-group">
+        <div class="sb-group-label">Web3 &amp; AI</div>
+        <p><span class="skill-tag">Smart Contracts</span> · <span class="skill-tag">DeFi</span><br><span class="skill-tag">LLM / RAG</span> · <span class="skill-tag">MCP Framework</span><br><span class="skill-tag">Hyperledger Iroha</span></p>
+      </div>
+
+      <div class="sb-group">
+        <div class="sb-group-label">State &amp; ORM</div>
+        <p><span class="skill-tag">Zustand</span> · <span class="skill-tag">Redux</span><br><span class="skill-tag">Prisma</span> · <span class="skill-tag">Drizzle ORM</span></p>
+      </div>
+    </div>
+
+    <div class="sb-section">
+      <div class="sb-title">Certifications</div>
+      <div class="sb-item">CompTIA Security+</div>
+    </div>
+
+    <div class="sb-section">
+      <div class="sb-title">Tools &amp; Infra</div>
+      <div class="sb-item"><span class="skill-tag">Docker</span> · <span class="skill-tag">GitHub Actions</span></div>
+      <div class="sb-item"><span class="skill-tag">AWS</span> · <span class="skill-tag">Azure</span> · <span class="skill-tag">Vercel</span></div>
+      <div class="sb-item"><span class="skill-tag">Bash</span> · <span class="skill-tag">Stripe Connect</span></div>
+    </div>
+
+    <div class="sb-section">
+      <div class="sb-title">Education</div>
+      <div class="edu-line"><strong>Olympic College</strong></div>
+      <div class="edu-line">Computer Science coursework</div>
+      <div class="edu-line" style="margin-top:0.35rem"><strong>South Kitsap HS</strong></div>
+      <div class="edu-line">1999 – 2001</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ PAGE 2 ══════════ -->
+<div class="page" id="page2">
+  <div class="header-band" style="padding:0.9rem 1.7rem 0.7rem;">
+    <h1 style="font-size:1.15rem;">William Heeb</h1>
+    <div class="tagline" style="font-size:0.72rem;">Full-Stack Software Engineer | Page 2</div>
+  </div>
+
+  <div class="main">
+    <div class="sec-title">Experience (continued)</div>
+
+    <div class="entry">
+      <div class="entry-role">Founder &amp; Lead Developer <span class="co">| GymTech</span></div>
+      <div class="entry-meta">Remote · Dec 2025 – Present</div>
+      <ul>
+        <li>Built multi-tenant SaaS for martial arts and fitness gyms competing with SparkMembership</li>
+        <li>Integrated Stripe Connect for platform billing and gym payment processing ($79-$299/mo tiers)</li>
+        <li>Architected role-based access (super_admin, gym_owner, staff, member), class scheduling, QR check-in, landing page builder, and real-time analytics dashboards</li>
+        <li>PostgreSQL triggers enforce tier limits on members, staff, and messaging quotas; designed complete subscription lifecycle with 14-day trials</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-role">Founder &amp; Developer <span class="co">| Appliance Consult</span></div>
+      <div class="entry-meta">Remote · 2023 – Present</div>
+      <ul>
+        <li>Digitized 9 years of appliance repair diagnostics into AI-powered searchable knowledge base with Stripe checkout</li>
+        <li>Built full-stack platform: Next.js frontend, Rust backend, MongoDB with Prisma ORM and Drizzle</li>
+        <li>Delivers instant expert repair guidance to paying customers</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-role">Developer <span class="co">| Learning Tutor</span></div>
+      <div class="entry-meta">Remote · 2024</div>
+      <ul>
+        <li>Shipped adaptive learning platform that generates personalized study plans via GPT-4 API</li>
+        <li>Built to pass Security+ certification; open-sourced after passing the exam</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-role">Lead Developer <span class="co">| Command Center</span></div>
+      <div class="entry-meta">Remote · 2022 – 2023</div>
+      <ul>
+        <li>Built real-time Web3 wallet indexer across 12 chains (Ethereum, Polygon, Arbitrum, etc.)</li>
+        <li>Dashboard displays holdings with integrated DeFi options for cross-chain operations</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-role">Developer <span class="co">| CoinCrete dApp</span></div>
+      <div class="entry-meta">Remote · 2022</div>
+      <ul>
+        <li>Built Web3 dApp with security-first design; wrote Solidity contracts, integrated MetaMask + WalletConnect</li>
+        <li>Multi-chain connectivity with user auth and smart contract integration</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-role">Developer <span class="co">| CFT Market Pools</span></div>
+      <div class="entry-meta">Remote · 2022</div>
+      <ul>
+        <li>DeFi pool tracker with local RPC indexing; all transactions verifiable on-chain in real time</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="sb-section">
+      <div class="sb-title">Contact</div>
+      <div class="sb-item contact-item">360-874-4669</div>
+      <div class="sb-item contact-item">tundra2727@gmail.com</div>
+      <div class="sb-item contact-item"><a href="https://linkedin.com/in/william360">LinkedIn</a></div>
+      <div class="sb-item contact-item"><a href="https://github.com/addicted2crypto">GitHub</a></div>
+      <div class="sb-item contact-item"><a href="https://williamsforeverportfolio.vercel.app">Portfolio</a></div>
+    </div>
+
+    <div class="sb-section">
+      <div class="sb-title">Highlights</div>
+      <div class="highlight-item"><span class="hl-icon">🔗</span>First gov blockchain in production</div>
+      <div class="highlight-item"><span class="hl-icon">⚡</span>NestJS SDK adopted by 4 DoD teams</div>
+      <div class="highlight-item"><span class="hl-icon">🤖</span>MCP framework: 4 SDKs, 12 integrations</div>
+      <div class="highlight-item"><span class="hl-icon">📉</span>Hallucination rate 23% → 4%</div>
+      <div class="highlight-item"><span class="hl-icon">💰</span>$20k loss → $100k quarterly profit</div>
+      <div class="highlight-item"><span class="hl-icon">🏋️</span>GymTech SaaS: multi-tenant + Stripe Connect</div>
+      <div class="highlight-item"><span class="hl-icon">🔒</span>CompTIA Security+ certified</div>
+    </div>
+
+    <div class="sb-section">
+      <div class="sb-title">Interests</div>
+      <div class="sb-item">Smart Contract Security</div>
+      <div class="sb-item">AI / LLM Tooling &amp; Agents</div>
+      <div class="sb-item">DeFi Protocol Design</div>
+      <div class="sb-item">SaaS Architecture</div>
+      <div class="sb-item">Open Source</div>
+      <div class="sb-item">Martial Arts</div>
+    </div>
+  </div>
+
+  <div class="refs">References available on request</div>
+</div>
+
+<!-- ══════════ INTERACTIVE JS ══════════ -->
+<script>
+(function() {
+  // ── Typewriter effect (runs once on load) ──
+  const nameEl = document.getElementById('typed-name');
+  const taglineEl = document.getElementById('typed-tagline');
+  const name = 'William Heeb';
+  const tagline = 'Full-Stack Software Engineer';
+  let i = 0, j = 0;
+
+  function typeName() {
+    if (i < name.length) {
+      nameEl.textContent = name.slice(0, i + 1);
+      i++;
+      setTimeout(typeName, 60);
+    } else {
+      // Start tagline after name is done
+      taglineEl.style.opacity = '1';
+      typeTagline();
+    }
+  }
+
+  function typeTagline() {
+    if (j < tagline.length) {
+      taglineEl.textContent = tagline.slice(0, j + 1);
+      j++;
+      setTimeout(typeTagline, 30);
+    }
+  }
+
+  // Start typing on load
+  typeName();
+
+  // ── Cursor glow orb that follows mouse on each page ──
+  document.querySelectorAll('.page').forEach(page => {
+    const orb = document.createElement('div');
+    orb.className = 'glow-orb';
+    Object.assign(orb.style, {
+      position: 'absolute', width: '400px', height: '400px',
+      borderRadius: '50%', pointerEvents: 'none',
+      background: 'radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%)',
+      transform: 'translate(-50%, -50%)', opacity: '0',
+      transition: 'opacity 0.45s ease', zIndex: '0',
+    });
+    page.appendChild(orb);
+
+    page.addEventListener('mousemove', e => {
+      const r = page.getBoundingClientRect();
+      orb.style.left = (e.clientX - r.left) + 'px';
+      orb.style.top = (e.clientY - r.top) + 'px';
+      orb.style.opacity = '1';
+    });
+    page.addEventListener('mouseleave', () => { orb.style.opacity = '0'; });
+  });
+
+  // ── Staggered entrance animation ──
+  function stagger(sel, delay) {
+    document.querySelectorAll(sel).forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(10px)';
+      el.style.transition = 'opacity 0.45s ease ' + (i * delay) + 'ms, transform 0.45s ease ' + (i * delay) + 'ms';
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }));
+    });
+  }
+  stagger('.entry', 80);
+  stagger('.project', 80);
+  stagger('.highlight-item', 55);
+
+  // ── Skill tag glow on hover (already via CSS, this adds a slight scale) ──
+  document.querySelectorAll('.skill-tag').forEach(tag => {
+    tag.addEventListener('mouseenter', () => { tag.style.transform = 'scale(1.05)'; });
+    tag.addEventListener('mouseleave', () => { tag.style.transform = 'scale(1)'; });
+  });
+})();
+</script>
+</body>
+</html>
