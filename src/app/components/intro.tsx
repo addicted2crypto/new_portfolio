@@ -117,7 +117,7 @@ export default function Intro() {
                 </h1>
                 <h2>
                     <span className='font-bold text-3xl'>
-                        Specializing in AI & Web3 Solutions
+                        Specializing in your everchanging Solutions
                     </span>
                 </h2>
                 <h3>
