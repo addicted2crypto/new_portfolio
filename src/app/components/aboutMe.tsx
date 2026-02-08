@@ -18,15 +18,15 @@ export default function AboutMe() {
        >
          <SectionHeader>About me</SectionHeader>
         <p className='mb-8'>
-        Welcome to my portfolio! My journey into the world of code began with an exciting opportunity to test AI implementation in early 2016. The experience of providing direct feedback ignited an excitement that hasn&apos;t faded since. Code has become more than just a hobby—it&apos;s my undeniable passion.
+        I&apos;m a full-stack software engineer currently working as a <span className='font-semibold'>DoD contractor</span> supporting Defense Health Agency platforms including health.mil and TRICARE. I&apos;m helping ship the first government blockchain deployment in production using Hyperledger Iroha, and building internal tooling that&apos;s been adopted across multiple DoD teams.
         </p>
 
         <p className='mb-8'>
-        As a software engineer, I thrive on the dynamic nature of software development, embracing the ever-changing landscape and reveling in pushing the limits of problem-solving. I find my stride in the constant evolution of technology. Beyond my passion for code and tech, my family holds the key to my heart, making them my primary source of inspiration and support.
+        Outside of my contract work, I&apos;m building <span className='font-semibold'>GymTech</span>—a SaaS platform for martial arts and fitness gyms. From multi-tenant architecture to Stripe Connect integrations, I enjoy solving real business problems with clean, scalable code. I&apos;m <span className='font-semibold'>CompTIA Security+ certified</span> and take security seriously in everything I build.
         </p>
 
         <p className='mb-8'>
-        My commitment to learning propels me forward as I enthusiastically explore new technologies and keep up with industry trends. Join me on this coding journey where innovation meets dedication, and let&apos;s create something extraordinary together.
+        My background spans Web3, AI integrations, and enterprise systems. I&apos;ve led teams, shipped production apps, and worked with technologies ranging from React and TypeScript to Rust and Solidity. When I&apos;m not coding, I&apos;m usually with my family—they keep me grounded and motivated.
         </p>
         </motion.section>
         

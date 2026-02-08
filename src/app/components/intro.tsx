@@ -10,6 +10,7 @@ import { FaGithubSquare } from 'react-icons/fa';
 import { HiDocumentText } from 'react-icons/hi';
 import { useSectionTimeOutForClick } from '../lib/hooks';
 import { useActiveSection } from '../context/active-section';
+import toast from 'react-hot-toast';
 
 
 export default function Intro() {
@@ -168,6 +169,7 @@ export default function Intro() {
                     <a
                         href="/newres.pdf"
                         download
+                        onClick={() => toast.success('Resume downloading!')}
                         className='group flex items-center gap-2 bg-white px-7 py-3 rounded-full outline-none
                                  focus:scale-110 hover:scale-110 active:scale-105 transition
                                  borderBlack dark:bg-white/10'

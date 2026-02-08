@@ -9,6 +9,7 @@ import MyProjects from './components/myProjects';
 import SectionSeperator from './components/sectionSeperator';
 import Skills from './context/skills';
 import Certifications from './components/certifications';
+import Terminal from './components/Terminal';
 
 export default function Home() {
   return (
@@ -22,7 +23,8 @@ export default function Home() {
       <Certifications />
       <Contact />
       <Toaster position='top-center'/>
-        <Footer />
+      <Terminal />
+      <Footer />
     </main>
   );
 }
