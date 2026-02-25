@@ -97,7 +97,7 @@ export const experienceData = [
     description:
       "Led blockchain development team building decentralized applications (dApps) for Web3 projects. Designed and implemented smart contracts and frontend interfaces that interact with multiple blockchain networks. Collaborated with leading Web3 companies on production deployments.",
     icon: React.createElement(FaReact),
-    date: "2021 - 2022",
+    date: "2021 - 2024",
 
   },
   {
