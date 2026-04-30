@@ -16,6 +16,17 @@ export interface ProjectData {
   githubUrl?: string;
 }
 
+export interface CertificationData {
+  name: string;
+  issuer: string;
+  date: string;
+  credentialId?: string;
+  verificationCode?: string;
+  expirationDate?: string;
+  credentialUrl?: string;
+  description?: string;
+}
+
 import easImg from "/public/eas.png";
 import coincreteImg from '/public/coincrete.png';
 import cftmarketImg from '/public/cftmarket.png';
@@ -111,6 +122,30 @@ export const experienceData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: 'AvaSleuth / ContractSleuth',
+    description:
+      "Flagship multi-module Web3 intelligence platform for the Avalanche ecosystem. Smart contract auditing pipeline spanning L0–L7: ABI-level static analysis, live on-chain intelligence, adversarial threat modeling, and Foundry three-phase PoC generation. 5-gate anti-hallucination pipeline prevents false findings. Includes WalletSleuth for wallet analysis and TokenRadar for token intelligence. Heartbeat state machine maintains module health. 44-finding audit track record including Club HashCash (Avalanche C-Chain).",
+    tags: ["NestJS", "TypeScript", "PostgreSQL", "Redis", "BullMQ", "Foundry", "Avalanche", "Solidity", "wagmi", "viem"],
+    imageUrl: commandImg,
+    githubUrl: "https://github.com/addicted2crypto",
+  },
+  {
+    title: 'DCGP',
+    description:
+      "Context governance kernel for LLM agents. Implements entropy prediction and hallucination blocking to enforce deterministic output within agentic pipelines. Integrates as an opencode plugin, giving any LLM orchestration system a typed context boundary and audit surface.",
+    tags: ["TypeScript", "LLM", "RAG", "AI", "Node.js", "Agents"],
+    imageUrl: agentImg,
+    githubUrl: "https://github.com/addicted2crypto/DCGP",
+  },
+  {
+    title: 'WillAgent',
+    description:
+      "NestJS ReACT orchestration system with dual-routing between local models and the Claude API. Features a typed tool registry, Redis state persistence, kill-switch for agent termination, and full audit logging. Designed for autonomous task execution with deterministic control flow and zero-trust module boundaries.",
+    tags: ["NestJS", "TypeScript", "Redis", "Claude API", "Node.js", "Agents", "LLM"],
+    imageUrl: agentImg,
+    githubUrl: "https://github.com/addicted2crypto/willagent",
+  },
   {
     title: 'Defense Health Agency — DoD Contractor',
     description:
@@ -208,12 +243,19 @@ export const skillsData = [
   "Supabase",
   "Prisma",
   "Drizzle",
+  // Web3 Tooling
+  "Foundry",
+  "wagmi",
+  "viem",
+  "RainbowKit",
   // State & APIs
   "Redux",
   "Zustand",
   "GraphQL",
   "Apollo",
   "Stripe",
+  // Queue / Infra
+  "BullMQ",
   // AI/ML
   "LLM",
   "RAG",
@@ -226,7 +268,7 @@ export const skillsData = [
   "Azure",
 ] as const;
 
-export const certificationsData = [
+export const certificationsData: CertificationData[] = [
   {
     name: "CompTIA Security+ Certified",
     issuer: "CompTIA",
@@ -236,4 +278,18 @@ export const certificationsData = [
     expirationDate: "October 28, 2028",
     credentialUrl: "https://www.certmetrics.com/comptia/public/verification.aspx?code=QF4L4H4TYNRQ2WH2",
   },
-] as const;
+  {
+    name: "OWASP Smart Contract Top 10 2026",
+    issuer: "OWASP Foundation",
+    date: "2025",
+    description:
+      "Full-coverage audit methodology: ABI-level static analysis, live on-chain intelligence, adversarial threat modeling, Foundry three-phase PoC generation. Track record includes a 44-finding audit of Club HashCash (Avalanche C-Chain).",
+  },
+  {
+    name: "DoD IAT Level II",
+    issuer: "Department of Defense",
+    date: "October 2025",
+    description:
+      "Information Assurance Technical Level II designation held in conjunction with CompTIA Security+. Qualifies for privileged access on DoD information systems.",
+  },
+];

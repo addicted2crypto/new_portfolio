@@ -18,15 +18,15 @@ export default function AboutMe() {
        >
          <SectionHeader>About me</SectionHeader>
         <p className='mb-8'>
-        I&apos;m a full-stack software engineer currently working as a <span className='font-semibold'>DoD contractor</span> supporting Defense Health Agency platforms including health.mil and TRICARE. I&apos;m helping ship the first government blockchain deployment in production using Hyperledger Iroha, and building internal tooling that&apos;s been adopted across multiple DoD teams.
+        Full-stack engineer and <span className='font-semibold'>smart contract security auditor</span> with 8+ years of production experience across federal healthcare IT, Web3 infrastructure, and independent SaaS. Day job: <span className='font-semibold'>DoD contract engineer</span> supporting Defense Health Agency platforms — shipping the first government blockchain deployment in production on Hyperledger Iroha. <span className='font-semibold'>CompTIA Security+ | IAT II</span> certified.
         </p>
 
         <p className='mb-8'>
-        Outside of my contract work, I&apos;m building <span className='font-semibold'>GymTech</span>—a SaaS platform for martial arts and fitness gyms. From multi-tenant architecture to Stripe Connect integrations, I enjoy solving real business problems with clean, scalable code. I&apos;m <span className='font-semibold'>CompTIA Security+ certified</span> and take security seriously in everything I build.
+        Off hours: auditing smart contracts on <span className='font-semibold'>Avalanche</span>, building SaaS tools, and shipping community projects at <span className='font-semibold'>The Grotto</span> (AVAX ecosystem). 44-finding audit track record — most recent: Club HashCash (Avalanche C-Chain). Methodology covers <span className='font-semibold'>OWASP Smart Contract Top 10 2026</span>: ABI-level analysis, adversarial threat modeling, Foundry PoC generation.
         </p>
 
         <p className='mb-8'>
-        My background spans Web3, AI integrations, and enterprise systems. I&apos;ve led teams, shipped production apps, and worked with technologies ranging from React and TypeScript to Rust and Solidity. When I&apos;m not coding, I&apos;m usually with my family—they keep me grounded and motivated.
+        Currently expanding <span className='font-semibold'>AvaSleuth</span> (ContractSleuth + WalletSleuth + TokenRadar), shipping GymTech to production, and open to smart contract audit engagements. When a new tool ships that changes how things get built, I learn it and integrate it. I do not plateau.
         </p>
         </motion.section>
         

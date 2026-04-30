@@ -14,9 +14,9 @@ export default function Header() {
 
   return <header className='z-[999] relative'>
     <motion.div
-    className='fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-black border-opacity-90
+    className='fixed top-0 left-1/2 h-[3.25rem] w-full rounded-none border border-black border-opacity-90
                bg-blue-100 bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]
-               sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full
+               sm:top-6 sm:w-[44rem] sm:rounded-full
                dark:bg-[#060606] dark:border-black/40 dark:bg-opacity-80'
     initial={{ y: -100, x: "-50%", opacity: 0}}
     animate={{ y: 0, x: "-50%", opacity: 1}}
@@ -24,8 +24,8 @@ export default function Header() {
 
     </motion.div>
 
-    <nav className='flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0'>
-      <ul className='flex w-[22rem] flex-wrap items-center justify-between gap-y-1 text-[0.8rem] font-medium text-gray-600 sm:w-[34rem] sm:flex-nowrap sm:gap-1 sm:px-2'>
+    <nav className='flex fixed top-[0.15rem] left-1/2 h-[3.25rem] -translate-x-1/2 items-center sm:top-[1.7rem]'>
+      <ul className='flex w-[calc(100vw-1rem)] flex-nowrap items-center justify-between gap-0 text-[0.62rem] font-medium text-gray-600 sm:w-[42rem] sm:text-[0.8rem] sm:gap-1 sm:px-2'>
         {links.map(link => {
           // Special styling for Home and Contact
           const isHome = link.name === 'Home';
@@ -60,7 +60,9 @@ export default function Header() {
                   setTimeOfLastClick(Date.now());
                 }}
               >
-                {link.name}
+                {link.name === 'Certifications' ? (
+                  <><span className='sm:hidden'>Certs</span><span className='hidden sm:inline'>Certifications</span></>
+                ) : link.name}
                 {
                   link.name === activeSection && !isSpecial && (
                     <motion.span

@@ -10,23 +10,41 @@ import ScrollProgress from './components/scrollProgress';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "William Heeb | Full-Stack Developer | React, TypeScript, AI & Web3",
-  description: "Full-stack software engineer with 5+ years building production-ready web applications. Specialized in React, Next.js, TypeScript, AI integration, and Web3 development. CompTIA Security+ certified. Open to new opportunities.",
-  keywords: ["Full-Stack Developer", "React Developer", "TypeScript", "Next.js", "AI Developer", "Web3 Developer", "Software Engineer", "Blockchain Developer", "JavaScript"],
+  title: "William Heeb | Full-Stack Engineer & Smart Contract Auditor",
+  description: "Full-stack engineer and smart contract security auditor with 8+ years of production experience. DoD contractor, CompTIA Security+ | IAT II certified. Specializing in NestJS, Next.js, TypeScript, Solidity, Foundry, and Avalanche. 44-finding audit track record.",
+  keywords: [
+    "Full-Stack Engineer",
+    "Smart Contract Auditor",
+    "Web3 Security",
+    "React Developer",
+    "TypeScript",
+    "Next.js",
+    "NestJS",
+    "Solidity",
+    "Foundry",
+    "Avalanche",
+    "OWASP",
+    "DoD Contractor",
+    "AI Developer",
+    "Web3 Developer",
+    "Software Engineer",
+    "Blockchain Developer",
+    "JavaScript",
+  ],
   authors: [{ name: "William Heeb" }],
   creator: "William Heeb",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://williamsforeverportfolio.vercel.app/",
-    title: "William Heeb - Full-Stack Developer Portfolio",
-    description: "Full-stack developer specializing in React, TypeScript, AI, and Web3 technologies. 5+ years of experience building scalable applications.",
+    title: "William Heeb — Full-Stack Engineer & Smart Contract Auditor",
+    description: "Full-stack engineer and smart contract security auditor with 8+ years of production experience across federal health IT, Web3 infrastructure, and SaaS.",
     siteName: "William Heeb Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "William Heeb - Full-Stack Developer",
-    description: "Full-stack developer specializing in React, TypeScript, AI, and Web3",
+    title: "William Heeb — Full-Stack Engineer & Smart Contract Auditor",
+    description: "Full-stack engineer and smart contract auditor. DoD contractor. AVAX ecosystem. 44-finding audit track record.",
   },
 };
 

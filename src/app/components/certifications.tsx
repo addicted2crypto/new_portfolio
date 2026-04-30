@@ -52,12 +52,26 @@ export default function Certifications() {
                 {cert.name}
               </h3>
               <p className='text-lg text-gray-700 dark:text-white/70 mb-1'>{cert.issuer}</p>
-              <p className='text-sm text-gray-600 dark:text-white/60 mb-2'>
-                Issued: {cert.date} | Expires: {cert.expirationDate}
-              </p>
-              <p className='text-sm text-gray-500 dark:text-white/50 mb-3'>
-                Credential ID: {cert.credentialId}
-              </p>
+              {cert.expirationDate && (
+                <p className='text-sm text-gray-600 dark:text-white/60 mb-2'>
+                  Issued: {cert.date} | Expires: {cert.expirationDate}
+                </p>
+              )}
+              {!cert.expirationDate && (
+                <p className='text-sm text-gray-600 dark:text-white/60 mb-2'>
+                  {cert.date}
+                </p>
+              )}
+              {cert.description && (
+                <p className='text-sm text-gray-600 dark:text-white/60 mb-3 leading-relaxed'>
+                  {cert.description}
+                </p>
+              )}
+              {cert.credentialId && (
+                <p className='text-sm text-gray-500 dark:text-white/50 mb-3'>
+                  Credential ID: {cert.credentialId}
+                </p>
+              )}
               {cert.credentialUrl && (
                 <a
                   href={cert.credentialUrl}
