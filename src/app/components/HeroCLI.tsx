@@ -13,7 +13,7 @@ const BOOT: Raw[] = [
   { type: 'blank',     text: '' },
   { type: 'pair',      text: 'Name  ', sub: 'William Heeb' },
   { type: 'pair',      text: 'Role  ', sub: 'Full-Stack Engineer · Security+ · Web3' },
-  { type: 'pair',      text: 'Status', sub: 'Available for hire' },
+  { type: 'pair',      text: 'Status ', sub: 'Available for hire' },
   { type: 'blank',     text: '' },
   { type: 'muted',     text: "Type 'help' to explore ↵" },
 ];
