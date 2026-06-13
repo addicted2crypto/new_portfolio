@@ -208,7 +208,7 @@ export default function Intro() {
 
             {/* HeroCLI — hidden on small mobile, full width centered below social links */}
             <motion.div
-                className='hidden sm:block w-full mt-8 h-[26rem] sm:h-[28rem]'
+                className='hidden sm:block w-full mt-8'
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35, duration: 0.6, ease: 'easeOut' }}

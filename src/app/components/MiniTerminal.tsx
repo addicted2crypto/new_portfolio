@@ -104,11 +104,12 @@ export default function MiniTerminal() {
   const [lines, setLines] = useState<Line[]>(stamp(BOOT));
   const [input, setInput] = useState('');
   const [busy, setBusy] = useState(false);
-  const bottomRef = useRef<HTMLDivElement>(null);
+  const outputRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+    const el = outputRef.current;
+    if (el) el.scrollTop = el.scrollHeight;
   }, [lines]);
 
   function run(raw: string) {
@@ -162,7 +163,7 @@ export default function MiniTerminal() {
       </div>
 
       {/* Output scroll area */}
-      <div className='flex-1 overflow-y-auto px-3 py-2 space-y-0.5'>
+      <div ref={outputRef} className='flex-1 overflow-y-auto px-3 py-2 space-y-0.5'>
         <AnimatePresence initial={false}>
           {lines.map(line => (
             <motion.div
@@ -188,7 +189,6 @@ export default function MiniTerminal() {
             className='text-green-400 inline-block'
           >▋</motion.span>
         )}
-        <div ref={bottomRef} />
       </div>
 
       {/* Input row */}

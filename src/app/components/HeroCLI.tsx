@@ -95,7 +95,6 @@ const CMDS: Record<string, Raw[]> = {
 };
 CMDS['?'] = CMDS['help'];
 
-/* line color map */
 const C: Record<LT, string> = {
   system:    'text-blue-400',
   output:    'text-white/80',
@@ -115,14 +114,27 @@ let uid = 0;
 const stamp = (raw: Raw[]): Line[] => raw.map(r => ({ ...r, id: ++uid }));
 
 export default function HeroCLI() {
-  const [lines, setLines] = useState<Line[]>([]);
-  const [input, setInput] = useState('');
-  const [busy,  setBusy]  = useState(false);
+  const [lines,  setLines]  = useState<Line[]>([]);
+  const [input,  setInput]  = useState('');
+  const [busy,   setBusy]   = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const bootedRef = useRef(false);
   const outputRef = useRef<HTMLDivElement>(null);
   const inputRef  = useRef<HTMLInputElement>(null);
 
-  /* auto-scroll — uses scrollTop so only the terminal scrolls, not the page */
+  /* Ctrl+` global toggle */
+  useEffect(() => {
+    function onKey(e: globalThis.KeyboardEvent) {
+      if (e.ctrlKey && e.key === '`') {
+        e.preventDefault();
+        setIsOpen(prev => !prev);
+      }
+    }
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
+
+  /* auto-scroll — container only */
   useEffect(() => {
     const el = outputRef.current;
     if (el) el.scrollTop = el.scrollHeight;
@@ -152,10 +164,7 @@ export default function HeroCLI() {
       setTimeout(() => setLines(stamp(BOOT)), 80);
       return;
     }
-
-    if (cmd === 'github') {
-      window.open('https://github.com/addicted2crypto', '_blank');
-    }
+    if (cmd === 'github') window.open('https://github.com/addicted2crypto', '_blank');
     if (cmd === 'contact') {
       setTimeout(() => {
         document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
@@ -179,7 +188,7 @@ export default function HeroCLI() {
     });
   }
 
-  function onKey(e: KeyboardEvent<HTMLInputElement>) {
+  function onInputKey(e: KeyboardEvent<HTMLInputElement>) {
     if (e.key === 'Enter' && !busy) run(input);
   }
 
@@ -210,14 +219,16 @@ export default function HeroCLI() {
 
   return (
     <div
-      className='flex flex-col h-full bg-[#080c10] rounded-xl border border-white/8
-                 font-mono text-xs overflow-hidden cursor-text
-                 shadow-2xl shadow-black/50'
-      onClick={() => inputRef.current?.focus()}
+      className='flex flex-col bg-[#080c10] rounded-xl border border-white/8
+                 font-mono text-xs overflow-hidden shadow-2xl shadow-black/50'
+      onClick={() => isOpen && inputRef.current?.focus()}
     >
-      {/* Title bar */}
-      <div className='flex items-center justify-between px-4 py-2.5 bg-[#0d1117]
-                      border-b border-white/8 shrink-0'>
+      {/* Title bar — click to toggle */}
+      <div
+        className='flex items-center justify-between px-4 py-2.5 bg-[#0d1117]
+                   border-b border-white/8 shrink-0 cursor-pointer select-none'
+        onClick={e => { e.stopPropagation(); setIsOpen(prev => !prev); }}
+      >
         <div className='flex items-center gap-2'>
           <div className='flex gap-1.5'>
             <span className='w-3 h-3 rounded-full bg-[#ff5f57]' />
@@ -226,52 +237,77 @@ export default function HeroCLI() {
           </div>
           <span className='text-white/40 text-[11px] ml-2 tracking-wide'>portfolio.sh</span>
         </div>
-        <span className='text-[10px] text-green-400/70 tracking-widest'>● LIVE</span>
+        <div className='flex items-center gap-3'>
+          {!isOpen && (
+            <span className='text-[10px] text-white/25 tracking-widest'>ctrl+` to open</span>
+          )}
+          <span className='text-[10px] text-green-400/70 tracking-widest'>● LIVE</span>
+          <span className='text-white/40 text-sm leading-none select-none'>
+            {isOpen ? '−' : '+'}
+          </span>
+        </div>
       </div>
 
-      {/* Output */}
-      <div ref={outputRef} className='flex-1 overflow-y-auto px-4 py-3 space-y-0.5
-                      scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent'>
-        <AnimatePresence initial={false}>
-          {lines.map(line => (
-            <motion.div
-              key={line.id}
-              initial={{ opacity: 0, x: -4 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.09 }}
-              className='leading-relaxed'
+      {/* Collapsible body */}
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            key='body'
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.22, ease: 'easeInOut' }}
+            className='flex flex-col overflow-hidden'
+          >
+            {/* Output */}
+            <div
+              ref={outputRef}
+              className='h-[22rem] overflow-y-auto px-4 py-3 space-y-0.5
+                         scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent'
             >
-              {renderLine(line)}
-            </motion.div>
-          ))}
-        </AnimatePresence>
+              <AnimatePresence initial={false}>
+                {lines.map(line => (
+                  <motion.div
+                    key={line.id}
+                    initial={{ opacity: 0, x: -4 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.09 }}
+                    className='leading-relaxed'
+                  >
+                    {renderLine(line)}
+                  </motion.div>
+                ))}
+              </AnimatePresence>
 
-        {busy && (
-          <motion.span
-            animate={{ opacity: [1, 0, 1] }}
-            transition={{ repeat: Infinity, duration: 0.75 }}
-            className='text-green-400 inline-block'
-          >▋</motion.span>
+              {busy && (
+                <motion.span
+                  animate={{ opacity: [1, 0, 1] }}
+                  transition={{ repeat: Infinity, duration: 0.75 }}
+                  className='text-green-400 inline-block'
+                >▋</motion.span>
+              )}
+            </div>
+
+            {/* Input */}
+            <div className='flex items-center gap-2 px-4 py-2.5 border-t border-white/8
+                            bg-[#0d1117] shrink-0'>
+              <span className='text-green-400 select-none text-sm'>›</span>
+              <input
+                ref={inputRef}
+                value={input}
+                onChange={e => setInput(e.target.value)}
+                onKeyDown={onInputKey}
+                disabled={busy}
+                placeholder={busy ? '' : 'whoami · stack · hire · avax · help'}
+                className='flex-1 bg-transparent text-white/80 outline-none text-[11px]
+                           placeholder:text-white/20 disabled:cursor-wait caret-green-400'
+                spellCheck={false}
+                autoComplete='off'
+              />
+            </div>
+          </motion.div>
         )}
-      </div>
-
-      {/* Input */}
-      <div className='flex items-center gap-2 px-4 py-2.5 border-t border-white/8
-                      bg-[#0d1117] shrink-0'>
-        <span className='text-green-400 select-none text-sm'>›</span>
-        <input
-          ref={inputRef}
-          value={input}
-          onChange={e => setInput(e.target.value)}
-          onKeyDown={onKey}
-          disabled={busy}
-          placeholder={busy ? '' : 'whoami · stack · hire · avax · help'}
-          className='flex-1 bg-transparent text-white/80 outline-none text-[11px]
-                     placeholder:text-white/20 disabled:cursor-wait caret-green-400'
-          spellCheck={false}
-          autoComplete='off'
-        />
-      </div>
+      </AnimatePresence>
     </div>
   );
 }

@@ -56,6 +56,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className='!scroll-smooth'>
+      <head>
+        {/* Synchronously kill scroll restoration before browser can apply it */}
+        <script dangerouslySetInnerHTML={{ __html: `history.scrollRestoration='manual';` }} />
+      </head>
       <body className={`${inter.className}
       bg-gray-50 text-gray-950 relative dark:bg-[#100f0f] dark:text-[#d6d6d6] `}>
         <ScrollToTop />
