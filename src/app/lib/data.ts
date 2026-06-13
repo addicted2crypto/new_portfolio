@@ -82,9 +82,9 @@ export const experienceData = [
     title: "Software Engineer — DoD Contractor",
     location: "Seattle, WA (Hybrid)",
     description:
-      "Supporting Defense Health Agency platforms (health.mil, TRICARE) through government contracts with Semper Valens Solutions and Chenega Corporation. Shipping DoD Health IT features on Hyperledger Iroha—pushing for the first government project supported on blockchain in production. Built NestJS SDK adopted by 4 DoD teams. Maintaining enterprise CMS with JavaScript, C#, and Sitecore while implementing end-to-end TLS, VPN tunnels, and WAF configurations.",
+      "Supporting Defense Health Agency platforms (health.mil, TRICARE) through BDR Solutions LLC. Shipping DoD Health IT features on Hyperledger Iroha, pushing for the first government blockchain deployment in production. Built NestJS SDK adopted by 4 DoD teams. Maintaining enterprise CMS with JavaScript, C#, and Sitecore while implementing end-to-end TLS, VPN tunnels, and WAF configurations.",
     icon: React.createElement(GiComputing),
-    date: "April 2025 - January 2026"
+    date: "April 2025 - Present"
   },
   {
     title: "Lead Full-Stack Developer",
@@ -149,7 +149,7 @@ export const projectsData = [
   {
     title: 'Defense Health Agency — DoD Contractor',
     description:
-    "Software Engineer supporting health.mil and TRICARE platforms through government contracts (Semper Valens Solutions → Chenega Corporation). Shipping DoD Health IT features on Hyperledger Iroha—the first government blockchain deployment in production. Built a NestJS SDK adopted by 4 DoD teams, reducing boilerplate setup from 2 days to 3 hours. Maintaining enterprise CMS sites with JavaScript, C#, and Sitecore while implementing security protocols including end-to-end TLS, VPN tunnels, and WAF configurations.",
+    "Software Engineer heading up DHA.mil and TRICARE platforms through BDR Solutions LLC. Shipping DoD Health IT features on Hyperledger Iroha, the first government blockchain deployment in production. Built a NestJS SDK adopted by 4 DoD teams, reducing boilerplate setup from 2 days to 3 hours. Maintaining enterprise CMS sites with JavaScript, C#, and Sitecore while implementing security protocols including end-to-end TLS, VPN tunnels, and WAF configurations.",
     tags: ["NestJS", "Hyperledger Iroha", "C#", "JavaScript", "Sitecore CMS", "TypeScript", "Security+", ".NET", "Node.js", "DoD"],
     imageUrl: dhaImg,
   },

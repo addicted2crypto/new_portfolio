@@ -6,6 +6,7 @@ import './globals.css';
 import Toggledarkmode from './components/toggleDark';
 import DarkContextProvider from './context/darkmode-context';
 import ScrollProgress from './components/scrollProgress';
+import ScrollToTop from './components/ScrollToTop';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -57,6 +58,7 @@ export default function RootLayout({
     <html lang="en" className='!scroll-smooth'>
       <body className={`${inter.className}
       bg-gray-50 text-gray-950 relative dark:bg-[#100f0f] dark:text-[#d6d6d6] `}>
+        <ScrollToTop />
         <ScrollProgress />
         <div className='bg-[#075738] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75] pt-28 dark:bg-[#1d3d15]'>
         </div>

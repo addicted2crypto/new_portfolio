@@ -100,14 +100,14 @@ export default function Intro() {
 
                 <p className='mt-2 text-lg font-medium tracking-wide
                               text-blue-600 dark:text-blue-400'>
-                    Full-Stack Engineer &nbsp;·&nbsp; Security+ &amp; DoD Contractor &nbsp;·&nbsp; Web3 &amp; AI Systems
+                    Full-Stack Engineer &nbsp;·&nbsp; Active DoD Contractor &nbsp;·&nbsp; Security+ Certified
                 </p>
 
                 <p className='mt-3 text-base font-normal text-gray-700 dark:text-gray-300 leading-relaxed'>
-                    8+ years shipping production systems — federal health IT, Web3 infrastructure, and SaaS.
+                    Eight years shipping systems with real stakes: government health records, blockchain infrastructure, live AI pipelines. Not side projects. Production.
                 </p>
                 <p className='mt-1.5 text-sm font-normal text-gray-500 dark:text-gray-400'>
-                    I build with strict typed boundaries, security-first design, and documented architecture.
+                    I&apos;ve been Security+ certified and DoD-cleared, and I bring that standard to everything I build.
                 </p>
             </motion.div>
 
@@ -147,7 +147,7 @@ export default function Intro() {
                     </motion.div>
 
                     <a
-                        href="/newres.pdf"
+                        href="/William_Heeb_Resume.pdf"
                         download
                         onClick={() => toast.success('Resume downloading!')}
                         className='group flex items-center gap-2 bg-white px-6 py-3 rounded-full outline-none
@@ -158,16 +158,29 @@ export default function Intro() {
                         Download CV
                     </a>
 
-                    <Link
-                        href="/resume"
+                    <a
+                        href="/resume_1page.html"
                         target='_blank'
+                        rel='noopener noreferrer'
                         className='group flex items-center gap-2 bg-white px-6 py-3 rounded-full outline-none
                                  focus:scale-110 hover:scale-110 active:scale-105 transition
                                  borderBlack dark:bg-white/10'
                     >
                         <HiDocumentText className='opacity-60 group-hover:scale-110 transition' />
-                        View Resume
-                    </Link>
+                        1-Page Resume
+                    </a>
+
+                    <a
+                        href="/resume_2page.html"
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='group flex items-center gap-2 bg-white px-6 py-3 rounded-full outline-none
+                                 focus:scale-110 hover:scale-110 active:scale-105 transition
+                                 borderBlack dark:bg-white/10'
+                    >
+                        <HiDocumentText className='opacity-60 group-hover:scale-110 transition' />
+                        2-Page Resume
+                    </a>
                 </div>
 
                 {/* Social icons */}

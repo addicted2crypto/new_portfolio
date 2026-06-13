@@ -40,7 +40,7 @@ const CMDS: Record<string, Raw[]> = {
   ],
   experience: [
     { type: 'section', text: 'Career Timeline' },
-    { type: 'pair',    text: '2025–2026', sub: 'Software Engineer — DoD Contractor (DHA)' },
+    { type: 'pair',    text: '2025–now ', sub: 'Software Engineer, DoD Contractor (BDR Solutions / DHA)' },
     { type: 'pair',    text: '2024–now ', sub: 'AvaSleuth / The Grotto (AVAX ecosystem)' },
     { type: 'pair',    text: '2022–now ', sub: 'Lead Full-Stack Developer' },
     { type: 'pair',    text: '2021–2024', sub: 'Blockchain Dev & Team Lead' },
