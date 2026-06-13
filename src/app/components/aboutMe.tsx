@@ -18,7 +18,7 @@ export default function AboutMe() {
        >
          <SectionHeader>About me</SectionHeader>
         <p className='mb-8'>
-        Full-stack engineer and <span className='font-semibold'>smart contract security auditor</span> with 8+ years of production experience across federal healthcare IT, Web3 infrastructure, and independent SaaS. Currently heading up <span className='font-semibold'>DHA.mil</span> as a DoD contractor with <span className='font-semibold'>BDR Solutions LLC</span> — shipping the first government blockchain deployment in production on Hyperledger Iroha. <span className='font-semibold'>CompTIA Security+ | IAT II</span> certified.
+        Full-stack engineer and <span className='font-semibold'>forever learning</span> with 8+ years of production experience across federal healthcare IT, Web3 infrastructure, and independent SaaS. Currently heading up <span className='font-semibold'>DHA.mil</span> as a DoD contractor with <span className='font-semibold'>BDR Solutions LLC</span> — shipping the first government blockchain deployment in production on Hyperledger Iroha. <span className='font-semibold'>CompTIA Security+ | IAT II</span> certified.
         </p>
 
         <p className='mb-8'>

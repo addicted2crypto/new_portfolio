@@ -117,7 +117,7 @@ export default function HeroCLI() {
   const [lines,  setLines]  = useState<Line[]>([]);
   const [input,  setInput]  = useState('');
   const [busy,   setBusy]   = useState(false);
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const bootedRef = useRef(false);
   const outputRef = useRef<HTMLDivElement>(null);
   const inputRef  = useRef<HTMLInputElement>(null);
