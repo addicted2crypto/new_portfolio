@@ -22,7 +22,7 @@ export default function AboutMe() {
         </p>
 
         <p className='mb-8'>
-        Off hours: learning new tech <span className='font-semibold'>while looking for security risks</span>, building SaaS tools, and shipping community projects at <span className='font-semibold'>The Grotto</span> (AVAX ecosystem). 44-finding audit track record. Most recent: Club HashCash (Avalanche C-Chain). Methodology covers <span className='font-semibold'>OWASP Smart Contract Top 10 2026</span>: ABI-level analysis, adversarial threat modeling, Foundry PoC generation.
+        Off hours: learning new tech <span className='font-semibold'>while looking for security risks</span>, building SaaS tools, and shipping community projects at <span className='font-semibold'>Everywhere looking for a dev</span> (AVAX and all evm ecosystems). 44-finding audit track record. Most recent: Club HashCash (Avalanche C-Chain). Methodology covers <span className='font-semibold'>OWASP Smart Contract Top 10 2026</span>: ABI-level analysis, adversarial threat modeling, Foundry PoC generation.
         </p>
 
         <p className='mb-8'>
