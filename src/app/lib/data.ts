@@ -27,8 +27,6 @@ export interface CertificationData {
   description?: string;
 }
 
-import easImg from "/public/eas.png";
-import coincreteImg from '/public/coincrete.png';
 import cftmarketImg from '/public/cftmarket.png';
 import commandImg from '/public/command.png';
 import applianceImg from '/public/appliance.png';
@@ -125,7 +123,7 @@ export const projectsData = [
   {
     title: 'AvaSleuth / ContractSleuth',
     description:
-      "Flagship multi-module Web3 intelligence platform for the Avalanche ecosystem. Smart contract auditing pipeline spanning L0–L7: ABI-level static analysis, live on-chain intelligence, adversarial threat modeling, and Foundry three-phase PoC generation. 5-gate anti-hallucination pipeline prevents false findings. Includes WalletSleuth for wallet analysis and TokenRadar for token intelligence. Heartbeat state machine maintains module health. 44-finding audit track record including Club HashCash (Avalanche C-Chain).",
+      "Production application built on top of a local AI stack I built from scratch (DCGP + WillAgent). Applies local model intelligence to Avalanche ecosystem security: L0-L7 smart contract auditing, smart wallet tracking (996 identities indexed), and token radar — all running on local models with a 5-gate anti-hallucination pipeline. Foundry three-phase PoC generation, heartbeat state machine, 44-finding audit track record including Club HashCash (Avalanche C-Chain). Local AI doing real work in a live, high-stakes environment.",
     tags: ["NestJS", "TypeScript", "PostgreSQL", "Redis", "BullMQ", "Foundry", "Avalanche", "Solidity", "wagmi", "viem"],
     imageUrl: commandImg,
     githubUrl: "https://github.com/addicted2crypto",
@@ -133,16 +131,16 @@ export const projectsData = [
   {
     title: 'DCGP',
     description:
-      "Context governance kernel for LLM agents. Implements entropy prediction and hallucination blocking to enforce deterministic output within agentic pipelines. Integrates as an opencode plugin, giving any LLM orchestration system a typed context boundary and audit surface.",
-    tags: ["TypeScript", "LLM", "RAG", "AI", "Node.js", "Agents"],
+      "Live context governance ecosystem for local LLM development. DCGP is the foundation layer: it enforces typed context boundaries, predicts entropy before hallucinations occur, and gates deterministic output across any agentic pipeline. Ships as an opencode plugin so any local model build gets hallucination prevention and a full audit surface out of the box. The kernel powering the AvaSleuth and WillAgent ecosystem.",
+    tags: ["TypeScript", "LLM", "RAG", "AI", "Node.js", "Agents", "Opencode"],
     imageUrl: agentImg,
     githubUrl: "https://github.com/addicted2crypto/DCGP",
   },
   {
     title: 'WillAgent',
     description:
-      "NestJS ReACT orchestration system with dual-routing between local models and the Claude API. Features a typed tool registry, Redis state persistence, kill-switch for agent termination, and full audit logging. Designed for autonomous task execution with deterministic control flow and zero-trust module boundaries.",
-    tags: ["NestJS", "TypeScript", "Redis", "Claude API", "Node.js", "Agents", "LLM"],
+      "Local model orchestration framework and the middle layer of the local AI stack. Dual-routes between local models (Ollama/Qwen) and the Claude API using a ReACT pattern with a typed tool registry. Redis state persistence, kill-switch agent termination, and full audit logging give deterministic control over autonomous AI workloads. Built to run real tasks on your own hardware without depending on cloud APIs.",
+    tags: ["NestJS", "TypeScript", "Redis", "Claude API", "Ollama", "Node.js", "Agents", "LLM"],
     imageUrl: agentImg,
     githubUrl: "https://github.com/addicted2crypto/willagent",
   },
@@ -178,16 +176,9 @@ export const projectsData = [
   {
     title: 'Appliance Consult',
     description:
-      "Full-stack application digitizing a century of appliance repair expertise into an AI-powered advisory platform. Users receive instant expert repair guidance with one click. Built with modern tech stack integrating payment processing and comprehensive database architecture to deliver intelligent repair recommendations.",
-      tags: ["React", "Next.js",  "Tailwind",  "Rust", "MongoDB", "API", "LLM", "AI", "Prisma", "Stripe", "ORM", "Node.js", "Drizzle"],
-       imageUrl: applianceImg,
-  },
-  {
-    title: "EAS",
-    description:
-      "Brought on as lead developer for Experience as a Service platform through referrals from previous successful projects. Architected scalable full-stack solution with payment integration, authentication systems, and blockchain capabilities to serve B2B clients.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Node.js", "Rust","Stripe", "Blockchain"],
-    imageUrl: easImg,
+      "The project that launched an engineering career. With a decade of hands-on appliance repair experience, the gap was obvious: repair knowledge lived in people's heads, not software. Built an AI-powered advisory platform to change that — digitizing expert repair logic so users get instant guidance with one click. LLM integration, Stripe billing, full production database. First full-stack app. The bridge from trades to tech.",
+    tags: ["React", "Next.js", "Tailwind", "Rust", "MongoDB", "API", "LLM", "AI", "Prisma", "Stripe", "Node.js", "Drizzle"],
+    imageUrl: applianceImg,
   },
   {
     title: "Command Center",
@@ -195,13 +186,6 @@ export const projectsData = [
       "Led development team building a comprehensive Web3 wallet tracker with multi-chain indexing capabilities. Real-time data dashboard displays wallet holdings across multiple blockchain networks with integrated DeFi options for cross-chain operations.",
       tags: ["React", "TypeScript", "Next.js", "Tailwind", "Solidity", "Postgres", "AI-LLM", "Node.js"],
       imageUrl:  commandImg,
-  },
-  {
-    title: "CoinCrete",
-    description:
-      "Joined a growing development team building a Web3 dApp from the ground up with security as the primary focus. Implemented core features including smart contract integration, user authentication, and multi-chain wallet connectivity using modern full-stack technologies.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Solidity", "JavaScript", "MongoDB", "Postgres"],
-    imageUrl: coincreteImg,
   },
   {
     title: "CFT",
