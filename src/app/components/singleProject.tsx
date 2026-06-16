@@ -116,15 +116,19 @@ export default function Project({
         {/* Project media */}
         <div className='absolute hidden sm:block top-8 -right-40 w-[26.69rem]
                         group-even:right-[initial] group-even:-left-40'>
-          {mediaSlot ? (
-            <div className='h-[17rem] rounded-lg overflow-hidden shadow-2xl'>
-              {mediaSlot}
-            </div>
-          ) : (
-            <div className='relative overflow-hidden rounded-t-lg shadow-2xl'>
-              <div className='absolute inset-0 bg-gradient-to-br from-blue-500/0 to-purple-500/0
-                              group-hover:from-blue-500/20 group-hover:to-purple-500/20
-                              transition-all duration-500 z-10' />
+          <div className='relative overflow-hidden rounded-t-lg shadow-2xl'>
+            <div className='absolute inset-0 bg-gradient-to-br from-blue-500/0 to-purple-500/0
+                            group-hover:from-blue-500/20 group-hover:to-purple-500/20
+                            transition-all duration-500 z-10 pointer-events-none' />
+            {mediaSlot ? (
+              <div className='h-[17rem] transition-all duration-500 ease-out
+                              group-hover:scale-[1.12] group-hover:brightness-110
+                              group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2
+                              group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3
+                              group-even:group-hover:rotate-2'>
+                {mediaSlot}
+              </div>
+            ) : (
               <Image
                 src={imageUrl}
                 alt={title}
@@ -137,8 +141,8 @@ export default function Project({
                            group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3
                            group-even:group-hover:rotate-2'
               />
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </motion.section>
     </motion.div>

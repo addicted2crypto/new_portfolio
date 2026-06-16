@@ -16,7 +16,7 @@ const RESPONSES: Record<string, Raw[]> = {
   scan: [
     { type: 'system',  text: '[AVAX] Scanning hot tokens...' },
     { type: 'blank',   text: '' },
-    { type: 'section', text: 'TOKEN RADAR — Top Movers' },
+    { type: 'section', text: 'TOKEN RADAR: Top Movers' },
     { type: 'success', text: 'NOCHILL  $0.00142  +847%  smart: 12 wallets' },
     { type: 'success', text: 'GROTTO   $0.00089  +312%  smart: 7 wallets' },
     { type: 'output',  text: 'KIMBO    $0.00034  +189%  smart: 4 wallets' },
@@ -49,7 +49,7 @@ const RESPONSES: Record<string, Raw[]> = {
     { type: 'output',  text: '[L6] Tax 2% buy / 2% sell      ✓' },
     { type: 'success', text: '[L7] Threat model: LOW RISK    ✓' },
     { type: 'blank',   text: '' },
-    { type: 'success', text: 'Score: 91/100 — CLEAN  |  5/5 gates passed' },
+    { type: 'success', text: 'Score: 91/100 CLEAN | 5/5 gates passed' },
   ],
   heartbeat: [
     { type: 'system',  text: '[AVAX] Module status...' },
@@ -60,7 +60,7 @@ const RESPONSES: Record<string, Raw[]> = {
     { type: 'success', text: 'TokenRadar      ● ACTIVE   847 pairs' },
     { type: 'success', text: 'AntiHalluc.     ● ACTIVE   5/5 gates armed' },
     { type: 'blank',   text: '' },
-    { type: 'output',  text: 'Last audit: Club HashCash — 44 findings' },
+    { type: 'output',  text: 'Last audit: Club HashCash, 44 findings' },
     { type: 'success', text: 'Redis: healthy  |  Uptime: 99.2%' },
   ],
   help: [
@@ -71,7 +71,7 @@ const RESPONSES: Record<string, Raw[]> = {
     { type: 'output',  text: 'heartbeat         System module status' },
     { type: 'output',  text: 'help / ?          This menu' },
     { type: 'blank',   text: '' },
-    { type: 'warning', text: '⚠  Demo — simulated output' },
+    { type: 'warning', text: '⚠  Demo: simulated output' },
   ],
 };
 RESPONSES['?'] = RESPONSES['help'];

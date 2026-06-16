@@ -135,10 +135,10 @@ export default function Intro() {
                 </p>
 
                 <p className='mt-3 text-base font-normal text-gray-700 dark:text-gray-300 leading-relaxed'>
-                    AI &amp; full-stack engineer with <span className='font-semibold'>8+ years</span> shipping production systems. Today I build live <span className='font-semibold'>LLM &amp; RAG pipelines</span> into real products — agents, orchestration, and the typed full-stack apps around them. Not demos. Production.
+                    AI &amp; full-stack engineer with <span className='font-semibold'>8+ years</span> shipping production systems. Today I build live <span className='font-semibold'>LLM &amp; RAG pipelines</span> into real products: agents, orchestration, and the typed full-stack apps around them. Not demos. Production.
                 </p>
                 <p className='mt-1.5 text-sm font-normal text-gray-500 dark:text-gray-400'>
-                    DoD-cleared and Security+ certified — I bring that standard to every system I build, from AI to full-stack to on-chain.
+                    DoD-cleared and Security+ certified. I bring that standard to every system I build, from AI to full-stack to on-chain.
                 </p>
             </motion.div>
 

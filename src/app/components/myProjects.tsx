@@ -34,7 +34,7 @@ function AgentPreview() {
         <span className='text-green-800'>+976 more</span>
       </div>
       <div className='mt-auto border-t border-green-900/40 pt-1 text-green-900'>
-        scan · who_bought {'<token>'} · inspect · heartbeat — Press ? for help
+        scan · who_bought {'<token>'} · inspect · heartbeat | Press ? for help
       </div>
     </div>
   );
@@ -43,7 +43,7 @@ function AgentPreview() {
 /* ── Static code block for DCGP ── */
 function CodePreview() {
   const lines = [
-    { t: 'comment', v: '// DCGP — Context Governance Kernel' },
+    { t: 'comment', v: '// DCGP: Context Governance Kernel' },
     { t: 'blank',   v: '' },
     { t: 'keyword', v: 'import', rest: ' { DCGPKernel } from \'dcgp\'' },
     { t: 'blank',   v: '' },

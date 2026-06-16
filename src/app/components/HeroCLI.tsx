@@ -20,13 +20,13 @@ const BOOT: Raw[] = [
 
 const CMDS: Record<string, Raw[]> = {
   whoami: [
-    { type: 'highlight', text: 'William Heeb — AI & Full-Stack Engineer' },
+    { type: 'highlight', text: 'William Heeb | AI & Full-Stack Engineer' },
     { type: 'blank',     text: '' },
     { type: 'output',    text: '8+ years shipping production systems.' },
     { type: 'output',    text: 'AI pipelines · Full-stack apps · Federal health IT.' },
     { type: 'blank',     text: '' },
     { type: 'pair',      text: 'Focus    ', sub: 'Live LLM & RAG pipelines · agent orchestration' },
-    { type: 'pair',      text: 'Contract ', sub: 'DoD Engineer — Defense Health Agency' },
+    { type: 'pair',      text: 'Contract ', sub: 'DoD Engineer, Defense Health Agency' },
     { type: 'pair',      text: 'Certs    ', sub: 'CompTIA Security+ | IAT Level II' },
   ],
   stack: [
@@ -68,10 +68,10 @@ const CMDS: Record<string, Raw[]> = {
   ],
   avax: [
     { type: 'section', text: 'AVAX Ecosystem' },
-    { type: 'pair',    text: 'Community', sub: 'The Grotto — builder since 2021' },
+    { type: 'pair',    text: 'Community', sub: 'AVAX/EVM, builder since 2021' },
     { type: 'pair',    text: 'Platform ', sub: 'AvaSleuth (ContractSleuth + WalletSleuth + TokenRadar)' },
     { type: 'pair',    text: 'Wallets  ', sub: '1047 smart money identities indexed' },
-    { type: 'pair',    text: 'Audit    ', sub: 'Club HashCash — 44 findings (Avalanche C-Chain)' },
+    { type: 'pair',    text: 'Audit    ', sub: 'Club HashCash, 44 findings (Avalanche C-Chain)' },
     { type: 'pair',    text: 'Network  ', sub: 'On-chain every day.' },
   ],
   help: [

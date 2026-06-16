@@ -38,13 +38,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://williamsforeverportfolio.vercel.app/",
-    title: "William Heeb — Full-Stack Engineer & Smart Contract Auditor",
+    title: "William Heeb | Full-Stack Engineer & Smart Contract Auditor",
     description: "Full-stack engineer and smart contract security auditor with 8+ years of production experience across federal health IT, Web3 infrastructure, and SaaS.",
     siteName: "William Heeb Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "William Heeb — Full-Stack Engineer & Smart Contract Auditor",
+    title: "William Heeb | Full-Stack Engineer & Smart Contract Auditor",
     description: "Full-stack engineer and smart contract auditor. DoD contractor. AVAX ecosystem. 44-finding audit track record.",
   },
 };

@@ -33,6 +33,8 @@ import agentImg from '/public/agent.png';
 import learningtutorImg from '/public/learningtutor.png';
 import dhaImg from '/public/dha.png';
 import gymtechImg from '/public/gymtech.png';
+import hcashImg from '/public/hcash.png';
+import moatImg from '/public/moat.png';
 
 
 export const links = [
@@ -121,7 +123,7 @@ export const projectsData = [
   {
     title: 'AvaSleuth / ContractSleuth',
     description:
-      "Production application built on top of a local AI stack I built from scratch (DCGP + WillAgent). Applies local model intelligence to Avalanche ecosystem security: L0-L7 smart contract auditing, smart wallet tracking (1047 identities indexed), and token radar — all running on local models with a 5-gate anti-hallucination pipeline. Foundry three-phase PoC generation, heartbeat state machine, 44-finding audit track record including Club HashCash (Avalanche C-Chain). Local AI doing real work in a live, high-stakes environment.",
+      "Production application built on top of a local AI stack I built from scratch (DCGP + WillAgent). Applies local model intelligence to Avalanche ecosystem security: L0-L7 smart contract auditing, smart wallet tracking (1047 identities indexed), and token radar, all running on local models with a 5-gate anti-hallucination pipeline. Foundry three-phase PoC generation, heartbeat state machine, 44-finding audit track record including Club HashCash (Avalanche C-Chain). Local AI doing real work in a live, high-stakes environment.",
     tags: ["NestJS", "TypeScript", "PostgreSQL", "Redis", "BullMQ", "Foundry", "Avalanche", "Solidity", "wagmi", "viem"],
     imageUrl: commandImg,
     githubUrl: "https://github.com/addicted2crypto",
@@ -145,28 +147,28 @@ export const projectsData = [
   {
     title: 'hCASH ROI Oracle',
     description:
-      "Live mining ROI calculator running on Avalanche mainnet. Powered by Chainlink price oracles and real-time DexScreener data — calculates break-even thresholds, tracks hCASH token economics, and scans on-chain marketplace activity for live pricing. Real oracle integration, real financial modeling, real stakes.",
+      "Live mining ROI calculator running on Avalanche mainnet. Powered by Chainlink price oracles and real-time DexScreener data. Calculates break-even thresholds, tracks hCASH token economics, and scans on-chain marketplace activity for live pricing. Real oracle integration, real financial modeling, real stakes.",
     tags: ["Next.js", "TypeScript", "Chainlink", "Avalanche", "DexScreener", "Solidity", "wagmi", "viem"],
-    imageUrl: commandImg,
+    imageUrl: hcashImg,
     demoUrl: "https://hcash.onchaintruth.xyz/",
   },
   {
     title: 'Moat OCA Leaderboard',
     description:
-      "Live on-chain portfolio analyzer tracking Moat strategy performance against AVAX and BTC benchmarks. Scrapes wallet data, calculates opportunity cost, and ranks top performers on a real-time leaderboard. Full-stack Web3 analytics with verifiable on-chain data — delivered at hackathon speed, running on mainnet.",
+      "Live on-chain portfolio analyzer tracking Moat strategy performance against AVAX and BTC benchmarks. Scrapes wallet data, calculates opportunity cost, and ranks top performers on a real-time leaderboard. Full-stack Web3 analytics with verifiable on-chain data, delivered at hackathon speed and running on mainnet.",
     tags: ["Next.js", "TypeScript", "Avalanche", "wagmi", "viem", "PostgreSQL", "Web3", "Analytics"],
-    imageUrl: cftmarketImg,
+    imageUrl: moatImg,
     demoUrl: "https://moat.onchaintruth.xyz/leaderboard",
   },
   {
-    title: 'Defense Health Agency — DoD Contractor',
+    title: 'Defense Health Agency, DoD Contractor',
     description:
-    "Software Engineer heading up DHA.mil and TRICARE platforms through BDR Solutions LLC. Shipping DoD Health IT features on Hyperledger Iroha, the first government blockchain deployment in production. Built a NestJS SDK adopted by 4 DoD teams, reducing boilerplate setup from 2 days to 3 hours. Maintaining enterprise CMS sites with JavaScript, C#, and Sitecore while implementing security protocols including end-to-end TLS, VPN tunnels, and WAF configurations.",
-    tags: ["NestJS", "Hyperledger Iroha", "C#", "JavaScript", "Sitecore CMS", "TypeScript", "Security+", ".NET", "Node.js", "DoD"],
+    "Two DoD health contracts: health.mil and TRICARE (prior engagement), now heading up DHA.mil through BDR Solutions LLC. DHA.mil runs fully in Docker: C#, Sitecore CMS, Unicorn serialization, and MVC inside a containerized image, the first Docker pubweb instance running in government production. Shipped Hyperledger Iroha blockchain features (first gov blockchain in production) and built a NestJS SDK adopted by 4 DoD teams, cutting boilerplate setup from 2 days to 3 hours.",
+    tags: ["C#", "Sitecore CMS", "Docker", "Unicorn", "MVC", "NestJS", "Hyperledger Iroha", "TypeScript", "Security+", ".NET", "DoD"],
     imageUrl: dhaImg,
   },
   {
-    title: 'GymTech — Gym Management SaaS',
+    title: 'GymTech',
     description:
       "Full-stack SaaS platform for martial arts and fitness gyms competing with SparkMembership. Built multi-tenant architecture with role-based access control (super_admin, gym_owner, staff, member) and tier-based subscriptions ($79-$299/mo). Integrated Stripe for platform billing and Stripe Connect for gym payment processing. Core features include class scheduling, member database, QR check-in system, landing page builder, and real-time analytics dashboards. PostgreSQL triggers enforce tier limits on members, staff, and messaging quotas. Designed complete subscription lifecycle with 14-day trials and automated data policies.",
     tags: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "Stripe", "Tailwind CSS", "Zustand", "RLS", "Multi-tenant", "SaaS"],
@@ -181,16 +183,9 @@ export const projectsData = [
     demoUrl: "https://tutorlearningapp.vercel.app/",
   },
   {
-    title: 'Anything_AI',
-    description:
-    "Facilitating MCP tools with agentic AI integration for any website and tech stack. Enables seamless AI-Bot communication and web scraping capabilities that adapt to client-specific APIs and requirements. Flexible architecture supports multiple programming languages and frameworks.",
-    tags: ["C#", ".net", "Python", "JavaScript", "AI", "LLM", "RAG", "Opensource", "JAVA", "API", "Fine-Tune"],
-    imageUrl: agentImg,
-  },
-  {
     title: 'Appliance Consult',
     description:
-      "The project that launched an engineering career. With a decade of hands-on appliance repair experience, the gap was obvious: repair knowledge lived in people's heads, not software. Built an AI-powered advisory platform to change that — digitizing expert repair logic so users get instant guidance with one click. LLM integration, Stripe billing, full production database. First full-stack app. The bridge from trades to tech.",
+      "The project that launched an engineering career. With a decade of hands-on appliance repair experience, the gap was obvious: repair knowledge lived in people's heads, not software. Built an AI-powered advisory platform to digitize expert repair logic so users get instant guidance with one click. LLM integration, Stripe billing, full production database. First full-stack app. The bridge from trades to tech.",
     tags: ["React", "Next.js", "Tailwind", "Rust", "MongoDB", "API", "LLM", "AI", "Prisma", "Stripe", "Node.js", "Drizzle"],
     imageUrl: applianceImg,
   },
