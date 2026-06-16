@@ -56,7 +56,7 @@ const RESPONSES: Record<string, Raw[]> = {
     { type: 'blank',   text: '' },
     { type: 'section', text: 'MODULES' },
     { type: 'success', text: 'ContractSleuth  ● ACTIVE   L0-L7 ready' },
-    { type: 'success', text: 'WalletSleuth    ● ACTIVE   996 identities' },
+    { type: 'success', text: 'WalletSleuth    ● ACTIVE   1047 identities' },
     { type: 'success', text: 'TokenRadar      ● ACTIVE   847 pairs' },
     { type: 'success', text: 'AntiHalluc.     ● ACTIVE   5/5 gates armed' },
     { type: 'blank',   text: '' },
@@ -78,10 +78,10 @@ RESPONSES['?'] = RESPONSES['help'];
 RESPONSES['sleuth'] = RESPONSES['inspect'];
 
 const BOOT: Raw[] = [
-  { type: 'system', text: 'AvaSleuth ready. Primary: Qwen3.5 | Critical: Claude' },
+  { type: 'system', text: 'AvaSleuth ready. Primary: Qwen3.6-27B | Fallback: Qwen3.6-35B | Critical: Claude' },
   { type: 'blank',  text: '' },
   { type: 'output', text: 'Token flow:  scan → who_bought → inspect' },
-  { type: 'output', text: 'Smart wallets: 996 identities indexed' },
+  { type: 'output', text: 'Smart wallets: 1047 identities indexed' },
   { type: 'blank',  text: '' },
   { type: 'output', text: 'Type help or ? to see all commands.' },
 ];

@@ -1,6 +1,5 @@
 
 import React from "react";
-import { FaReact } from "react-icons/fa";
 import { GiComputing } from "react-icons/gi";
 import { BiSolidFridge } from "react-icons/bi";
 import { StaticImageData } from "next/image";
@@ -69,34 +68,34 @@ export const links = [
 
 export const experienceData = [
   {
-    title: "Founder & Lead Developer — GymTech",
+    title: "Founder & Lead Developer, GymTech",
     location: "Remote",
     description:
-      "Building a full-stack SaaS platform for martial arts and fitness gyms. Architected multi-tenant system with role-based access control, tier-based subscriptions ($79-$299/mo), and Stripe Connect payment processing. Implementing class scheduling, member management, QR check-ins, landing page builder, and real-time analytics with PostgreSQL and Supabase.",
+      "Building a full-stack SaaS platform for martial arts and fitness gyms. Architected multi-tenant system with role-based access control, tier-based subscriptions ($79-$299/mo), and Stripe Connect payment processing. Features include class scheduling, member management, QR check-ins, landing page builder, and real-time analytics with PostgreSQL and Supabase.",
     icon: React.createElement(GiComputing),
-    date: "Dec 2025 - Present"
+    date: "Dec 2025 - Present",
   },
   {
-    title: "Software Engineer — DoD Contractor",
+    title: "Software Engineer, DoD Contractor",
     location: "Seattle, WA (Hybrid)",
     description:
-      "Supporting Defense Health Agency platforms (health.mil, TRICARE) through BDR Solutions LLC. Shipping DoD Health IT features on Hyperledger Iroha, pushing for the first government blockchain deployment in production. Built NestJS SDK adopted by 4 DoD teams. Maintaining enterprise CMS with JavaScript, C#, and Sitecore while implementing end-to-end TLS, VPN tunnels, and WAF configurations.",
+      "Supporting Defense Health Agency platforms (health.mil, TRICARE) through BDR Solutions LLC. Shipping DoD Health IT features on Hyperledger Iroha, the first government blockchain deployment in production. Built NestJS SDK adopted by 4 DoD teams, reducing boilerplate setup from 2 days to 3 hours. Maintaining enterprise CMS with JavaScript, C#, and Sitecore while implementing end-to-end TLS, VPN tunnels, and WAF configurations.",
     icon: React.createElement(GiComputing),
-    date: "April 2025 - Present"
+    date: "Apr 2025 - Present",
   },
   {
     title: "Lead Full-Stack Developer",
     location: "Remote",
     description:
-      "Leading development of enterprise SaaS platforms with focus on payment processing, authentication systems, and data analytics. Architecting secure APIs and implementing industry-standard security practices for client applications. Managing full development lifecycle from requirements to deployment.",
+      "Led development of enterprise SaaS platforms with focus on payment processing, authentication systems, and data analytics. Architected secure APIs and implemented industry-standard security practices across client applications. Managed full development lifecycle from requirements to production deployment.",
     icon: React.createElement(GiComputing),
-    date: "Oct 2022 - Present"
+    date: "Oct 2022 - Present",
   },
   {
-    title: "Full-Stack Lead Developer",
+    title: "Full-Stack Developer, EAS Platform",
     location: "Seattle, WA",
     description:
-      "Lead developer for Experience as a Service (EAS) platform. Architected scalable full-stack solutions serving B2B clients. Built core features including user authentication, payment integration, and real-time data processing using modern web technologies.",
+      "Lead developer for an Experience as a Service B2B platform. Architected scalable full-stack solutions serving enterprise clients, including user authentication, payment integration, blockchain capabilities, and real-time data processing.",
     icon: React.createElement(GiComputing),
     date: "2020 - 2022",
   },
@@ -104,16 +103,15 @@ export const experienceData = [
     title: "Blockchain Developer & Team Lead",
     location: "Remote",
     description:
-      "Led blockchain development team building decentralized applications (dApps) for Web3 projects. Designed and implemented smart contracts and frontend interfaces that interact with multiple blockchain networks. Collaborated with leading Web3 companies on production deployments.",
-    icon: React.createElement(FaReact),
+      "Led blockchain development team building decentralized applications for Web3 projects. Designed and implemented smart contracts and frontend interfaces across multiple blockchain networks. Collaborated with leading Web3 companies on production deployments.",
+    icon: React.createElement(GiComputing),
     date: "2021 - 2024",
-
   },
   {
     title: "Freelance Full-Stack Developer",
     location: "Remote",
     description:
-      "Provided full-stack development services with emphasis on security and scalable architecture. Built custom web applications for clients in various industries. Specialized in React, Node.js, and blockchain integrations while maintaining strong focus on code quality and security best practices.",
+      "Delivered full-stack development services with emphasis on security and scalable architecture. Built custom web applications across industries, specializing in React, Node.js, and blockchain integrations with a strong focus on code quality and security best practices.",
     icon: React.createElement(GiOpenTreasureChest),
     date: "2020 - 2021",
   },
@@ -123,7 +121,7 @@ export const projectsData = [
   {
     title: 'AvaSleuth / ContractSleuth',
     description:
-      "Production application built on top of a local AI stack I built from scratch (DCGP + WillAgent). Applies local model intelligence to Avalanche ecosystem security: L0-L7 smart contract auditing, smart wallet tracking (996 identities indexed), and token radar — all running on local models with a 5-gate anti-hallucination pipeline. Foundry three-phase PoC generation, heartbeat state machine, 44-finding audit track record including Club HashCash (Avalanche C-Chain). Local AI doing real work in a live, high-stakes environment.",
+      "Production application built on top of a local AI stack I built from scratch (DCGP + WillAgent). Applies local model intelligence to Avalanche ecosystem security: L0-L7 smart contract auditing, smart wallet tracking (1047 identities indexed), and token radar — all running on local models with a 5-gate anti-hallucination pipeline. Foundry three-phase PoC generation, heartbeat state machine, 44-finding audit track record including Club HashCash (Avalanche C-Chain). Local AI doing real work in a live, high-stakes environment.",
     tags: ["NestJS", "TypeScript", "PostgreSQL", "Redis", "BullMQ", "Foundry", "Avalanche", "Solidity", "wagmi", "viem"],
     imageUrl: commandImg,
     githubUrl: "https://github.com/addicted2crypto",
@@ -143,6 +141,22 @@ export const projectsData = [
     tags: ["NestJS", "TypeScript", "Redis", "Claude API", "Ollama", "Node.js", "Agents", "LLM"],
     imageUrl: agentImg,
     githubUrl: "https://github.com/addicted2crypto/willagent",
+  },
+  {
+    title: 'hCASH ROI Oracle',
+    description:
+      "Live mining ROI calculator running on Avalanche mainnet. Powered by Chainlink price oracles and real-time DexScreener data — calculates break-even thresholds, tracks hCASH token economics, and scans on-chain marketplace activity for live pricing. Real oracle integration, real financial modeling, real stakes.",
+    tags: ["Next.js", "TypeScript", "Chainlink", "Avalanche", "DexScreener", "Solidity", "wagmi", "viem"],
+    imageUrl: commandImg,
+    demoUrl: "https://hcash.onchaintruth.xyz/",
+  },
+  {
+    title: 'Moat OCA Leaderboard',
+    description:
+      "Live on-chain portfolio analyzer tracking Moat strategy performance against AVAX and BTC benchmarks. Scrapes wallet data, calculates opportunity cost, and ranks top performers on a real-time leaderboard. Full-stack Web3 analytics with verifiable on-chain data — delivered at hackathon speed, running on mainnet.",
+    tags: ["Next.js", "TypeScript", "Avalanche", "wagmi", "viem", "PostgreSQL", "Web3", "Analytics"],
+    imageUrl: cftmarketImg,
+    demoUrl: "https://moat.onchaintruth.xyz/leaderboard",
   },
   {
     title: 'Defense Health Agency — DoD Contractor',

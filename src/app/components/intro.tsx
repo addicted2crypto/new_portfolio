@@ -1,9 +1,9 @@
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { LuHardDriveDownload } from 'react-icons/lu';
 import { FaGithubSquare, FaTwitterSquare } from 'react-icons/fa';
@@ -14,12 +14,22 @@ import toast from 'react-hot-toast';
 import HeroCLI from './HeroCLI';
 
 
+const ROLES = ['AI systems', 'full-stack products', 'production LLM pipelines', 'blockchain infra'];
+
 export default function Intro() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [imageTilt,     setImageTilt]     = useState({ rotateX: 0, rotateY: 0 });
+    const [roleIndex,     setRoleIndex]     = useState(0);
     const buttonRef = useRef<HTMLDivElement>(null);
     const { ref } = useSectionTimeOutForClick("Home", 0.6);
     const { setActiveSection, setTimeOfLastClick } = useActiveSection();
+
+    useEffect(() => {
+        const id = setInterval(() => {
+            setRoleIndex(prev => (prev + 1) % ROLES.length);
+        }, 2200);
+        return () => clearInterval(id);
+    }, []);
 
     const handleMouseMove = (e: React.MouseEvent) => {
         if (!buttonRef.current) return;
@@ -96,18 +106,39 @@ export default function Intro() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-                <h1 className='font-bold text-3xl sm:text-4xl'>Hello, I&apos;m William</h1>
+                <h1 className='font-bold text-3xl sm:text-4xl'>Hi, I&apos;m William.</h1>
 
-                <p className='mt-2 text-lg font-medium tracking-wide
-                              text-blue-600 dark:text-blue-400'>
-                    Full-Stack Engineer &nbsp;·&nbsp; Active DoD Contractor &nbsp;·&nbsp; Security+ Certified
+                {/* Rotating specialty line — AI leads, full-stack core, blockchain last */}
+                <p className='mt-2 text-lg sm:text-xl font-medium tracking-wide
+                              text-gray-800 dark:text-gray-200'>
+                    I build{' '}
+                    <span className='relative inline-grid align-bottom'>
+                        <AnimatePresence mode='wait'>
+                            <motion.span
+                                key={ROLES[roleIndex]}
+                                initial={{ opacity: 0, y: 12 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -12 }}
+                                transition={{ duration: 0.35, ease: 'easeOut' }}
+                                className='col-start-1 row-start-1 whitespace-nowrap font-semibold
+                                           bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500
+                                           bg-clip-text text-transparent'
+                            >
+                                {ROLES[roleIndex]}
+                            </motion.span>
+                        </AnimatePresence>
+                        {/* invisible sizer keeps width stable on the longest word */}
+                        <span aria-hidden className='col-start-1 row-start-1 whitespace-nowrap font-semibold opacity-0'>
+                            production LLM pipelines
+                        </span>
+                    </span>
                 </p>
 
                 <p className='mt-3 text-base font-normal text-gray-700 dark:text-gray-300 leading-relaxed'>
-                    Eight years shipping systems with real stakes: government health records, blockchain infrastructure, live AI pipelines. Not side projects. Production.
+                    AI &amp; full-stack engineer with <span className='font-semibold'>8+ years</span> shipping production systems. Today I build live <span className='font-semibold'>LLM &amp; RAG pipelines</span> into real products — agents, orchestration, and the typed full-stack apps around them. Not demos. Production.
                 </p>
                 <p className='mt-1.5 text-sm font-normal text-gray-500 dark:text-gray-400'>
-                    I&apos;ve been Security+ certified and DoD-cleared, and I bring that standard to everything I build.
+                    DoD-cleared and Security+ certified — I bring that standard to every system I build, from AI to full-stack to on-chain.
                 </p>
             </motion.div>
 

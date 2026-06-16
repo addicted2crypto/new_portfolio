@@ -21,7 +21,7 @@ function AgentPreview() {
       <div className='text-green-300'>
         Token-discovery flow: <span className='text-blue-300'>scan → who_bought {'<token>'} → inspect {'<token>'}</span>
       </div>
-      <div className='text-green-400'>Smart wallets: <span className='text-yellow-400'>996 identities</span> indexed</div>
+      <div className='text-green-400'>Smart wallets: <span className='text-yellow-400'>1047 identities</span> indexed</div>
       <div className='h-1' />
       <div className='text-green-900 text-[9px] leading-tight overflow-hidden max-h-[6rem]'>
         {[
