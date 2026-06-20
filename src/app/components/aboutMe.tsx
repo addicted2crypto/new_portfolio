@@ -18,7 +18,7 @@ export default function AboutMe() {
        >
          <SectionHeader>About me</SectionHeader>
         <p className='mb-8'>
-        <span className='font-semibold'>Security first</span> full stack engineer with <span className='font-semibold'>8+ years</span> in production. Security first always, Web3 infrastructure, federal healthcare IT. Built it, hardened it, shipped it. Currently heading up <span className='font-semibold'>DHA.mil</span> as a DoD contractor with <span className='font-semibold'>BDR Solutions LLC</span>, pushing the first government blockchain deployment in production on Hyperledger Iroha. <span className='font-semibold'>CompTIA Security+ | IAT II</span> certified. Forever learning.
+        <span className='font-semibold'>Security first</span> full stack engineer with <span className='font-semibold'>8+ years</span> in production. Security first always, Web3 infrastructure, federal healthcare IT. Built it, hardened it, shipped it. Currently heading up <span className='font-semibold'>DHA.mil</span> as a DoD contractor with <span className='font-semibold'>BDR Solutions LLC</span>, pushing forward local testing using docker for the first time in our public web space. <span className='font-semibold'>CompTIA Security+ | IAT II</span> certified. Forever learning.
         </p>
 
         <p className='mb-8'>
